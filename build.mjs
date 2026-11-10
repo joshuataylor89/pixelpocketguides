@@ -268,6 +268,58 @@ ${sourcesBlock()}
   posts.push({ slug, title, desc, body, blurb: 'Best pick and runners-up for each budget, with a quick chooser and a pre-checkout checklist.', kicker: 'BY PRICE' });
 }
 
+// POST 3: Top 5 vertical handhelds
+{
+  const ids = ['trimui-brick', 'magicx-zero40', 'rg35xx-plus', 'super-pocket', 'rg28xx'];
+  const slug = 'best-vertical-retro-handhelds-2026';
+  const title = 'Top 5 Best Vertical Retro Handhelds for Holiday 2026 (Game Boy-Style Gift Guide)';
+  const desc = 'The best vertical retro handhelds to buy for the 2026 holidays: pocket-sized, Game Boy-style emulation handhelds for GBA, SNES, PS1 and more, all on Amazon.';
+  const body = `<article>
+<span class="pill">HOLIDAY 2026 · VERTICAL HANDHELDS</span>
+<h1>${esc(title)}</h1>
+<p class="meta">Updated ${esc(cfg.updated)}</p>
+<div class="disclosure"><b>Affiliate disclosure:</b> ${DISCLOSURE} Links below go to Amazon and we may earn a commission at no extra cost to you. <a href="/affiliate-disclosure/">Details</a>.</div>
+<p class="lead">Looking for the best vertical retro handheld this holiday season? A vertical handheld is the classic Game Boy-style shape: a portrait screen on top, controls underneath, small enough to slide into a pocket. They are cheap, easy to carry and a great fit for Game Boy, Game Boy Color, Game Boy Advance, NES, SNES, Sega Genesis and PlayStation 1 games. Here are our top 5 vertical retro handhelds on Amazon, from stocking stuffers to the best all-round pocket emulator.</p>
+<p>Short on time? <a href="#trimui-brick">The TRIMUI Brick</a> is the best vertical retro handheld overall, <a href="#magicx-zero40">the MagicX Zero 40</a> is best for Nintendo DS and arcade shooters, and <a href="#super-pocket">the Evercade Super Pocket</a> is the best no-setup gift.</p>
+
+<h2>Top 5 vertical handhelds at a glance</h2>
+${compareTable(ids)}
+
+<h2>What is a vertical retro handheld?</h2>
+<p>A vertical handheld (also called a portrait or Game Boy-style handheld) holds the screen above the buttons instead of between them. That keeps the device narrow and pocketable, and it is the shape most people picture when they think of a retro gaming handheld. Most vertical emulation handhelds run Linux with a simple menu, so you can pick it up and play with little setup, while a few, like the MagicX Zero 40, run Android.</p>
+
+<h2>Ranked: the 5 best vertical retro handhelds for the holidays</h2>
+${ids.map((id, i) => productCard(P[id], i + 1)).join('\n')}
+
+<h2>Vertical vs horizontal handhelds: which should you buy?</h2>
+<ul>
+<li><b>Choose vertical</b> if you want a pocket-sized, lightweight handheld for 8-bit, 16-bit, Game Boy Advance and PlayStation 1 games, or if you are shopping for a kid or a nostalgic gift.</li>
+<li><b>Choose horizontal</b> if you want analog sticks, a bigger screen, or PS2, GameCube and PSP performance. See our <a href="/best-retro-handhelds-holiday-2026/">Top 10 Retro Handhelds for the Holidays</a>.</li>
+<li><b>Choose a clamshell</b> if you want a fold-up screen protector. The <a href="/retro-handheld-buying-guide-by-price-2026/">buying guide by price</a> covers the best option.</li>
+</ul>
+
+<h2>How to choose a vertical handheld</h2>
+<ul>
+<li><b>Screen size and shape.</b> Smaller screens (around 2.8 to 3.5 inches) suit Game Boy and SNES games and fit any pocket. Larger ones suit DS games and arcade shooters.</li>
+<li><b>Operating system.</b> Linux handhelds are simple to start with, and Android handhelds can run more apps.</li>
+<li><b>Games.</b> Most emulation handhelds ship without games. You supply backups of games you own. The Evercade Super Pocket comes with licensed games built in.</li>
+<li><b>Battery and storage.</b> Check the battery size, and buy a microSD card for your games. <a href="${esc(microSD)}" target="_blank" rel="sponsored nofollow noopener">Browse microSD cards on Amazon</a>.</li>
+<li><b>Budget.</b> Prices here run from about $40 to under $90. Always check Amazon for the current price, since sales around Black Friday and Cyber Monday can change it.</li>
+</ul>
+
+${faqBlock([
+  ['What is the best vertical retro handheld?', 'For most people, the <a href="#trimui-brick">TRIMUI Brick</a>. It has a sharp screen, a simple operating system and a pocket-friendly size.'],
+  ['What is the best vertical handheld for Game Boy Advance games?', 'The <a href="#trimui-brick">TRIMUI Brick</a> and the <a href="#rg35xx-plus">Anbernic RG35XX Plus</a> both handle Game Boy Advance well. The RG35XX Plus costs less.'],
+  ['What is the best vertical handheld for Nintendo DS?', 'The <a href="#magicx-zero40">MagicX Zero 40</a>. Its tall screen suits DS games and vertical arcade shooters.'],
+  ['What is the best cheap vertical handheld?', 'The <a href="#rg28xx">Anbernic RG28XX</a> is the cheapest pick here, often under $40, and the <a href="#rg35xx-plus">RG35XX Plus</a> is a step up.'],
+  ['What is the best retro handheld for kids?', 'The <a href="#super-pocket">Evercade Super Pocket</a>. It comes with licensed games built in and needs no setup.'],
+  ['Are these good holiday gifts?', 'Yes. They are small, affordable and easy to wrap, and most work as a stocking stuffer or a main gift. Add a microSD card for the emulation models.']
+])}
+${sourcesBlock()}
+</article>`;
+  posts.push({ slug, title, desc, body, blurb: 'Five pocket-sized, Game Boy-style handhelds ranked, from stocking stuffers to the best overall.', kicker: 'TOP 5 VERTICAL' });
+}
+
 // ---------- Static pages ----------
 const aboutBody = `<article><h1>About ${esc(cfg.siteName)}</h1>
 <p class="lead">Pixel Pocket Guides helps you pick the right retro gaming handheld without wading through hundreds of near-identical devices.</p>
