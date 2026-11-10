@@ -321,6 +321,58 @@ ${disclosureBox}
   posts.push({ slug, title, desc, body, blurb: 'Five pocket-sized, Game Boy-style handhelds ranked, from stocking stuffers to the best overall.', kicker: 'TOP 5 VERTICAL' });
 }
 
+// POST 4: Top 5 horizontal handhelds
+{
+  const ids = ['rg-cube', 'pocket-air-mini', 'rg477m', 'odin-2', 'analogue-pocket'];
+  const slug = 'best-horizontal-retro-handhelds-2026';
+  const title = 'Top 5 Best Horizontal Retro Handhelds for Holiday 2026 (Gift Guide)';
+  const desc = 'The best horizontal retro gaming handhelds for the 2026 holidays: Android emulation handhelds with sticks and big screens for PS2, GameCube, Dreamcast, DS and more, all on Amazon.';
+  const body = `<article>
+<span class="pill">HOLIDAY 2026 · HORIZONTAL HANDHELDS</span>
+<h1>${esc(title)}</h1>
+<p class="meta">Updated ${esc(cfg.updated)}</p>
+<p class="lead">Want the best horizontal retro handheld this holiday season? A horizontal handheld has the screen in the middle with controls on both sides, the same layout as a Nintendo Switch or Steam Deck. That gives room for analog sticks, a bigger screen and more power, so these are the models to look at for Dreamcast, PSP, GameCube, DS and PS2 games as well as classic 8-bit and 16-bit favorites. Here are our top 5 horizontal retro handhelds on Amazon, from a budget-friendly Android handheld to a flagship PS2 machine.</p>
+<p>Short on time? <a href="#rg-cube">The Anbernic RG Cube</a> is the best horizontal retro handheld overall, <a href="#pocket-air-mini">the AYANEO Pocket Air Mini</a> is the best value, and <a href="#odin-2">the AYN Odin 2</a> is the best for PS2 and GameCube.</p>
+
+<h2>Top 5 horizontal handhelds at a glance</h2>
+${compareTable(ids)}
+
+<h2>What is a horizontal retro handheld?</h2>
+<p>A horizontal (or landscape) handheld is the wide, controller-style shape. Because the buttons sit beside the screen, there is space for analog sticks, triggers and a larger battery, which is why most Android retro handhelds use this layout. They run emulators for systems like the Sega Dreamcast, Sony PSP, Nintendo GameCube and PlayStation 2, and many can also play Android games and stream games from the cloud.</p>
+
+<h2>Ranked: the 5 best horizontal retro handhelds for the holidays</h2>
+${ids.map((id, i) => productCard(P[id], i + 1)).join('\n')}
+
+<h2>Horizontal vs vertical handhelds: which should you buy?</h2>
+<ul>
+<li><b>Choose horizontal</b> if you want analog sticks, a bigger screen, and the power for Dreamcast, PSP, GameCube or PS2 games.</li>
+<li><b>Choose vertical</b> if you want a cheap, pocket-sized Game Boy-style handheld for 8-bit, 16-bit and PS1 games. See our <a href="/best-vertical-retro-handhelds-2026/">Top 5 Vertical Retro Handhelds</a>.</li>
+<li><b>Want all the options?</b> Our <a href="/best-retro-handhelds-holiday-2026/">Top 10 Retro Handhelds for the Holidays</a> and the <a href="/retro-handheld-buying-guide-by-price-2026/">buying guide by price</a> cover every shape and budget.</li>
+</ul>
+
+<h2>How to choose a horizontal retro handheld</h2>
+<ul>
+<li><b>Power.</b> Stronger chips run PS2 and GameCube games at higher resolutions. If you mostly play older systems, a cheaper model is enough.</li>
+<li><b>Screen shape and size.</b> A 4:3 screen suits classic games, a square screen suits Game Boy and DS games, and a large 16:9 screen suits PSP and modern games.</li>
+<li><b>Operating system.</b> These run Android, which needs more setup than a Linux handheld but runs more emulators and apps.</li>
+<li><b>Games.</b> Most emulation handhelds ship without games. You supply backups of games you own. The Analogue Pocket plays your real cartridges.</li>
+<li><b>Storage and budget.</b> Prices here run from about $110 to over $400, so check Amazon for the current price. Many models take a microSD card. <a href="${esc(microSD)}" target="_blank" rel="sponsored nofollow noopener">Browse microSD cards on Amazon</a>.</li>
+</ul>
+
+${faqBlock([
+  ['What is the best horizontal retro handheld?', 'For most people, the <a href="#rg-cube">Anbernic RG Cube</a>. It handles everything from Game Boy games to many PS2 games and has a big battery.'],
+  ['What is the best horizontal handheld for PS2 games?', 'The <a href="#odin-2">AYN Odin 2</a> is the strongest pick here, and the <a href="#rg477m">Anbernic RG477M</a> is a premium metal alternative.'],
+  ['What is the best cheap horizontal retro handheld?', 'The <a href="#pocket-air-mini">AYANEO Pocket Air Mini</a>, from about $110, gives you an Android handheld with analog sticks and triggers.'],
+  ['What is the best horizontal handheld for Game Boy cartridges?', 'The <a href="#analogue-pocket">Analogue Pocket</a>. It plays original Game Boy, Game Boy Color and Game Boy Advance cartridges.'],
+  ['What is the best horizontal handheld for Nintendo DS?', 'The <a href="#rg-cube">Anbernic RG Cube</a>. Its square screen leaves room to show both DS screens.'],
+  ['Are these good holiday gifts?', 'Yes, for gamers who already know what they want. They cost more than a pocket handheld, so check the return window on Amazon, and add a microSD card for the emulation models.']
+])}
+${sourcesBlock()}
+${disclosureBox}
+</article>`;
+  posts.push({ slug, title, desc, body, blurb: 'Five horizontal Android and cartridge handhelds ranked, from the best-value pick to the PS2 powerhouse.', kicker: 'TOP 5 HORIZONTAL' });
+}
+
 // ---------- Static pages ----------
 const aboutBody = `<article><h1>About ${esc(cfg.siteName)}</h1>
 <p class="lead">Pixel Pocket Guides helps you pick the right retro gaming handheld without wading through hundreds of near-identical devices.</p>
