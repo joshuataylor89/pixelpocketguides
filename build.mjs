@@ -389,11 +389,14 @@ ${guides.map((g) => `<a class="postcard" href="/guides/${g.slug}/"><span class="
 <div class="disclosure">${DISCLOSURE} <a href="/affiliate-disclosure/">Learn more</a>.</div>`;
 
 // Blog-style home page: the newest post opens in full, with the other posts and guides listed below.
-const blogHome = `${posts[0].body}
+// Newest first: sort by each post's optional "date" (YYYY-MM-DD); posts with the same date go newest-added first.
+const ordered = posts.map((p, i) => ({ ...p, _i: i })).sort((a, b) => (b.date || '2026-11-10').localeCompare(a.date || '2026-11-10') || b._i - a._i);
+const latest = ordered[0];
+const blogHome = `${latest.body}
 <section>
 <h2>More from ${esc(cfg.siteName)}</h2>
 <div class="cards">
-${[...posts.slice(1).map((p) => ({ href: `/${p.slug}/`, kicker: p.kicker, title: p.title, blurb: p.blurb })), ...guides.map((g) => ({ href: `/guides/${g.slug}/`, kicker: g.kicker, title: g.title, blurb: g.blurb }))]
+${[...ordered.slice(1).map((p) => ({ href: `/${p.slug}/`, kicker: p.kicker, title: p.title, blurb: p.blurb })), ...guides.map((g) => ({ href: `/guides/${g.slug}/`, kicker: g.kicker, title: g.title, blurb: g.blurb }))]
   .map((c) => `<a class="postcard" href="${c.href}"><span class="pill">${esc(c.kicker)}</span><h2>${esc(c.title)}</h2><p>${esc(c.blurb)}</p></a>`)
   .join('\n')}
 </div>
@@ -410,7 +413,7 @@ const write = (rel, html) => {
   fs.writeFileSync(path.join(dir, 'index.html'), html);
 };
 const published = '2026-11-10';
-write('', page({ title: `${cfg.siteName}: Retro Handheld Buying Guides`, desc: 'Honest buying guides for retro gaming handhelds at every price point, all available on Amazon.', url: '/', body: blogHome, canonical: `${cfg.domain}/${posts[0].slug}/` }));
+write('', page({ title: `${cfg.siteName}: Retro Handheld Buying Guides`, desc: 'Honest buying guides for retro gaming handhelds at every price point, all available on Amazon.', url: '/', body: blogHome, canonical: `${cfg.domain}/${latest.slug}/` }));
 for (const p of posts) write(p.slug, page({ title: `${p.title} | ${cfg.siteName}`, desc: p.desc, url: `/${p.slug}/`, body: p.body, type: 'article', datePublished: published }));
 write('guides', page({ title: `Setup Guides | ${cfg.siteName}`, desc: 'Practical setup guides for retro gaming handhelds.', url: '/guides/', body: guidesIndexBody }));
 for (const g of guides) {
