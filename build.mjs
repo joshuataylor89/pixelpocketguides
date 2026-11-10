@@ -82,7 +82,6 @@ ${ids
 }
 
 const SOURCES = [
-  ['Held Games reviews', 'https://heldgames.com/reviews'],
   ['Retro Catalog: best budget handhelds', 'https://retrocatalog.com/best-gaming-handhelds/budget-under-70-dollars'],
   ['Retro Handhelds reviews', 'https://retrohandhelds.gg/reviews/'],
   ['GamesRadar: best retro handheld', 'https://www.gamesradar.com/hardware/retro/best-retro-handheld/'],
@@ -301,26 +300,25 @@ ${posts.map((p) => `<a class="postcard" href="/${p.slug}/"><span class="pill">${
 // ---------- How-to guides (Guides tab) ----------
 const guides = [
   {
-    slug: 'gen1recomp-handheld-setup',
-    title: 'How to Run Gen1Recomp on a Retro Handheld',
-    desc: 'A short overview of running Gen1Recomp, a native recreation of Pokémon Red, Blue and Yellow, on Anbernic, Android and Steam Deck, with a link to the full step-by-step guide.',
-    blurb: 'Which handhelds can run Gen1Recomp, what you need, and where to find the full setup steps.',
+    slug: 'gen1recomp-on-handhelds',
+    title: 'Getting Started with Gen1Recomp on a Handheld',
+    desc: 'What Gen1Recomp is, what you need to run it, and which platforms it supports, with a link to the project’s own FAQ.',
+    blurb: 'What Gen1Recomp is, what you need to run it, and where to find the official setup details.',
     kicker: 'SETUP GUIDE',
-    source: 'https://heldgames.com/guides/gen1recomp-handheld-setup',
-    sourceName: 'Held Games',
-    body: `<p class="lead">Gen1Recomp is a native recreation of Pokémon Red, Blue and Yellow. It is not an emulator, so there are no cores or BIOS files to set up. Whether it runs on your handheld depends mostly on the device.</p>
+    source: 'https://gen1recomp.com/faq/',
+    sourceName: 'the Gen1Recomp FAQ',
+    body: `<p class="lead">Gen1Recomp is an unofficial fan project that recreates classic Pokémon games to run natively, rather than as a standard Game Boy emulator. It is not affiliated with Nintendo, Game Freak or The Pokémon Company.</p>
 <h2>Quick overview</h2>
 <ul>
-<li><b>You need your own game file.</b> The app asks you to import a copy of the US Red, Blue or Yellow game that you made from a cartridge you own. It does not include the game.</li>
-<li><b>Anbernic RG34XX SP:</b> per Held Games, the only dedicated retro handheld with an official build, and only on the stock OS using PortMaster.</li>
-<li><b>Android handhelds:</b> install the app and play with touch or a controller.</li>
-<li><b>Steam Deck and Windows handhelds:</b> the best choice if you want the optional 3D, first-person or VR mods.</li>
-<li><b>Not supported:</b> custom firmware like muOS, KNULLI, ArkOS and ROCKNIX, and most other cheap Linux handhelds.</li>
+<li><b>You need your own game file.</b> The project does not include or link to game files. You import a compatible US copy that you made from a cartridge you own, and the app only accepts specific versions.</li>
+<li><b>Platforms:</b> the project's FAQ lists guides and builds for Windows, Mac, Android and Linux, plus homebrew builds for Nintendo Switch and PlayStation 4.</li>
+<li><b>Handhelds:</b> Android handhelds and Windows or Linux handheld PCs are the natural fit. The project does not list specific Anbernic or other retro Linux handhelds, so check the FAQ and the project's pages for your exact device before you buy or install anything.</li>
+<li><b>Availability is not a guarantee.</b> The project notes that a download existing does not mean every OS version, GPU, controller or firmware is supported.</li>
 </ul>
-<h2>Read the full guide</h2>
-<p>The step-by-step install instructions, performance settings, mod notes and troubleshooting are in the full guide by Held Games. Check it before you install, since details change as the app updates.</p>
-<p><a class="btn" href="__SOURCE__" target="_blank" rel="noopener">Read the full guide on __SOURCENAME__ <small>→</small></a></p>
-<p class="meta">This page is a short summary. Credit for the detailed instructions goes to Held Games. Looking for a handheld that fits? See our <a href="/best-retro-handhelds-holiday-2026/">Top 10 Retro Handhelds</a>.</p>`
+<h2>Read the official details</h2>
+<p>Install steps, supported games and platform guides change as the project updates, so go to the source before you install.</p>
+<p><a class="btn" href="__SOURCE__" target="_blank" rel="noopener">Open __SOURCENAME__ <small>→</small></a></p>
+<p class="meta">Looking for a handheld to run it on? See our <a href="/best-retro-handhelds-holiday-2026/">Top 10 Retro Handhelds</a>.</p>`
   }
 ];
 
