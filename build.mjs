@@ -138,7 +138,7 @@ ${ld}
 <body>
 <header class="site"><div class="wrap">
   <a class="logo" href="/">PIXEL<span>POCKET</span><br>GUIDES</a>
-  <nav><a href="/">Home</a><a href="/best-retro-handhelds-holiday-2026/">Top 10</a><a href="/retro-handheld-buying-guide-by-price-2026/">By Price</a><a href="/about/">About</a></nav>
+  <nav><a href="/">Home</a><a href="/best-retro-handhelds-holiday-2026/">Top 10</a><a href="/retro-handheld-buying-guide-by-price-2026/">By Price</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav>
 </div></header>
 <main class="wrap">
 ${body}
@@ -298,6 +298,42 @@ ${posts.map((p) => `<a class="postcard" href="/${p.slug}/"><span class="pill">${
 </div>
 <div class="disclosure">${DISCLOSURE} <a href="/affiliate-disclosure/">Learn more</a>.</div>`;
 
+// ---------- How-to guides (Guides tab) ----------
+const guides = [
+  {
+    slug: 'gen1recomp-handheld-setup',
+    title: 'How to Run Gen1Recomp on a Retro Handheld',
+    desc: 'A short overview of running Gen1Recomp, a native recreation of Pokémon Red, Blue and Yellow, on Anbernic, Android and Steam Deck, with a link to the full step-by-step guide.',
+    blurb: 'Which handhelds can run Gen1Recomp, what you need, and where to find the full setup steps.',
+    kicker: 'SETUP GUIDE',
+    source: 'https://heldgames.com/guides/gen1recomp-handheld-setup',
+    sourceName: 'Held Games',
+    body: `<p class="lead">Gen1Recomp is a native recreation of Pokémon Red, Blue and Yellow. It is not an emulator, so there are no cores or BIOS files to set up. Whether it runs on your handheld depends mostly on the device.</p>
+<h2>Quick overview</h2>
+<ul>
+<li><b>You need your own game file.</b> The app asks you to import a copy of the US Red, Blue or Yellow game that you made from a cartridge you own. It does not include the game.</li>
+<li><b>Anbernic RG34XX SP:</b> per Held Games, the only dedicated retro handheld with an official build, and only on the stock OS using PortMaster.</li>
+<li><b>Android handhelds:</b> install the app and play with touch or a controller.</li>
+<li><b>Steam Deck and Windows handhelds:</b> the best choice if you want the optional 3D, first-person or VR mods.</li>
+<li><b>Not supported:</b> custom firmware like muOS, KNULLI, ArkOS and ROCKNIX, and most other cheap Linux handhelds.</li>
+</ul>
+<h2>Read the full guide</h2>
+<p>The step-by-step install instructions, performance settings, mod notes and troubleshooting are in the full guide by Held Games. Check it before you install, since details change as the app updates.</p>
+<p><a class="btn" href="__SOURCE__" target="_blank" rel="noopener">Read the full guide on __SOURCENAME__ <small>→</small></a></p>
+<p class="meta">This page is a short summary. Credit for the detailed instructions goes to Held Games. Looking for a handheld that fits? See our <a href="/best-retro-handhelds-holiday-2026/">Top 10 Retro Handhelds</a>.</p>`
+  }
+];
+
+const guidesIndexBody = `<section class="hero">
+<span class="pill">GUIDES</span>
+<h1>Setup guides</h1>
+<p>Practical how-tos for getting the most out of your retro handheld.</p>
+</section>
+<div class="cards">
+${guides.map((g) => `<a class="postcard" href="/guides/${g.slug}/"><span class="pill">${esc(g.kicker)}</span><h2>${esc(g.title)}</h2><p>${esc(g.blurb)}</p></a>`).join('\n')}
+</div>
+<div class="disclosure">${DISCLOSURE} <a href="/affiliate-disclosure/">Learn more</a>.</div>`;
+
 // ---------- Write everything ----------
 fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(out, { recursive: true });
@@ -311,11 +347,16 @@ const write = (rel, html) => {
 const published = '2026-11-10';
 write('', page({ title: `${cfg.siteName}: Retro Handheld Buying Guides`, desc: 'Honest buying guides for retro gaming handhelds at every price point, all available on Amazon.', url: '/', body: homeBody }));
 for (const p of posts) write(p.slug, page({ title: `${p.title} | ${cfg.siteName}`, desc: p.desc, url: `/${p.slug}/`, body: p.body, type: 'article', datePublished: published }));
+write('guides', page({ title: `Setup Guides | ${cfg.siteName}`, desc: 'Practical setup guides for retro gaming handhelds.', url: '/guides/', body: guidesIndexBody }));
+for (const g of guides) {
+  const gbody = `<article><span class="pill">${esc(g.kicker)}</span><h1>${esc(g.title)}</h1><p class="meta">Updated ${esc(cfg.updated)}</p>${g.body.replace('__SOURCE__', esc(g.source)).replace('__SOURCENAME__', esc(g.sourceName))}</article>`;
+  write(`guides/${g.slug}`, page({ title: `${g.title} | ${cfg.siteName}`, desc: g.desc, url: `/guides/${g.slug}/`, body: gbody, type: 'article', datePublished: published }));
+}
 write('about', page({ title: `About | ${cfg.siteName}`, desc: 'About Pixel Pocket Guides.', url: '/about/', body: aboutBody }));
 write('affiliate-disclosure', page({ title: `Affiliate Disclosure | ${cfg.siteName}`, desc: 'Amazon Associates affiliate disclosure.', url: '/affiliate-disclosure/', body: disclosureBody }));
 write('privacy', page({ title: `Privacy Policy | ${cfg.siteName}`, desc: 'Privacy policy for Pixel Pocket Guides.', url: '/privacy/', body: privacyBody }));
 
-const urls = ['/', ...posts.map((p) => `/${p.slug}/`), '/about/', '/affiliate-disclosure/', '/privacy/'];
+const urls = ['/', ...posts.map((p) => `/${p.slug}/`), '/guides/', ...guides.map((g) => `/guides/${g.slug}/`), '/about/', '/affiliate-disclosure/', '/privacy/'];
 fs.writeFileSync(path.join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${cfg.domain}${u}</loc><lastmod>${published}</lastmod></url>`).join('\n')}\n</urlset>\n`);
 fs.writeFileSync(path.join(out, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${cfg.domain}/sitemap.xml\n`);
 fs.writeFileSync(path.join(out, '_headers'), `/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  X-Frame-Options: DENY\n`);
