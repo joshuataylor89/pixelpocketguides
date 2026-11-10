@@ -312,7 +312,11 @@ const guides = [
 <ul>
 <li><b>You need your own game file.</b> The project does not include or link to game files. You import a compatible US copy that you made from a cartridge you own, and the app only accepts specific versions.</li>
 <li><b>Platforms:</b> the project's FAQ lists guides and builds for Windows, Mac, Android and Linux, plus homebrew builds for Nintendo Switch and PlayStation 4.</li>
-<li><b>Handhelds:</b> Android handhelds and Windows or Linux handheld PCs are the natural fit. The project does not list specific Anbernic or other retro Linux handhelds, so check the FAQ and the project's pages for your exact device before you buy or install anything.</li>
+<li><b>Anbernic RG34XX SP:</b> reportedly the only dedicated retro handheld with an official build, and only on the stock OS using PortMaster.</li>
+<li><b>Android handhelds:</b> install the app and play with touch or a controller.</li>
+<li><b>Steam Deck and Windows handhelds:</b> the best choice if you want the optional 3D, first-person or VR mods.</li>
+<li><b>Custom firmware:</b> reportedly not supported on muOS, KNULLI, ArkOS and ROCKNIX, or on most other cheap Linux handhelds.</li>
+<li><b>Check before you install.</b> The device notes above come from community reports and the project's own FAQ does not list them, so confirm your exact device before you buy or install anything.</li>
 <li><b>Availability is not a guarantee.</b> The project notes that a download existing does not mean every OS version, GPU, controller or firmware is supported.</li>
 </ul>
 <h2>Read the official details</h2>
