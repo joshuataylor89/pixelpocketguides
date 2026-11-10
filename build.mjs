@@ -129,7 +129,16 @@ function page({ title, desc, url, body, type = 'website', datePublished, canonic
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:type" content="${type}">
 <meta property="og:url" content="${full}">
-<meta name="twitter:card" content="summary">
+<meta property="og:site_name" content="${esc(cfg.siteName)}">
+<meta property="og:image" content="${cfg.domain}/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc(cfg.siteName)} logo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(title)}">
+<meta name="twitter:description" content="${esc(desc)}">
+<meta name="twitter:image" content="${cfg.domain}/og-image.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
