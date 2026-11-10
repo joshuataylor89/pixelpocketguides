@@ -12,6 +12,7 @@ const out = path.join(root, 'public');
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const DISCLOSURE = 'As an Amazon Associate I earn from qualifying purchases.';
+const disclosureBox = `<div class="disclosure"><b>Affiliate disclosure:</b> ${DISCLOSURE} Links to Amazon on this page may earn us a commission at no extra cost to you. <a href="/affiliate-disclosure/">Details</a>.</div>`;
 
 // ---------- Amazon links ----------
 // If a product has an "asin", link straight to the product page. Otherwise link to an
@@ -165,7 +166,6 @@ const posts = [];
 <span class="pill">HOLIDAY 2026 · BUYING GUIDE</span>
 <h1>${esc(title)}</h1>
 <p class="meta">Updated ${esc(cfg.updated)}</p>
-<div class="disclosure"><b>Affiliate disclosure:</b> ${DISCLOSURE} Links below go to Amazon and we may earn a commission at no extra cost to you. <a href="/affiliate-disclosure/">Details</a>.</div>
 <p class="lead">A retro handheld is one of the easiest gadget gifts to get right and one of the easiest to get wrong. Prices run from about $40 to well over $300, and the right pick depends on which games the person actually plays. Here are ten that make good gifts this year, ranked, with a clear "best for" on each.</p>
 <p>Short on time? <a href="#rg-cube">The Anbernic RG Cube</a> is the best all-rounder, <a href="#rg28xx">the RG28XX</a> is the cheap stocking stuffer, and <a href="#odin-2">the AYN Odin 2</a> is the splurge for PS2 and GameCube fans.</p>
 
@@ -190,6 +190,7 @@ ${faqBlock([
   ['Are prices on this page current?', 'They are rough figures reported by reviewers in November 2026. Amazon prices change often, so use the button on each pick for the live price.']
 ])}
 ${sourcesBlock()}
+${disclosureBox}
 </article>`;
   posts.push({ slug, title, desc, body, blurb: 'Ten ranked picks from stocking stuffers to PS2 powerhouses, each with specs, pros, cons and who it suits.', kicker: 'TOP 10' });
 }
@@ -204,7 +205,6 @@ ${sourcesBlock()}
 <span class="pill">HOLIDAY 2026 · BY BUDGET</span>
 <h1>${esc(title)}</h1>
 <p class="meta">Updated ${esc(cfg.updated)}</p>
-<div class="disclosure"><b>Affiliate disclosure:</b> ${DISCLOSURE} Links below go to Amazon and we may earn a commission at no extra cost to you. <a href="/affiliate-disclosure/">Details</a>.</div>
 <p class="lead">Spending more does not always get you a better gift. A $60 pocket handheld can be a better match than a $400 powerhouse, depending on the games. Find your budget below and you will get one best pick, a runner-up or two, and a note on who should skip it.</p>
 
 <h2>Quick chooser</h2>
@@ -264,6 +264,7 @@ ${tier(
 </ul>
 <p>Want the full ranked list with specs and pros and cons? See our <a href="/best-retro-handhelds-holiday-2026/">Top 10 Retro Handhelds for the Holidays</a>.</p>
 ${sourcesBlock()}
+${disclosureBox}
 </article>`;
   posts.push({ slug, title, desc, body, blurb: 'Best pick and runners-up for each budget, with a quick chooser and a pre-checkout checklist.', kicker: 'BY PRICE' });
 }
@@ -278,7 +279,6 @@ ${sourcesBlock()}
 <span class="pill">HOLIDAY 2026 · VERTICAL HANDHELDS</span>
 <h1>${esc(title)}</h1>
 <p class="meta">Updated ${esc(cfg.updated)}</p>
-<div class="disclosure"><b>Affiliate disclosure:</b> ${DISCLOSURE} Links below go to Amazon and we may earn a commission at no extra cost to you. <a href="/affiliate-disclosure/">Details</a>.</div>
 <p class="lead">Looking for the best vertical retro handheld this holiday season? A vertical handheld is the classic Game Boy-style shape: a portrait screen on top, controls underneath, small enough to slide into a pocket. They are cheap, easy to carry and a great fit for Game Boy, Game Boy Color, Game Boy Advance, NES, SNES, Sega Genesis and PlayStation 1 games. Here are our top 5 vertical retro handhelds on Amazon, from stocking stuffers to the best all-round pocket emulator.</p>
 <p>Short on time? <a href="#trimui-brick">The TRIMUI Brick</a> is the best vertical retro handheld overall, <a href="#magicx-zero40">the MagicX Zero 40</a> is best for Nintendo DS and arcade shooters, and <a href="#super-pocket">the Evercade Super Pocket</a> is the best no-setup gift.</p>
 
@@ -316,6 +316,7 @@ ${faqBlock([
   ['Are these good holiday gifts?', 'Yes. They are small, affordable and easy to wrap, and most work as a stocking stuffer or a main gift. Add a microSD card for the emulation models.']
 ])}
 ${sourcesBlock()}
+${disclosureBox}
 </article>`;
   posts.push({ slug, title, desc, body, blurb: 'Five pocket-sized, Game Boy-style handhelds ranked, from stocking stuffers to the best overall.', kicker: 'TOP 5 VERTICAL' });
 }
@@ -391,16 +392,16 @@ ${guides.map((g) => `<a class="postcard" href="/guides/${g.slug}/"><span class="
 // Blog-style home page: the newest post opens in full, with the other posts and guides listed below.
 // Newest first: sort by each post's optional "date" (YYYY-MM-DD); posts with the same date go newest-added first.
 const ordered = posts.map((p, i) => ({ ...p, _i: i })).sort((a, b) => (b.date || '2026-11-10').localeCompare(a.date || '2026-11-10') || b._i - a._i);
-const latest = ordered[0];
-const blogHome = `${latest.body}
-<section>
-<h2>More from ${esc(cfg.siteName)}</h2>
-<div class="cards">
-${[...ordered.slice(1).map((p) => ({ href: `/${p.slug}/`, kicker: p.kicker, title: p.title, blurb: p.blurb })), ...guides.map((g) => ({ href: `/guides/${g.slug}/`, kicker: g.kicker, title: g.title, blurb: g.blurb }))]
-  .map((c) => `<a class="postcard" href="${c.href}"><span class="pill">${esc(c.kicker)}</span><h2>${esc(c.title)}</h2><p>${esc(c.blurb)}</p></a>`)
-  .join('\n')}
+const fmtDate = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+const blogHome = `<section class="hero">
+<span class="pill">THE BLOG</span>
+<h1>Retro handheld buying guides</h1>
+<p>Honest picks for every budget. Every product is on Amazon.</p>
+</section>
+<div class="feed">
+${ordered.map((p) => `<article class="entry"><span class="pill">${esc(p.kicker)}</span><h2><a href="/${p.slug}/">${esc(p.title)}</a></h2><p class="meta">${fmtDate(p.date || '2026-11-10')}</p><p>${esc(p.desc)}</p><p><a class="more" href="/${p.slug}/">Read the full guide →</a></p></article>`).join('\n')}
 </div>
-</section>`;
+<div class="disclosure">${DISCLOSURE} <a href="/affiliate-disclosure/">Learn more</a>.</div>`;
 
 // ---------- Write everything ----------
 fs.rmSync(out, { recursive: true, force: true });
@@ -413,7 +414,7 @@ const write = (rel, html) => {
   fs.writeFileSync(path.join(dir, 'index.html'), html);
 };
 const published = '2026-11-10';
-write('', page({ title: `${cfg.siteName}: Retro Handheld Buying Guides`, desc: 'Honest buying guides for retro gaming handhelds at every price point, all available on Amazon.', url: '/', body: blogHome, canonical: `${cfg.domain}/${latest.slug}/` }));
+write('', page({ title: `${cfg.siteName}: Retro Handheld Buying Guides`, desc: 'Honest buying guides for retro gaming handhelds at every price point, all available on Amazon.', url: '/', body: blogHome }));
 for (const p of posts) write(p.slug, page({ title: `${p.title} | ${cfg.siteName}`, desc: p.desc, url: `/${p.slug}/`, body: p.body, type: 'article', datePublished: published }));
 write('guides', page({ title: `Setup Guides | ${cfg.siteName}`, desc: 'Practical setup guides for retro gaming handhelds.', url: '/guides/', body: guidesIndexBody }));
 for (const g of guides) {

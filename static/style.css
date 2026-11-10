@@ -59,3 +59,10 @@ th{color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.05
 .faq summary{cursor:pointer;font-weight:700}
 footer.site{border-top:2px solid var(--line);margin-top:64px;padding:28px 0 48px;color:var(--muted);font-size:14px;background:#0a0c19}
 footer.site a{color:var(--muted)}
+.feed{margin:8px 0 24px}
+.entry{border-bottom:1px solid var(--line);padding:26px 0}
+.entry h2{font-size:28px;line-height:1.25;margin:10px 0 4px}
+.entry h2 a{color:var(--text);text-decoration:none}
+.entry h2 a:hover{color:var(--accent)}
+.entry p{margin:6px 0}
+.more{font-weight:700}
