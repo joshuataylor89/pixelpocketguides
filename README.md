@@ -32,3 +32,5 @@ This regenerates everything in `public/` (no dependencies needed, Node 18+).
 3. Build settings: **Build command** `node build.mjs`, **Build output directory** `public`.
 4. After the first deploy, open the project → **Custom domains → Set up a domain** → `pixelpocketguides.com` (and `www`).
 5. Optional: enable Web Analytics in Cloudflare for privacy-friendly traffic stats, then mention it on the privacy page.
+
+_Deployed via Cloudflare Workers (build: node build.mjs, deploy: npx wrangler deploy)._
