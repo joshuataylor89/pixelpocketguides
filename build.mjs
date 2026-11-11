@@ -520,6 +520,102 @@ ${disclosureBox}
   posts.push({ slug, title, desc, body, blurb: 'Why the Steam Deck OLED still wins in 2026: its Steam library, real-world battery life, comfort and HDR OLED screen, plus a 2TB bundle on Amazon.', kicker: 'STEAM DECK' });
 }
 
+// POSTS 7-10: stick and flip lists
+{
+  const D = {
+    'retroid-pocket-6': { name: 'Retroid Pocket 6', form: 'horizontal', badge: 'Premium Dual Sticks', price: '~$240', q: 'Retroid Pocket 6', specs: [['Screen', '5.5" 16:9 AMOLED, 1920×1080, 120Hz'], ['Chip / RAM', 'Snapdragon 8 Gen 2 / 8GB'], ['Battery', '6,000mAh'], ['Weight', '304g'], ['OS', 'Android 13 and Linux'], ['Sticks', 'Two Hall-effect sticks (per Retro Dodo)']], verdict: 'A big, bright AMOLED screen, a Snapdragon 8 Gen 2 chip and two Hall-effect sticks make this a strong all-rounder. Retro Catalog lists it as best for PS2 and GameCube.' },
+    'retroid-nova': { name: 'Retroid Pocket Nova', form: 'horizontal', badge: 'Compact Dual Sticks', price: '~$229', q: 'Retroid Pocket Nova', specs: [['Screen', '4.5" 4:3 AMOLED, 1280×960, 120Hz'], ['Chip / RAM', 'Snapdragon 8 Gen 2 / 8GB'], ['Battery', '5,000mAh'], ['Weight', '255g'], ['OS', 'Android 13 and Linux'], ['Sticks', 'Two Hall-effect sticks (per Retro Dodo)']], verdict: 'The same Snapdragon 8 Gen 2 chip in a lighter, more compact 4:3 body with a 120Hz AMOLED screen. A good fit if you mostly play classic systems and still want proper sticks.' },
+    'rg-ds-plus': { name: 'Anbernic RG DS Plus', form: 'horizontal', badge: 'Dual-Screen Budget', price: '~$95', q: 'Anbernic RG DS Plus', specs: [['Screens', 'Two 4.3" 4:3 IPS, 1024×768'], ['Chip / RAM', 'Rockchip RK3568 / 1GB'], ['Battery', '4,000mAh'], ['Weight', '345g'], ['OS', 'Linux'], ['Storage', 'Dual microSD slots'], ['Stick', 'One analog stick (per Retro Dodo)']], verdict: 'A budget dual-screen handheld for Nintendo DS games, with one analog stick. Retro Catalog lists it as best for NDS and Dreamcast. Retro Dodo notes the stick is not high quality.' },
+    'sf2000': { name: 'DATA FROG SF2000', form: 'horizontal', badge: 'Ultra-Budget', price: 'Check Amazon', q: 'DATA FROG SF2000', specs: [['Stick', 'One analog stick (per Tech Tactician)']], verdict: 'An ultra-cheap handheld that Tech Tactician describes as having a single analog stick. Check the current Amazon listing for the exact model, price and controls before you buy.' },
+    'rg-rotate': { name: 'Anbernic RG Rotate', form: 'square', badge: 'Square Screen', price: '~$85', q: 'Anbernic RG Rotate', specs: [['Screen', '3.5" 1:1 IPS, 720×720'], ['Chip / RAM', 'UNISOC Tiger T618 / 3GB'], ['Battery', '2,000mAh'], ['Weight', '167g'], ['OS', 'Android 12'], ['Controls', 'No analog sticks (per Retro Dodo)'], ['Best for', 'Arcade and Game Boy']], verdict: 'A small, light handheld with a square screen that suits arcade and Game Boy games, with a D-pad and no sticks.' },
+    'rg34xxsp': { name: 'Anbernic RG-34XXSP', form: 'clamshell', badge: 'Best Flip Overall', price: '~$67', q: 'Anbernic RG34XXSP', specs: [['Screen', '3.4" 3:2 IPS, 720×480, 110Hz'], ['Chip / RAM', 'Allwinner H700 / 2GB'], ['Battery', '3,300mAh'], ['Weight', '178g'], ['OS', 'Linux'], ['Best for', 'GBA and Game Gear']], verdict: 'A fold-up handheld with a sharp 3:2 screen and a 2GB chip, which Retro Catalog tags as a Staff Pick. Retro Dodo lists it with two Hall-effect sticks.' },
+    'miyoo-flip': { name: 'Miyoo Flip', form: 'clamshell', badge: 'Best Flip for Dreamcast & N64', price: '~$78', q: 'Miyoo Flip', specs: [['Screen', '3.5" 4:3 IPS, 640×480'], ['Chip / RAM', 'Rockchip RK3566 / 1GB'], ['Battery', '3,000mAh'], ['Weight', '165g'], ['OS', 'Linux'], ['Best for', 'Dreamcast and N64']], verdict: 'A pocketable clamshell with a 4:3 screen that Retro Catalog tags as a Staff Pick and lists as best for Dreamcast and N64.' },
+    'rp-flip2': { name: 'Retroid Pocket Flip 2', form: 'clamshell', badge: 'Most Powerful Flip', price: '~$190 to ~$220', q: 'Retroid Pocket Flip 2', specs: [['Screen', '5.5" 16:9 AMOLED, 1920×1080, 60Hz'], ['Chip', 'Dimensity 1100 (~$190) or Snapdragon 865 (~$220)'], ['RAM', '8GB'], ['Battery', '5,000mAh'], ['Weight', '300g'], ['OS', 'Android 13 (Snapdragon 865 also lists Linux)']], verdict: 'A flip-style Android handheld with a big 1080p AMOLED screen and 8GB of RAM, in two chip options. Retro Catalog lists both as best for PS2 and GameCube.' },
+    'rg-sp': { name: 'Anbernic RG SP', form: 'clamshell', badge: 'Budget Flip', price: '~$65', q: 'Anbernic RG SP', specs: [['Screen', '3.4" 3:2 IPS, 720×480'], ['Chip / RAM', 'Allwinner H700 / 1GB'], ['Battery', '3,300mAh'], ['Weight', '168g'], ['OS', 'Linux'], ['Best for', 'GBA and Game Gear']], verdict: 'A light, affordable clamshell with a 3:2 screen, tagged a Staff Pick by Retro Catalog.' },
+    'miyoo-mini-flip': { name: 'Miyoo Mini Flip', form: 'clamshell', badge: 'Smallest Flip', price: '~$60', q: 'Miyoo Mini Flip', specs: [['Screen', '2.8" 4:3 IPS, 750×560'], ['Chip / RAM', 'SigmaStar SSD202D / 128MB'], ['Battery', '2,500mAh'], ['Weight', '116g'], ['OS', 'Linux'], ['Best for', 'PS1 and SNES']], verdict: 'The lightest and smallest flip here at 116g, a simple pick for PS1 and SNES games.' }
+  };
+  const dcard = (d, id, rank) => `<section class="product" id="${id}">
+  ${thumb(d)}
+  <div>
+    <div class="rank">#${rank}</div>
+    <h3>${esc(d.name)}<span class="badge">${esc(d.badge)}</span></h3>
+    <div class="price">${esc(d.price)}</div>
+    <p>${esc(d.verdict)}</p>
+    <ul class="specs">${d.specs.map(([k, v]) => `<li><b>${esc(k)}:</b> ${esc(v)}</li>`).join('')}</ul>
+    ${buyBtn({ amazonQuery: d.q, asin: '', link: d.link })}
+  </div>
+</section>`;
+  const entry = (id, rank) => (P[id] ? productCard(P[id], rank) : dcard(D[id], id, rank));
+  const nm = (id) => (P[id] ? P[id].name : D[id].name);
+  const pr = (id) => (P[id] ? P[id].price : D[id].price);
+  const glance = (ids) => `<ul>${ids.map((id) => `<li><a href="#${id}">${esc(nm(id))}</a> (${esc(pr(id))})</li>`).join('')}</ul>`;
+  const more = `<p>More handheld guides: <a href="/best-retro-handhelds-holiday-2026/">Top 10 Retro Handhelds</a>, <a href="/best-horizontal-retro-handhelds-2026/">Top 5 Horizontal</a>, <a href="/best-vertical-retro-handhelds-2026/">Top 5 Vertical</a>, <a href="/best-dual-joystick-retro-handhelds-2026/">Top 5 Dual-Joystick</a>, <a href="/best-single-joystick-retro-handhelds-2026/">Top 3 Single-Joystick</a>, <a href="/best-joystick-free-retro-handhelds-2026/">Top 5 Joystick-Free</a> and <a href="/best-flip-clamshell-retro-handhelds-2026/">Top 5 Flip Handhelds</a>. Add a card from our <a href="/best-microsd-cards-for-retro-handhelds-2026/">microSD card guide</a>.</p>`;
+  const srcs = `<h2>Where this guide comes from</h2><p>We have not hands-on tested these devices. Specs and prices come from Retro Catalog's handheld database and published reviews, including <a href="https://retrododo.com/best-retro-handhelds/" rel="noopener" target="_blank">Retro Dodo</a> and <a href="https://retrocatalog.com/best-gaming-handhelds" rel="noopener" target="_blank">Retro Catalog</a>. Prices are approximate and change often, so check the current Amazon listing before you buy.</p>`;
+  const mk = ({ slug, title, desc, pill, lead, ids, intro, kicker, blurb, extra }) => {
+    const body = `<article>
+<span class="pill">${esc(pill)}</span>
+<h1>${esc(title)}</h1>
+<p class="meta">Updated ${esc(cfg.updated)}</p>
+<p class="lead">${lead}</p>
+<h2>At a glance</h2>
+${glance(ids)}
+<h2>${esc(intro[0])}</h2>
+<p>${intro[1]}</p>
+<h2>Our ranked picks</h2>
+${ids.map((id, i) => entry(id, i + 1)).join('\n')}
+${extra}
+${more}
+${srcs}
+${disclosureBox}
+</article>`;
+    posts.push({ slug, title, desc, body, blurb, kicker });
+  };
+  mk({
+    slug: 'best-dual-joystick-retro-handhelds-2026',
+    title: 'Top 5 Retro Handhelds with Dual Joysticks for Holiday 2026',
+    desc: 'The best retro handhelds with two analog sticks for 2026: Android handhelds for PS2, GameCube, PSP and Dreamcast, with Hall-effect sticks. All on Amazon.',
+    pill: 'DUAL JOYSTICK HANDHELDS',
+    lead: 'If you want to play PSP, Dreamcast, GameCube, PS2 or Nintendo 64 games, you want two analog sticks. These are our top 5 retro handhelds with dual joysticks, from a budget Android pick to a Snapdragon 8 Gen 2 powerhouse, all sold on Amazon.',
+    ids: ['pocket-air-mini', 'retroid-nova', 'retroid-pocket-6', 'rg477m', 'odin-2'],
+    intro: ['Why dual joysticks matter', 'Many 3D games, from N64 to PS2 and GameCube, expect two analog sticks, one to move and one to aim the camera. A handheld with two sticks lets you play them the way they were designed. All five picks use Hall-effect sticks, which are designed to resist drift.'],
+    kicker: 'TOP 5 DUAL-STICK', blurb: 'Five retro handhelds with two analog sticks, from the budget AYANEO Pocket Air Mini to the AYN Odin 2.',
+    extra: '<h2>How to choose</h2><ul><li><b>Budget:</b> the Pocket Air Mini is the cheapest way in.</li><li><b>Power:</b> the Retroid Pocket Nova, Retroid Pocket 6 and AYN Odin 2 use a Snapdragon 8 Gen 2 chip for PS2 and GameCube.</li><li><b>Screen:</b> pick 4:3 for classic games or a large 16:9 screen for PSP and modern titles.</li></ul>'
+  });
+  mk({
+    slug: 'best-single-joystick-retro-handhelds-2026',
+    title: 'Top 3 Retro Handhelds with a Single Joystick for Holiday 2026',
+    desc: 'The best retro handhelds with one analog stick for 2026: affordable picks for DS, arcade and classic games. All on Amazon.',
+    pill: 'SINGLE JOYSTICK HANDHELDS',
+    lead: 'A single analog stick is enough for DS games, arcade titles and 3D games that do not need a second stick, and it keeps the handheld small and cheap. Here are three retro handhelds with one joystick, all on Amazon.',
+    ids: ['magicx-zero40', 'rg-ds-plus', 'sf2000'],
+    intro: ['Single-stick handhelds', 'These devices have one analog stick instead of two. That suits Nintendo DS, PS1 and arcade games, but you will want a dual-stick handheld for games that need a second stick for the camera. See our <a href="/best-dual-joystick-retro-handhelds-2026/">dual-joystick picks</a>.'],
+    kicker: 'TOP 3 SINGLE-STICK', blurb: 'Three retro handhelds with one analog stick, including the MagicX Zero 40 and Anbernic RG DS Plus.',
+    extra: '<h2>Before you buy</h2><p>Stick counts and models vary by listing. Confirm the number of sticks on the Amazon product page before you order.</p>'
+  });
+  mk({
+    slug: 'best-joystick-free-retro-handhelds-2026',
+    title: 'Top 5 Joystick-Free Retro Handhelds for Holiday 2026',
+    desc: 'The best retro handhelds with no analog sticks for 2026: D-pad-only handhelds for Game Boy, GBA, SNES, PS1 and arcade games. All on Amazon.',
+    pill: 'JOYSTICK-FREE HANDHELDS',
+    lead: 'No joystick, no problem. Classic 8-bit, 16-bit and Game Boy games were built for a D-pad, and handhelds without sticks stay small, light and cheap. Here are our top 5 joystick-free retro handhelds, all sold on Amazon.',
+    ids: ['trimui-brick', 'rg35xx-plus', 'rg35xxsp', 'analogue-pocket', 'rg-rotate'],
+    intro: ['Why choose a handheld without sticks', 'A D-pad-only handheld is smaller, lighter and usually cheaper. It is the best fit for Game Boy, GBA, NES, SNES and arcade games. If you also want N64, PSP or Dreamcast, see our <a href="/best-dual-joystick-retro-handhelds-2026/">dual-joystick picks</a>.'],
+    kicker: 'TOP 5 NO-STICK', blurb: 'Five D-pad-only retro handhelds, from the TRIMUI Brick to the Analogue Pocket.',
+    extra: ''
+  });
+  mk({
+    slug: 'best-flip-clamshell-retro-handhelds-2026',
+    title: 'Top 5 Flip (Clamshell) Retro Handhelds for Holiday 2026',
+    desc: 'The best flip and clamshell retro handhelds for 2026: fold-up handhelds for GBA, SNES, PS1, Dreamcast, PS2 and more. All on Amazon.',
+    pill: 'FLIP HANDHELDS',
+    lead: 'A flip handheld folds shut to protect the screen and slips into a pocket, the same idea as the Game Boy Advance SP. Here are our top 5 flip (clamshell) retro handhelds on Amazon, from tiny budget pocket pals to a big-screen Android flip.',
+    ids: ['rg34xxsp', 'miyoo-flip', 'rp-flip2', 'rg-sp', 'miyoo-mini-flip'],
+    intro: ['Why choose a flip handheld', 'The hinged lid protects the screen in a bag or pocket, and the shape feels like the classic Game Boy Advance SP. Most flip handhelds are small and affordable. The Retroid Pocket Flip 2 adds a big AMOLED screen and Android power.'],
+    kicker: 'TOP 5 FLIP', blurb: 'Five fold-up handhelds, from the budget Anbernic RG SP to the Android-powered Retroid Pocket Flip 2.',
+    extra: ''
+  });
+}
+
 // ---------- Static pages ----------
 const aboutBody = `<article><h1>About ${esc(cfg.siteName)}</h1>
 <p class="lead">Pixel Pocket Guides helps you pick the right retro gaming handheld without wading through hundreds of near-identical devices.</p>
@@ -600,7 +696,9 @@ const previews = {
   'best-retro-handhelds-holiday-2026': P['rg-cube'].image,
   'retro-handheld-buying-guide-by-price-2026': P['trimui-brick'].image,
   'best-vertical-retro-handhelds-2026': P['trimui-brick'].image,
-  'best-horizontal-retro-handhelds-2026': P['pocket-air-mini'].image
+  'best-horizontal-retro-handhelds-2026': P['pocket-air-mini'].image,
+  'best-dual-joystick-retro-handhelds-2026': P['pocket-air-mini'].image,
+  'best-joystick-free-retro-handhelds-2026': P['trimui-brick'].image
 };
 const entryCard = (p, i) => `<article class="entry${i === 0 ? ' lead-entry' : ''}"><a class="entry-img" href="/${p.slug}/" aria-label="${esc(p.title)}">${previews[p.slug] ? `<img referrerpolicy="no-referrer" src="${esc(previews[p.slug])}" alt="${esc(p.title)}" loading="${i < 2 ? 'eager' : 'lazy'}">` : '<span class="entry-ph">PIXEL POCKET</span>'}</a><div class="entry-body"><span class="pill">${esc(p.kicker)}</span><h2><a href="/${p.slug}/">${esc(p.title)}</a></h2><p class="meta">${fmtDate(p.date || '2026-11-10')}</p><p>${esc(p.blurb || p.desc)}</p><p><a class="more" href="/${p.slug}/">Read the full guide →</a></p></div></article>`;
 const blogHome = `<section class="hero">
