@@ -8,6 +8,7 @@
   var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   function relText(d) { if (d.upcoming) return 'Upcoming *'; var p = d.released.split('-'); return MONTHS[+p[1] - 1] + '. ' + p[0]; }
   function icon(d) {
+    if (d.img) return '<img src="/img/d/' + d.slug + '/icon.webp" alt="' + esc(d.name) + ' handheld" width="480" height="360" loading="lazy" decoding="async">';
     var f = d.form[0] || 'Horizontal', big = d.size.indexOf('Big') > -1;
     var s = '#0d0f1f', c = '#e9ecff';
     if (f === 'Vertical' || f === 'Micro') return '<svg viewBox="0 0 80 110" aria-hidden="true"><rect x="14" y="4" width="52" height="102" rx="10" fill="' + c + '"/><rect x="22" y="12" width="36" height="40" rx="3" fill="' + s + '"/><rect x="27" y="68" width="14" height="4" fill="' + s + '"/><rect x="32" y="63" width="4" height="14" fill="' + s + '"/><circle cx="52" cy="66" r="3.5" fill="' + s + '"/><circle cx="58" cy="74" r="3.5" fill="' + s + '"/></svg>';

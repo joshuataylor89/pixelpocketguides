@@ -102,7 +102,7 @@ const faqBlock = (items) => `<h2>Quick answers</h2><div class="faq">${items
 const microSD = `https://www.amazon.com/s?k=${encodeURIComponent('microSD card 256GB')}&tag=${cfg.amazonTag}`;
 
 // ---------- Page shell ----------
-function page({ title, desc, url, body, type = 'website', datePublished, canonical, wide = false, scripts = '', crumbs = null, product = null }) {
+function page({ title, desc, url, body, type = 'website', datePublished, canonical, wide = false, scripts = '', crumbs = null, product = null, image = null }) {
   const full = cfg.domain + url;
   const graph = [];
   if (type === 'article') {
@@ -130,14 +130,14 @@ function page({ title, desc, url, body, type = 'website', datePublished, canonic
 <meta property="og:type" content="${type}">
 <meta property="og:url" content="${full}">
 <meta property="og:site_name" content="${esc(cfg.siteName)}">
-<meta property="og:image" content="${cfg.domain}/og-image.png">
+<meta property="og:image" content="${image ? cfg.domain + image : cfg.domain + '/og-image.png'}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="${esc(cfg.siteName)} logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(desc)}">
-<meta name="twitter:image" content="${cfg.domain}/og-image.png">
+<meta name="twitter:image" content="${image ? cfg.domain + image : cfg.domain + '/og-image.png'}">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -825,7 +825,7 @@ ${ordered.map(entryCard).join('\n')}
 // ---------- Write everything ----------
 fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(out, { recursive: true });
-for (const f of fs.readdirSync(path.join(root, 'static'))) fs.copyFileSync(path.join(root, 'static', f), path.join(out, f));
+fs.cpSync(path.join(root, 'static'), out, { recursive: true });
 
 const write = (rel, html) => {
   const dir = path.join(out, rel);
@@ -843,6 +843,7 @@ for (const g of guides) {
 const hhData = JSON.parse(fs.readFileSync(path.join(root, 'data', 'handhelds.json'), 'utf8'));
 const slugify = (s) => s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 { const seen = {}; for (const d of hhData) { let s = slugify(d.name), n = 2; while (seen[s]) s = `${slugify(d.name)}-${n++}`; seen[s] = 1; d.slug = s; } }
+for (const d of hhData) { const dir = path.join(root, 'static', 'img', 'd', d.slug); if (fs.existsSync(path.join(dir, 'icon.webp'))) d.img = 1; if (fs.existsSync(dir)) d.n = fs.readdirSync(dir).filter((f) => /^\d+\.webp$/.test(f)).length; }
 const hhBody = `<div class="hh-head"><div><span class="pill">DATABASE</span><h1>Retro Handheld Database</h1></div></div>
 <p class="meta" style="margin:0 0 8px">Search ${hhData.length} handhelds, filter by specs and compare prices. Buttons search Amazon, and not every device is sold there, so check the listing.</p>
 <div class="hh-bar">
@@ -860,7 +861,8 @@ ${disclosureBox}
 <aside id="hh-panel" aria-label="Filters"><div class="hh-ph"><b>Filters</b><button type="button" id="hh-close" aria-label="Close">×</button></div><div id="hh-panel-body"></div></aside>`;
 const hhScripts = `<script id="hh-data" type="application/json">${JSON.stringify({ tag: cfg.amazonTag, devices: hhData }).replace(/</g, '\\u003c')}</script><script src="/handhelds.js" defer></script>`;
 // ---- device detail pages ----
-const devIcon = (d) => {
+const devIcon = (d, eager) => {
+  if (d.img) return `<img src="/img/d/${d.slug}/icon.webp" alt="${esc(d.name)} handheld" width="480" height="360"${eager ? ' fetchpriority="high"' : ' loading="lazy"'} decoding="async">`;
   const f = d.form[0] || 'Horizontal', big = d.size.includes('Big'), s = '#0d0f1f', c = '#e9ecff';
   if (f === 'Vertical' || f === 'Micro') return `<svg viewBox="0 0 80 110" role="img" aria-label="${esc(d.name)}"><rect x="14" y="4" width="52" height="102" rx="10" fill="${c}"/><rect x="22" y="12" width="36" height="40" rx="3" fill="${s}"/><rect x="27" y="68" width="14" height="4" fill="${s}"/><rect x="32" y="63" width="4" height="14" fill="${s}"/><circle cx="52" cy="66" r="3.5" fill="${s}"/><circle cx="58" cy="74" r="3.5" fill="${s}"/></svg>`;
   if (f === 'Clamshell') return `<svg viewBox="0 0 120 90" role="img" aria-label="${esc(d.name)}"><rect x="14" y="4" width="92" height="40" rx="8" fill="${c}"/><rect x="26" y="10" width="68" height="28" rx="2" fill="${s}"/><rect x="14" y="48" width="92" height="38" rx="8" fill="${c}" opacity=".85"/><rect x="26" y="62" width="14" height="4" fill="${s}"/><rect x="31" y="57" width="4" height="14" fill="${s}"/><circle cx="84" cy="62" r="3.5" fill="${s}"/><circle cx="92" cy="68" r="3.5" fill="${s}"/></svg>`;
@@ -894,7 +896,7 @@ for (const d of hhData) {
 <div class="dv">
 <aside class="dv-side">
   <h1 class="hh-title">${dvNameLink(d)}</h1>
-  <div class="hh-img dv-img">${devIcon(d)}</div>
+  <div class="hh-img dv-img">${devIcon(d, true)}</div>
   <a class="btn hh-buy dv-buy" href="${esc(dvAmazon(d))}" target="_blank" rel="sponsored nofollow noopener">Check price on Amazon <small>→</small></a>
   <a class="btn dv-cmp" href="/compare/?a=${d.slug}">Compare with another handheld</a>
   <div class="dv-box">${dvKv([['Released', relText(d)], ['OS', d.osText], ['Screen', d.screen], ['Best for', d.best.join(', ')], ['Price', d.priceText]])}</div>
@@ -902,6 +904,7 @@ for (const d of hhData) {
   ${sim.map((x) => `<a class="hh-row" href="/handhelds/${x.slug}/"><span class="hh-rimg">${devIcon(x)}</span><span class="hh-rmain"><b>${dvName(x)}</b><span class="hh-rtags">${x.os.concat(x.form).slice(0, 2).map((t) => `<span class="hh-tag">${esc(t)}</span>`).join('')}</span></span><span class="hh-rside"><b class="hh-price">${esc(x.priceText)}</b></span></a>`).join('\n')}
 </aside>
 <div class="dv-main">
+  ${d.n ? `<section class="dv-panel dv-gal"><h2>More photos</h2><div class="gal">${Array.from({ length: d.n }, (_, i) => `<a href="/img/d/${d.slug}/${i + 1}.webp" data-gal><img src="/img/d/${d.slug}/${i + 1}.webp" alt="${esc(d.name)} photo ${i + 1}" width="640" height="640" loading="lazy" decoding="async"></a>`).join('')}</div></section>` : ''}
   <section class="dv-panel"><h2>Best for</h2><div class="hh-tags">${d.best.map((t) => tagA('best', t)).join('')}</div></section>
   <section class="dv-panel"><h2>Screen</h2>${dvKv([['Aspect ratio', d.aspect], ['Screen size', d.screenIn ? `${d.screenIn}"` : ''], ['Resolution', d.res], ['Refresh rate', d.hz ? `${d.hz} Hz` : ''], ['Screen type', d.panel], ['Pixel density', d.ppi]])}</section>
   <section class="dv-panel"><h2>Build and Ergonomics</h2>${dvKv([['Material', d.material], ['Weight', d.weight ? `${d.weight} g` : ''], ['Speaker placement', d.speaker], ['Charge port', d.charge]])}</section>
@@ -911,7 +914,7 @@ for (const d of hhData) {
   ${disclosureBox}
 </div>
 </div>`;
-  write(`handhelds/${d.slug}`, page({ title: `${d.name} Specs, Price and Release Date | ${cfg.siteName}`, desc: `${d.name} specs: ${d.screen} screen, ${d.chip || d.osText}, ${d.battery ? d.battery.toLocaleString('en-US') + ' mAh battery, ' : ''}${d.priceText}. Best for ${d.best.join(', ') || 'retro games'}.`, url: `/handhelds/${d.slug}/`, body, wide: true, crumbs: [['Home', '/'], ['Handhelds', '/handhelds/'], [d.name, `/handhelds/${d.slug}/`]], product: { '@type': 'Product', name: d.name, brand: { '@type': 'Brand', name: d.brand }, category: 'Retro gaming handheld', description: `${d.name}: ${d.screen} screen, ${d.chip || d.osText}. Best for ${d.best.join(', ') || 'retro games'}.` } }));
+  write(`handhelds/${d.slug}`, page({ title: `${d.name} Specs, Price and Release Date | ${cfg.siteName}`, desc: `${d.name} specs: ${d.screen} screen, ${d.chip || d.osText}, ${d.battery ? d.battery.toLocaleString('en-US') + ' mAh battery, ' : ''}${d.priceText}. Best for ${d.best.join(', ') || 'retro games'}.`, url: `/handhelds/${d.slug}/`, body, wide: true, image: d.img ? `/img/d/${d.slug}/icon.webp` : null, scripts: d.n ? '<script>document.addEventListener("click",function(e){var a=e.target.closest("a[data-gal]");if(!a)return;e.preventDefault();var o=document.createElement("div");o.className="lb";o.innerHTML="<img src=\\""+a.href+"\\" alt=\\"\\">";o.onclick=function(){o.remove()};document.addEventListener("keydown",function k(ev){if(ev.key==="Escape"){o.remove();document.removeEventListener("keydown",k)}});document.body.appendChild(o)})</script>' : '', crumbs: [['Home', '/'], ['Handhelds', '/handhelds/'], [d.name, `/handhelds/${d.slug}/`]], product: { '@type': 'Product', ...(d.img ? { image: [`${cfg.domain}/img/d/${d.slug}/icon.webp`] } : {}), name: d.name, brand: { '@type': 'Brand', name: d.brand }, category: 'Retro gaming handheld', description: `${d.name}: ${d.screen} screen, ${d.chip || d.osText}. Best for ${d.best.join(', ') || 'retro games'}.` } }));
 }
 
 // ---- brand pages ----
