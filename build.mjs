@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { makePosts, slugMap } from './posts2.mjs';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const cfg = JSON.parse(fs.readFileSync(path.join(root, 'config.json'), 'utf8'));
@@ -106,7 +107,7 @@ function page({ title, desc, url, body, type = 'website', datePublished, canonic
   const full = cfg.domain + url;
   const graph = [];
   if (type === 'article') {
-    graph.push({ '@context': 'https://schema.org', '@type': 'Article', headline: title, description: desc, image: `${cfg.domain}/og-image.png`, datePublished, dateModified: datePublished, mainEntityOfPage: full, author: { '@type': 'Organization', name: cfg.siteName, url: cfg.domain }, publisher: { '@type': 'Organization', name: cfg.siteName, url: cfg.domain } });
+    graph.push({ '@context': 'https://schema.org', '@type': 'Article', headline: title, description: desc, image: `${cfg.domain}${image || '/og-image.png'}`, datePublished, dateModified: datePublished, mainEntityOfPage: full, author: { '@type': 'Organization', name: cfg.siteName, url: cfg.domain }, publisher: { '@type': 'Organization', name: cfg.siteName, url: cfg.domain } });
     const faqs = [...String(body).matchAll(/<details><summary>([\s\S]*?)<\/summary><p>([\s\S]*?)<\/p><\/details>/g)].map((m) => ({ '@type': 'Question', name: m[1].replace(/<[^>]+>/g, ''), acceptedAnswer: { '@type': 'Answer', text: m[2].replace(/<[^>]+>/g, '') } }));
     if (faqs.length) graph.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs });
   }
@@ -798,21 +799,51 @@ ${guides.map((g) => `<a class="postcard" href="/guides/${g.slug}/"><span class="
 
 // Blog-style home page: the newest post opens in full, with the other posts and guides listed below.
 // Newest first: sort by each post's optional "date" (YYYY-MM-DD); posts with the same date go newest-added first.
-const ordered = posts.map((p, i) => ({ ...p, _i: i })).sort((a, b) => (b.date || '2026-11-10').localeCompare(a.date || '2026-11-10') || b._i - a._i);
+// Scheduled posts: each appears once its time in data/schedule.json has passed.
+{
+  const sp = path.join(root, 'data', 'schedule.json');
+  const schedule = fs.existsSync(sp) ? JSON.parse(fs.readFileSync(sp, 'utf8')) : {};
+  for (const p of makePosts({ root, cfg, esc, disclosureBox })) {
+    const at = schedule[p.slug];
+    if (!at || Date.parse(at) > Date.now()) continue;
+    p.at = at; p.date = new Date(at).toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
+    posts.push(p);
+  }
+}
+const ordered = posts.map((p, i) => ({ ...p, _i: i })).sort((a, b) => (b.at || b.date || '2026-11-10').localeCompare(a.at || a.date || '2026-11-10') || b._i - a._i);
 const fmtDate = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-const IMG = 'https://m.media-amazon.com/images/I/';
-const previews = {
-  'steam-deck-still-a-beast-2026': IMG + '61XBCgb6nnL._SL1500_.jpg',
-  'best-microsd-cards-for-retro-handhelds-2026': IMG + '618XGviQ6+L._AC_SL1500_.jpg',
-  'best-retro-handhelds-holiday-2026': P['rg-cube'].image,
-  'retro-handheld-buying-guide-by-price-2026': P['trimui-brick'].image,
-  'best-vertical-retro-handhelds-2026': P['trimui-brick'].image,
-  'best-horizontal-retro-handhelds-2026': P['pocket-air-mini'].image,
-  'best-dual-joystick-retro-handhelds-2026': P['pocket-air-mini'].image,
-  'best-joystick-free-retro-handhelds-2026': P['trimui-brick'].image,
-  'best-game-boy-style-handhelds-2026': P['trimui-brick'].image
+const SM = slugMap(root);
+const PV = {
+  'best-retro-handhelds-holiday-2026': ['Anbernic RG Cube', 3],
+  'retro-handheld-buying-guide-by-price-2026': ['Retroid Pocket Classic', 2],
+  'best-vertical-retro-handhelds-2026': ['TRIMUI Brick', 3],
+  'best-horizontal-retro-handhelds-2026': ['AYANEO Pocket Air Mini', 1],
+  'best-microsd-cards-for-retro-handhelds-2026': ['Anbernic RG 35', 4],
+  'steam-deck-still-a-beast-2026': ['Valve Steam Deck OLED', 2],
+  'best-dual-joystick-retro-handhelds-2026': ['Retroid Pocket Nova', 1],
+  'best-single-joystick-retro-handhelds-2026': ['Anbernic RG DS', 4],
+  'best-joystick-free-retro-handhelds-2026': ['Anbernic RG-35XX Plus', 4],
+  'best-flip-clamshell-retro-handhelds-2026': ['Retroid Pocket Flip 2 SD865', 2],
+  'miyoo-flip-vs-anbernic-rg35xxsp': ['Miyoo Flip', 1],
+  'best-game-boy-style-handhelds-2026': ['TRIMUI Brick Hammer', 4],
+  'best-dual-screen-android-handhelds-2026': ['AYN Thor', 4],
+  'best-retro-handheld-gifts-under-100-2026': ['Anbernic RG SP', 2],
+  'anbernic-retro-handheld-lineup-2026': ['Anbernic RG Vita', 2],
+  'nintendo-switch-2-vs-rog-xbox-ally-x-vs-legion-go-2': ['Nintendo Switch 2', 1],
+  'best-android-handhelds-under-250-2026': ['Retroid Pocket G2', 1],
+  'retroid-pocket-6-vs-ayn-odin-3': ['Retroid Pocket 6', 1],
+  'best-large-screen-android-handhelds-2026': ['AYN Odin 2 Portal', 5],
+  'handhelds-with-the-biggest-batteries-2026': ['AYANEO Pocket S2', 1],
+  'best-new-vertical-handhelds-2026': ['Anbernic RG Rotate', 4]
 };
-const entryCard = (p, i) => `<article class="entry${i === 0 ? ' lead-entry' : ''}"><a class="entry-img" href="/${p.slug}/" aria-label="${esc(p.title)}">${previews[p.slug] ? `<img referrerpolicy="no-referrer" src="${esc(previews[p.slug])}" alt="${esc(p.title)}" loading="${i < 2 ? 'eager' : 'lazy'}">` : '<span class="entry-ph">PIXEL POCKET</span>'}</a><div class="entry-body"><span class="pill">${esc(p.kicker)}</span><h2><a href="/${p.slug}/">${esc(p.title)}</a></h2><p class="meta">${fmtDate(p.date || '2026-11-10')}</p><p>${esc(p.blurb || p.desc)}</p><p><a class="more" href="/${p.slug}/">Read the full guide →</a></p></div></article>`;
+const previews = {};
+for (const [slug, [name, n]] of Object.entries(PV)) {
+  const rel = `/img/d/${SM[name]}/${n}.webp`;
+  if (!fs.existsSync(path.join(root, 'static', rel))) throw new Error('Missing preview image ' + rel);
+  previews[slug] = rel;
+}
+{ const used = Object.values(previews); if (new Set(used).size !== used.length) throw new Error('Duplicate preview image'); }
+const entryCard = (p, i) => `<article class="entry${i === 0 ? ' lead-entry' : ''}"><a class="entry-img" href="/${p.slug}/" aria-label="${esc(p.title)}">${previews[p.slug] ? `<img src="${esc(previews[p.slug])}" alt="${esc(p.title)}" width="640" height="640" loading="${i < 2 ? 'eager' : 'lazy'}">` : '<span class="entry-ph">PIXEL POCKET</span>'}</a><div class="entry-body"><span class="pill">${esc(p.kicker)}</span><h2><a href="/${p.slug}/">${esc(p.title)}</a></h2><p class="meta">${fmtDate(p.date || '2026-11-10')}</p><p>${esc(p.blurb || p.desc)}</p><p><a class="more" href="/${p.slug}/">Read the full guide →</a></p></div></article>`;
 const blogHome = `<section class="hero hero-modern">
 <h1>Retro handheld buying guides</h1>
 <p class="tagline">Find the right handheld faster with ranked picks, clear specs and side-by-side comparisons.</p>
@@ -835,7 +866,7 @@ const write = (rel, html) => {
 };
 const published = '2026-11-10';
 write('', page({ title: `${cfg.siteName}: Retro Handheld Buying Guides`, desc: 'Honest buying guides for retro gaming handhelds at every price point, all available on Amazon.', url: '/', body: blogHome }));
-for (const p of posts) write(p.slug, page({ title: `${p.title} | ${cfg.siteName}`, desc: p.desc, url: `/${p.slug}/`, body: p.body, type: 'article', datePublished: published }));
+for (const p of posts) write(p.slug, page({ title: `${p.title} | ${cfg.siteName}`, desc: p.desc, url: `/${p.slug}/`, body: p.body, type: 'article', datePublished: p.date || published, image: previews[p.slug] || null }));
 write('guides', page({ title: `Setup Guides | ${cfg.siteName}`, desc: 'Practical setup guides for retro gaming handhelds.', url: '/guides/', body: guidesIndexBody }));
 for (const g of guides) {
   const gbody = `<article><span class="pill">${esc(g.kicker)}</span><h1>${esc(g.title)}</h1><p class="meta">Updated ${esc(cfg.updated)}</p>${g.body.replace('__SOURCE__', esc(g.source)).replace('__SOURCENAME__', esc(g.sourceName))}</article>`;

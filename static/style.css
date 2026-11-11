@@ -278,3 +278,4 @@ a.hh-tag:hover,a.hh-tag:focus-visible{background:#a8e8cf;color:#0d0f1f}
 .hh-buy+.hh-buy,.hh-buy.btn2{margin-left:6px}
 .cmp-foot .hh-buy+.hh-buy{margin-left:0}
 .acc{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:10px}.acc li{display:flex;flex-direction:column;gap:2px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px 14px}.acc a{font-weight:700}.acc span{color:var(--muted);font-size:14px}
+.tbl{overflow-x:auto;margin:16px 0}.tbl .cmp-table{min-width:520px}.tbl td,.tbl th{vertical-align:top;font-size:14.5px}
