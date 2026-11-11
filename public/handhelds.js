@@ -99,21 +99,22 @@
   function tagsHtml(d) { var t = d.form.concat(d.os, d.cat); return t.map(function (x) { return '<span class="hh-tag">' + esc(x) + '</span>'; }).join(''); }
   function kv(rows) { return '<dl class="hh-kv">' + rows.filter(function (r) { return r[1] && r[1] !== '?'; }).map(function (r) { return '<div><dt>' + esc(r[0]) + '</dt><dd>' + r[1] + '</dd></div>'; }).join('') + '</dl>'; }
   function top(d) { return [['Released', d.upcoming ? '<b class="hh-up">Upcoming *</b>' : esc(relText(d))], ['OS', esc(d.osText)], ['Screen', esc(d.screen)], ['Best for', esc(d.best.join(', '))], ['Price', '<b class="hh-price">' + esc(d.priceText) + '</b>']]; }
+  function href(d) { return '/handhelds/' + d.slug + '/'; }
   function buy(d) { return '<a class="btn hh-buy" href="' + esc(amazon(d)) + '" target="_blank" rel="sponsored nofollow noopener">Search on Amazon <small>→</small></a>'; }
 
   function cardFull(d) {
-    return '<article class="hh-card"><h2 class="hh-title">' + nameHtml(d) + '</h2><div class="hh-top"><div class="hh-img">' + icon(d) + '</div><div>' + kv(top(d)) + '</div></div><div class="hh-tags">' + tagsHtml(d) + '</div>' +
+    return '<article class="hh-card"><h2 class="hh-title"><a href="' + href(d) + '">' + nameHtml(d) + '</a></h2><div class="hh-top"><a class="hh-img" href="' + href(d) + '">' + icon(d) + '</a><div>' + kv(top(d)) + '</div></div><div class="hh-tags">' + tagsHtml(d) + '</div>' +
       '<h3>Screen</h3>' + kv([['Aspect ratio', esc(d.aspect)], ['Screen size', d.screenIn ? d.screenIn + '"' : ''], ['Resolution', esc(d.res)], ['Refresh rate', d.hz ? d.hz + ' Hz' : ''], ['Screen type', esc(d.panel)], ['Pixel density', esc(d.ppi)]]) +
       '<h3>Build and Ergonomics</h3>' + kv([['Material', esc(d.material)], ['Weight', d.weight ? d.weight + ' g' : ''], ['Speaker placement', esc(d.speaker)], ['Charge port', esc(d.charge)]]) +
       '<h3>Controls</h3>' + kv([['Shoulder button layout', esc(d.shoulder)], ['Additional controls', esc(d.controls)]]) +
       '<h3>Technical Specs</h3>' + kv([['Storage', esc(d.storage)], ['Battery', d.battery ? d.battery.toLocaleString('en-US') + ' mAh' : ''], ['RAM', esc(d.ram)], ['RAM type', esc(d.ramType)], ['Architecture', esc(d.arch)], ['Chipset', esc(d.chip)], ['CPU', esc(d.cpu)], ['GPU', esc(d.gpu)]]) +
-      '<p>' + buy(d) + '</p></article>';
+      '<p><a class="more" href="' + href(d) + '">View full specs →</a></p><p>' + buy(d) + '</p></article>';
   }
   function cardRecap(d) {
-    return '<article class="hh-card hh-recap"><h2 class="hh-title">' + nameHtml(d) + '</h2><div class="hh-top"><div class="hh-img">' + icon(d) + '</div><div>' + kv(top(d)) + '</div></div><div class="hh-tags">' + tagsHtml(d) + '</div><p>' + buy(d) + '</p></article>';
+    return '<article class="hh-card hh-recap"><h2 class="hh-title"><a href="' + href(d) + '">' + nameHtml(d) + '</a></h2><div class="hh-top"><a class="hh-img" href="' + href(d) + '">' + icon(d) + '</a><div>' + kv(top(d)) + '</div></div><div class="hh-tags">' + tagsHtml(d) + '</div><p>' + buy(d) + '</p></article>';
   }
   function rowPrev(d) {
-    return '<a class="hh-row" href="' + esc(amazon(d)) + '" target="_blank" rel="sponsored nofollow noopener"><span class="hh-rimg">' + icon(d) + '</span><span class="hh-rmain"><b>' + nameHtml(d) + '</b><span class="hh-rtags">' + tagsHtml(d) + '</span></span><span class="hh-rside"><b class="hh-price">' + esc(d.priceText) + '</b><span>' + esc((d.aspect || '').split(',')[0]) + (d.screenIn ? ' • ' + d.screenIn + '"' : '') + '</span></span></a>';
+    return '<a class="hh-row" href="' + href(d) + '"><span class="hh-rimg">' + icon(d) + '</span><span class="hh-rmain"><b>' + nameHtml(d) + '</b><span class="hh-rtags">' + tagsHtml(d) + '</span></span><span class="hh-rside"><b class="hh-price">' + esc(d.priceText) + '</b><span>' + esc((d.aspect || '').split(',')[0]) + (d.screenIn ? ' • ' + d.screenIn + '"' : '') + '</span></span></a>';
   }
 
   var listEl = $('#hh-list'), countEl = $('#hh-count'), moreEl = $('#hh-more');

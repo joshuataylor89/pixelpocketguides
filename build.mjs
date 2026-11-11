@@ -731,6 +731,8 @@ for (const g of guides) {
   write(`guides/${g.slug}`, page({ title: `${g.title} | ${cfg.siteName}`, desc: g.desc, url: `/guides/${g.slug}/`, body: gbody, type: 'article', datePublished: published }));
 }
 const hhData = JSON.parse(fs.readFileSync(path.join(root, 'data', 'handhelds.json'), 'utf8'));
+const slugify = (s) => s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+{ const seen = {}; for (const d of hhData) { let s = slugify(d.name), n = 2; while (seen[s]) s = `${slugify(d.name)}-${n++}`; seen[s] = 1; d.slug = s; } }
 const hhBody = `<div class="hh-head"><div><span class="pill">DATABASE</span><h1>Retro Handheld Database</h1></div></div>
 <p class="meta" style="margin:0 0 8px">Search ${hhData.length} handhelds, filter by specs and compare prices. Buttons search Amazon, and not every device is sold there, so check the listing.</p>
 <div class="hh-bar">
@@ -747,12 +749,59 @@ ${disclosureBox}
 <button type="button" id="hh-scrim" aria-label="Close filters"></button>
 <aside id="hh-panel" aria-label="Filters"><div class="hh-ph"><b>Filters</b><button type="button" id="hh-close" aria-label="Close">×</button></div><div id="hh-panel-body"></div></aside>`;
 const hhScripts = `<script id="hh-data" type="application/json">${JSON.stringify({ tag: cfg.amazonTag, devices: hhData }).replace(/</g, '\\u003c')}</script><script src="/handhelds.js" defer></script>`;
+// ---- device detail pages ----
+const devIcon = (d) => {
+  const f = d.form[0] || 'Horizontal', big = d.size.includes('Big'), s = '#0d0f1f', c = '#e9ecff';
+  if (f === 'Vertical' || f === 'Micro') return `<svg viewBox="0 0 80 110" role="img" aria-label="${esc(d.name)}"><rect x="14" y="4" width="52" height="102" rx="10" fill="${c}"/><rect x="22" y="12" width="36" height="40" rx="3" fill="${s}"/><rect x="27" y="68" width="14" height="4" fill="${s}"/><rect x="32" y="63" width="4" height="14" fill="${s}"/><circle cx="52" cy="66" r="3.5" fill="${s}"/><circle cx="58" cy="74" r="3.5" fill="${s}"/></svg>`;
+  if (f === 'Clamshell') return `<svg viewBox="0 0 120 90" role="img" aria-label="${esc(d.name)}"><rect x="14" y="4" width="92" height="40" rx="8" fill="${c}"/><rect x="26" y="10" width="68" height="28" rx="2" fill="${s}"/><rect x="14" y="48" width="92" height="38" rx="8" fill="${c}" opacity=".85"/><rect x="26" y="62" width="14" height="4" fill="${s}"/><rect x="31" y="57" width="4" height="14" fill="${s}"/><circle cx="84" cy="62" r="3.5" fill="${s}"/><circle cx="92" cy="68" r="3.5" fill="${s}"/></svg>`;
+  if (f === 'Dual-Screen') return `<svg viewBox="0 0 100 120" role="img" aria-label="${esc(d.name)}"><rect x="12" y="4" width="76" height="52" rx="8" fill="${c}"/><rect x="22" y="10" width="56" height="40" rx="2" fill="${s}"/><rect x="12" y="62" width="76" height="52" rx="8" fill="${c}"/><rect x="22" y="68" width="56" height="40" rx="2" fill="${s}"/></svg>`;
+  return `<svg viewBox="0 0 160 90" role="img" aria-label="${esc(d.name)}"><rect x="${big ? 4 : 10}" y="12" width="${big ? 152 : 140}" height="66" rx="22" fill="${c}"/><rect x="${big ? 36 : 40}" y="18" width="${big ? 88 : 80}" height="54" rx="3" fill="${s}"/><rect x="${big ? 15 : 20}" y="42" width="14" height="4" fill="${s}"/><rect x="${big ? 20 : 25}" y="37" width="4" height="14" fill="${s}"/><circle cx="136" cy="40" r="3.5" fill="${s}"/><circle cx="143" cy="47" r="3.5" fill="${s}"/></svg>`;
+};
+const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const relText = (d) => (d.upcoming ? 'Upcoming *' : `${MON[+d.released.split('-')[1] - 1]}. ${d.released.split('-')[0]}`);
+const dvKv = (rows) => `<dl class="hh-kv">${rows.filter((r) => r[1] && r[1] !== '?').map((r) => `<div><dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd></div>`).join('')}</dl>`;
+const dvName = (d) => (d.name.startsWith(d.brand) ? `<span class="hh-brand">${esc(d.brand)}</span> ${esc(d.name.slice(d.brand.length).trim())}` : esc(d.name));
+const dvAmazon = (d) => `https://www.amazon.com/s?k=${encodeURIComponent(d.name + ' handheld')}&tag=${cfg.amazonTag}`;
+const similar = (d) => hhData.filter((x) => x !== d).map((x) => {
+  let sc = 0;
+  if (x.form[0] === d.form[0]) sc += 3;
+  if (x.os[0] === d.os[0]) sc += 2;
+  if (x.brand === d.brand) sc += 1;
+  if (x.cat.some((c) => d.cat.includes(c))) sc += 1;
+  sc -= Math.abs(Math.log((x.price || 100) / (d.price || 100))) * 3;
+  return [sc, x];
+}).sort((a, b) => b[0] - a[0]).slice(0, 6).map((p) => p[1]);
+for (const d of hhData) {
+  const sim = similar(d);
+  const tags = [...d.form, ...d.size, ...d.os, ...d.cat];
+  const body = `<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/handhelds/">Handhelds</a> / ${esc(d.brand)} / ${esc(d.name)} Specs</nav>
+<div class="dv">
+<aside class="dv-side">
+  <h1 class="hh-title">${dvName(d)}</h1>
+  <div class="hh-img dv-img">${devIcon(d)}</div>
+  <a class="btn hh-buy dv-buy" href="${esc(dvAmazon(d))}" target="_blank" rel="sponsored nofollow noopener">Check price on Amazon <small>→</small></a>
+  <div class="dv-box">${dvKv([['Released', relText(d)], ['OS', d.osText], ['Screen', d.screen], ['Best for', d.best.join(', ')], ['Price', d.priceText]])}</div>
+  <h2 class="dv-sim">Similar Handhelds</h2>
+  ${sim.map((x) => `<a class="hh-row" href="/handhelds/${x.slug}/"><span class="hh-rimg">${devIcon(x)}</span><span class="hh-rmain"><b>${dvName(x)}</b><span class="hh-rtags">${x.os.concat(x.form).slice(0, 2).map((t) => `<span class="hh-tag">${esc(t)}</span>`).join('')}</span></span><span class="hh-rside"><b class="hh-price">${esc(x.priceText)}</b></span></a>`).join('\n')}
+</aside>
+<div class="dv-main">
+  <section class="dv-panel"><h2>Best for</h2><div class="hh-tags">${d.best.map((t) => `<span class="hh-tag">${esc(t)}</span>`).join('')}</div></section>
+  <section class="dv-panel"><h2>Screen</h2>${dvKv([['Aspect ratio', d.aspect], ['Screen size', d.screenIn ? `${d.screenIn}"` : ''], ['Resolution', d.res], ['Refresh rate', d.hz ? `${d.hz} Hz` : ''], ['Screen type', d.panel], ['Pixel density', d.ppi]])}</section>
+  <section class="dv-panel"><h2>Build and Ergonomics</h2>${dvKv([['Material', d.material], ['Weight', d.weight ? `${d.weight} g` : ''], ['Speaker placement', d.speaker], ['Charge port', d.charge]])}</section>
+  <section class="dv-panel"><h2>Controls</h2>${dvKv([['Shoulder button layout', d.shoulder], ['Additional controls', d.controls]])}</section>
+  <section class="dv-panel"><h2>Technical Specs</h2>${dvKv([['Storage', d.storage], ['Battery', d.battery ? `${d.battery.toLocaleString('en-US')} mAh` : ''], ['RAM', d.ram], ['RAM type', d.ramType], ['Architecture', d.arch], ['Chipset', d.chip], ['CPU', d.cpu], ['GPU', d.gpu]])}<div class="hh-tags dv-tags">${tags.map((t) => `<span class="hh-tag">${esc(t)}</span>`).join('')}</div></section>
+  <p class="hh-note">* Upcoming or recently announced. Specs and prices are approximate and come from Retro Catalog's handheld database (<a href="https://retrocatalog.com" rel="noopener" target="_blank">retrocatalog.com</a>). Not every device is sold on Amazon, so the button searches Amazon for it. Check the current listing before you buy.</p>
+  ${disclosureBox}
+</div>
+</div>`;
+  write(`handhelds/${d.slug}`, page({ title: `${d.name} Specs, Price and Release Date | ${cfg.siteName}`, desc: `${d.name} specs: ${d.screen} screen, ${d.chip || d.osText}, ${d.battery ? d.battery.toLocaleString('en-US') + ' mAh battery, ' : ''}${d.priceText}. Best for ${d.best.join(', ') || 'retro games'}.`, url: `/handhelds/${d.slug}/`, body, wide: true }));
+}
 write('handhelds', page({ title: `Retro Handheld Database: Specs, Prices and Filters | ${cfg.siteName}`, desc: 'Search and filter 120+ retro gaming handhelds by price, size, form factor, operating system, brand and specs. Compare screens, chips, batteries and more.', url: '/handhelds/', body: hhBody, wide: true, scripts: hhScripts }));
 write('about', page({ title: `About | ${cfg.siteName}`, desc: 'About Pixel Pocket Guides.', url: '/about/', body: aboutBody }));
 write('affiliate-disclosure', page({ title: `Affiliate Disclosure | ${cfg.siteName}`, desc: 'Amazon Associates affiliate disclosure.', url: '/affiliate-disclosure/', body: disclosureBody }));
 write('privacy', page({ title: `Privacy Policy | ${cfg.siteName}`, desc: 'Privacy policy for Pixel Pocket Guides.', url: '/privacy/', body: privacyBody }));
 
-const urls = ['/', ...posts.map((p) => `/${p.slug}/`), '/handhelds/', '/guides/', ...guides.map((g) => `/guides/${g.slug}/`), '/about/', '/affiliate-disclosure/', '/privacy/'];
+const urls = ['/', ...posts.map((p) => `/${p.slug}/`), '/handhelds/', ...hhData.map((d) => `/handhelds/${d.slug}/`), '/guides/', ...guides.map((g) => `/guides/${g.slug}/`), '/about/', '/affiliate-disclosure/', '/privacy/'];
 fs.writeFileSync(path.join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${cfg.domain}${u}</loc><lastmod>${published}</lastmod></url>`).join('\n')}\n</urlset>\n`);
 fs.writeFileSync(path.join(out, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${cfg.domain}/sitemap.xml\n`);
 fs.writeFileSync(path.join(out, '_headers'), `/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  X-Frame-Options: DENY\n`);
