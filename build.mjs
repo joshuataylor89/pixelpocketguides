@@ -869,6 +869,14 @@ const devIcon = (d, eager) => {
   if (f === 'Dual-Screen') return `<svg viewBox="0 0 100 120" role="img" aria-label="${esc(d.name)}"><rect x="12" y="4" width="76" height="52" rx="8" fill="${c}"/><rect x="22" y="10" width="56" height="40" rx="2" fill="${s}"/><rect x="12" y="62" width="76" height="52" rx="8" fill="${c}"/><rect x="22" y="68" width="56" height="40" rx="2" fill="${s}"/></svg>`;
   return `<svg viewBox="0 0 160 90" role="img" aria-label="${esc(d.name)}"><rect x="${big ? 4 : 10}" y="12" width="${big ? 152 : 140}" height="66" rx="22" fill="${c}"/><rect x="${big ? 36 : 40}" y="18" width="${big ? 88 : 80}" height="54" rx="3" fill="${s}"/><rect x="${big ? 15 : 20}" y="42" width="14" height="4" fill="${s}"/><rect x="${big ? 20 : 25}" y="37" width="4" height="14" fill="${s}"/><circle cx="136" cy="40" r="3.5" fill="${s}"/><circle cx="143" cy="47" r="3.5" fill="${s}"/></svg>`;
 };
+const carousel = (d) => {
+  if (!d.n) return `<div class="hh-img dv-img">${devIcon(d, true)}</div>`;
+  const slides = [`<div class="car-s on">${devIcon(d, true)}</div>`, ...Array.from({ length: d.n }, (_, i) => `<div class="car-s"><img src="/img/d/${d.slug}/${i + 1}.webp" alt="${esc(d.name)} photo ${i + 1}" width="640" height="640" loading="lazy" decoding="async"></div>`)];
+  return `<div class="hh-img dv-img car" data-car role="region" aria-roledescription="carousel" aria-label="${esc(d.name)} photos">
+  <div class="car-view">${slides.join('')}</div>
+  <button type="button" class="car-b car-prev" aria-label="Previous photo">&#8249;</button><button type="button" class="car-b car-next" aria-label="Next photo">&#8250;</button>
+  <div class="car-dots">${slides.map((_, i) => `<button type="button" class="car-d${i ? '' : ' on'}" aria-label="Show photo ${i + 1}"></button>`).join('')}</div></div>`;
+};
 const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const relText = (d) => (d.upcoming ? 'Upcoming *' : `${MON[+d.released.split('-')[1] - 1]}. ${d.released.split('-')[0]}`);
 const dvKv = (rows) => `<dl class="hh-kv">${rows.filter((r) => r[1] && r[1] !== '?').map((r) => `<div><dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd></div>`).join('')}</dl>`;
@@ -878,7 +886,8 @@ const fq = (k, v) => `/handhelds/?${k}=${encodeURIComponent(v)}`;
 const tagA = (k, v) => `<a class="hh-tag" href="${esc(fq(k, v))}" title="Show all ${esc(v)} handhelds">${esc(v)}</a>`;
 const dvNameLink = (d) => (d.name.startsWith(d.brand) ? `<a class="hh-brand" href="${esc(brandHref(d.brand))}" title="See all ${esc(d.brand)} handhelds">${esc(d.brand)}</a> ${esc(d.name.slice(d.brand.length).trim())}` : esc(d.name));
 const dvName = (d) => (d.name.startsWith(d.brand) ? `<span class="hh-brand">${esc(d.brand)}</span> ${esc(d.name.slice(d.brand.length).trim())}` : esc(d.name));
-const dvAmazon = (d) => `https://www.amazon.com/s?k=${encodeURIComponent(d.name + ' handheld')}&tag=${cfg.amazonTag}`;
+const dvAmazon = (d) => (d.asin ? `https://www.amazon.com/dp/${d.asin}?tag=${cfg.amazonTag}` : `https://www.amazon.com/s?k=${encodeURIComponent(d.name + ' handheld')}&tag=${cfg.amazonTag}`);
+const dvAli = (d) => d.ali || `https://www.aliexpress.com/wholesale?SearchText=${encodeURIComponent(d.name + ' handheld')}`;
 const similar = (d) => hhData.filter((x) => x !== d).map((x) => {
   let sc = 0;
   if (x.form[0] === d.form[0]) sc += 3;
@@ -896,15 +905,15 @@ for (const d of hhData) {
 <div class="dv">
 <aside class="dv-side">
   <h1 class="hh-title">${dvNameLink(d)}</h1>
-  <div class="hh-img dv-img">${devIcon(d, true)}</div>
-  <a class="btn hh-buy dv-buy" href="${esc(dvAmazon(d))}" target="_blank" rel="sponsored nofollow noopener">Check price on Amazon <small>→</small></a>
+  ${carousel(d)}
+  <a class="btn hh-buy dv-buy" href="${esc(dvAmazon(d))}" target="_blank" rel="sponsored nofollow noopener">${d.asin ? 'View on Amazon' : 'Check price on Amazon'} <small>→</small></a>
+  <a class="btn btn2 dv-buy dv-ali" href="${esc(dvAli(d))}" target="_blank" rel="nofollow noopener">${d.ali ? 'View on AliExpress' : 'Search on AliExpress'} <small>→</small></a>
   <a class="btn dv-cmp" href="/compare/?a=${d.slug}">Compare with another handheld</a>
   <div class="dv-box">${dvKv([['Released', relText(d)], ['OS', d.osText], ['Screen', d.screen], ['Best for', d.best.join(', ')], ['Price', d.priceText]])}</div>
   <h2 class="dv-sim">Similar Handhelds</h2>
   ${sim.map((x) => `<a class="hh-row" href="/handhelds/${x.slug}/"><span class="hh-rimg">${devIcon(x)}</span><span class="hh-rmain"><b>${dvName(x)}</b><span class="hh-rtags">${x.os.concat(x.form).slice(0, 2).map((t) => `<span class="hh-tag">${esc(t)}</span>`).join('')}</span></span><span class="hh-rside"><b class="hh-price">${esc(x.priceText)}</b></span></a>`).join('\n')}
 </aside>
 <div class="dv-main">
-  ${d.n ? `<section class="dv-panel dv-gal"><h2>More photos</h2><div class="gal">${Array.from({ length: d.n }, (_, i) => `<a href="/img/d/${d.slug}/${i + 1}.webp" data-gal><img src="/img/d/${d.slug}/${i + 1}.webp" alt="${esc(d.name)} photo ${i + 1}" width="640" height="640" loading="lazy" decoding="async"></a>`).join('')}</div></section>` : ''}
   <section class="dv-panel"><h2>Best for</h2><div class="hh-tags">${d.best.map((t) => tagA('best', t)).join('')}</div></section>
   <section class="dv-panel"><h2>Screen</h2>${dvKv([['Aspect ratio', d.aspect], ['Screen size', d.screenIn ? `${d.screenIn}"` : ''], ['Resolution', d.res], ['Refresh rate', d.hz ? `${d.hz} Hz` : ''], ['Screen type', d.panel], ['Pixel density', d.ppi]])}</section>
   <section class="dv-panel"><h2>Build and Ergonomics</h2>${dvKv([['Material', d.material], ['Weight', d.weight ? `${d.weight} g` : ''], ['Speaker placement', d.speaker], ['Charge port', d.charge]])}</section>
@@ -914,7 +923,7 @@ for (const d of hhData) {
   ${disclosureBox}
 </div>
 </div>`;
-  write(`handhelds/${d.slug}`, page({ title: `${d.name} Specs, Price and Release Date | ${cfg.siteName}`, desc: `${d.name} specs: ${d.screen} screen, ${d.chip || d.osText}, ${d.battery ? d.battery.toLocaleString('en-US') + ' mAh battery, ' : ''}${d.priceText}. Best for ${d.best.join(', ') || 'retro games'}.`, url: `/handhelds/${d.slug}/`, body, wide: true, image: d.img ? `/img/d/${d.slug}/icon.webp` : null, scripts: d.n ? '<script>document.addEventListener("click",function(e){var a=e.target.closest("a[data-gal]");if(!a)return;e.preventDefault();var o=document.createElement("div");o.className="lb";o.innerHTML="<img src=\\""+a.href+"\\" alt=\\"\\">";o.onclick=function(){o.remove()};document.addEventListener("keydown",function k(ev){if(ev.key==="Escape"){o.remove();document.removeEventListener("keydown",k)}});document.body.appendChild(o)})</script>' : '', crumbs: [['Home', '/'], ['Handhelds', '/handhelds/'], [d.name, `/handhelds/${d.slug}/`]], product: { '@type': 'Product', ...(d.img ? { image: [`${cfg.domain}/img/d/${d.slug}/icon.webp`] } : {}), name: d.name, brand: { '@type': 'Brand', name: d.brand }, category: 'Retro gaming handheld', description: `${d.name}: ${d.screen} screen, ${d.chip || d.osText}. Best for ${d.best.join(', ') || 'retro games'}.` } }));
+  write(`handhelds/${d.slug}`, page({ title: `${d.name} Specs, Price and Release Date | ${cfg.siteName}`, desc: `${d.name} specs: ${d.screen} screen, ${d.chip || d.osText}, ${d.battery ? d.battery.toLocaleString('en-US') + ' mAh battery, ' : ''}${d.priceText}. Best for ${d.best.join(', ') || 'retro games'}.`, url: `/handhelds/${d.slug}/`, body, wide: true, image: d.img ? `/img/d/${d.slug}/icon.webp` : null, scripts: d.n ? '<script src="/car.js" defer></script>' : '', crumbs: [['Home', '/'], ['Handhelds', '/handhelds/'], [d.name, `/handhelds/${d.slug}/`]], product: { '@type': 'Product', ...(d.img ? { image: [`${cfg.domain}/img/d/${d.slug}/icon.webp`] } : {}), name: d.name, brand: { '@type': 'Brand', name: d.brand }, category: 'Retro gaming handheld', description: `${d.name}: ${d.screen} screen, ${d.chip || d.osText}. Best for ${d.best.join(', ') || 'retro games'}.` } }));
 }
 
 // ---- brand pages ----

@@ -95,7 +95,8 @@
     if (f === 'Dual-Screen') return '<svg viewBox="0 0 100 120" aria-hidden="true"><rect x="12" y="4" width="76" height="52" rx="8" fill="' + c + '"/><rect x="22" y="10" width="56" height="40" rx="2" fill="' + s + '"/><rect x="12" y="62" width="76" height="52" rx="8" fill="' + c + '"/><rect x="22" y="68" width="56" height="40" rx="2" fill="' + s + '"/></svg>';
     return '<svg viewBox="0 0 160 90" aria-hidden="true"><rect x="' + (big ? 4 : 10) + '" y="12" width="' + (big ? 152 : 140) + '" height="66" rx="22" fill="' + c + '"/><rect x="' + (big ? 36 : 40) + '" y="18" width="' + (big ? 88 : 80) + '" height="54" rx="3" fill="' + s + '"/><rect x="' + (big ? 15 : 20) + '" y="42" width="14" height="4" fill="' + s + '"/><rect x="' + (big ? 20 : 25) + '" y="37" width="4" height="14" fill="' + s + '"/><circle cx="136" cy="40" r="3.5" fill="' + s + '"/><circle cx="143" cy="47" r="3.5" fill="' + s + '"/></svg>';
   }
-  function amazon(d) { return 'https://www.amazon.com/s?k=' + encodeURIComponent(d.name + ' handheld') + '&tag=' + TAG; }
+  function amazon(d) { return d.asin ? 'https://www.amazon.com/dp/' + d.asin + '?tag=' + TAG : 'https://www.amazon.com/s?k=' + encodeURIComponent(d.name + ' handheld') + '&tag=' + TAG; }
+  function ali(d) { return d.ali || 'https://www.aliexpress.com/wholesale?SearchText=' + encodeURIComponent(d.name + ' handheld'); }
   var BC = {}; D.forEach(function (d) { BC[d.brand] = (BC[d.brand] || 0) + 1; });
   function slugify(s) { return s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
   function brandHref(b) { return BC[b] > 1 ? '/handhelds/brand/' + slugify(b) + '/' : '/handhelds/?brand=' + encodeURIComponent(b); }
@@ -111,7 +112,7 @@
   function kv(rows) { return '<dl class="hh-kv">' + rows.filter(function (r) { return r[1] && r[1] !== '?'; }).map(function (r) { return '<div><dt>' + esc(r[0]) + '</dt><dd>' + r[1] + '</dd></div>'; }).join('') + '</dl>'; }
   function top(d) { return [['Released', d.upcoming ? '<b class="hh-up">Upcoming *</b>' : esc(relText(d))], ['OS', esc(d.osText)], ['Screen', esc(d.screen)], ['Best for', esc(d.best.join(', '))], ['Price', '<b class="hh-price">' + esc(d.priceText) + '</b>']]; }
   function href(d) { return '/handhelds/' + d.slug + '/'; }
-  function buy(d) { return '<a class="btn hh-buy" href="' + esc(amazon(d)) + '" target="_blank" rel="sponsored nofollow noopener">Search on Amazon <small>→</small></a>'; }
+  function buy(d) { return '<a class="btn hh-buy" href="' + esc(amazon(d)) + '" target="_blank" rel="sponsored nofollow noopener">' + (d.asin ? 'View on Amazon' : 'Search on Amazon') + ' <small>\u2192</small></a> <a class="btn btn2 hh-buy" href="' + esc(ali(d)) + '" target="_blank" rel="nofollow noopener">' + (d.ali ? 'View on AliExpress' : 'Search AliExpress') + ' <small>\u2192</small></a>'; }
 
   function cardFull(d) {
     return '<article class="hh-card"><h2 class="hh-title">' + nameHtml(d) + '</h2><div class="hh-top"><a class="hh-img" href="' + href(d) + '">' + icon(d) + '</a><div>' + kv(top(d)) + '</div></div><div class="hh-tags">' + tagsHtml(d) + '</div>' +

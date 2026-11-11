@@ -91,7 +91,9 @@
     return s;
   }
   function nameHtml(d) { var br = d.name.indexOf(d.brand) === 0; return br ? '<span class="hh-brand">' + esc(d.brand) + '</span> ' + esc(d.name.slice(d.brand.length).trim()) : esc(d.name); }
-  function amazonLink(d) { return 'https://www.amazon.com/s?k=' + encodeURIComponent(d.name + ' handheld') + '&tag=' + TAG; }
+  function amazonLink(d) { return d.asin ? 'https://www.amazon.com/dp/' + d.asin + '?tag=' + TAG : 'https://www.amazon.com/s?k=' + encodeURIComponent(d.name + ' handheld') + '&tag=' + TAG; }
+  function aliLink(d) { return d.ali || 'https://www.aliexpress.com/wholesale?SearchText=' + encodeURIComponent(d.name + ' handheld'); }
+  function btns(d) { return '<a class="btn hh-buy" href="' + esc(amazonLink(d)) + '" target="_blank" rel="sponsored nofollow noopener">Amazon <small>\u2192</small></a><a class="btn btn2 hh-buy" href="' + esc(aliLink(d)) + '" target="_blank" rel="nofollow noopener">AliExpress <small>\u2192</small></a>'; }
   function sizeBox(a, b) {
     var m = Math.max(a.screenIn || 4, b.screenIn || 4);
     var w = function (d) { return Math.max(26, Math.round((d.screenIn || 4) / m * 100)); };
@@ -121,7 +123,7 @@
       var cell = function (v, i) { return '<div class="cmp-cell">' + (i ? '<span class="cmp-ind">' + i + '</span>' : '') + '<span class="cmp-l">' + esc(r[1]) + '</span><span class="cmp-v">' + (good(v) ? esc(v) : '?') + '</span></div>'; };
       h += '<div class="cmp-pair cmp-rowp">' + cell(va, c[0]) + cell(vb, c[1]) + '</div>';
     });
-    h += '<div class="cmp-pair cmp-foot"><div><a class="more" href="/handhelds/' + a.slug + '/">Full specs →</a><a class="btn hh-buy" href="' + esc(amazonLink(a)) + '" target="_blank" rel="sponsored nofollow noopener">Check price on Amazon <small>→</small></a></div><div><a class="more" href="/handhelds/' + b.slug + '/">Full specs →</a><a class="btn hh-buy" href="' + esc(amazonLink(b)) + '" target="_blank" rel="sponsored nofollow noopener">Check price on Amazon <small>→</small></a></div></div>';
+    h += '<div class="cmp-pair cmp-foot"><div><a class="more" href="/handhelds/' + a.slug + '/">Full specs →</a>' + btns(a) + '</div><div><a class="more" href="/handhelds/' + b.slug + '/">Full specs →</a><a class="btn hh-buy" href="' + esc(amazonLink(b)) + '" target="_blank" rel="sponsored nofollow noopener">Check price on Amazon <small>→</small></a></div></div>';
     out.innerHTML = h;
   }
   // ---- search boxes ----
