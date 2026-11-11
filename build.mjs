@@ -147,7 +147,7 @@ ${ld}
 <body>
 <header class="site"><div class="wrap">
   <a class="logo" href="/">PIXEL<span>POCKET</span><br>GUIDES</a>
-  <nav aria-label="Main">${[['/', 'Home'], ['/handhelds/', 'Handhelds<span class="nm"> Database</span>'], ['/guides/', 'Guides'], ['/about/', 'About']].map(([h, t]) => `<a href="${h}"${(h === '/' ? url === '/' : url.startsWith(h)) ? ' class="active" aria-current="page"' : ''}>${t}</a>`).join('')}</nav>
+  <nav aria-label="Main">${[['/', 'Home'], ['/handhelds/', 'Handhelds<span class="nm"> Database</span>'], ['/compare/', 'Compare'], ['/guides/', 'Guides'], ['/about/', 'About']].map(([h, t]) => `<a href="${h}"${(h === '/' ? url === '/' : url.startsWith(h)) ? ' class="active" aria-current="page"' : ''}>${t}</a>`).join('')}</nav>
 </div></header>
 <main class="wrap${wide ? ' wide' : ''}">
 ${body}
@@ -870,9 +870,11 @@ const devIcon = (d) => {
 const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const relText = (d) => (d.upcoming ? 'Upcoming *' : `${MON[+d.released.split('-')[1] - 1]}. ${d.released.split('-')[0]}`);
 const dvKv = (rows) => `<dl class="hh-kv">${rows.filter((r) => r[1] && r[1] !== '?').map((r) => `<div><dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd></div>`).join('')}</dl>`;
+const brandCount = {}; for (const d of hhData) brandCount[d.brand] = (brandCount[d.brand] || 0) + 1;
+const brandHref = (b) => (brandCount[b] > 1 ? `/handhelds/brand/${slugify(b)}/` : `/handhelds/?brand=${encodeURIComponent(b)}`);
 const fq = (k, v) => `/handhelds/?${k}=${encodeURIComponent(v)}`;
 const tagA = (k, v) => `<a class="hh-tag" href="${esc(fq(k, v))}" title="Show all ${esc(v)} handhelds">${esc(v)}</a>`;
-const dvNameLink = (d) => (d.name.startsWith(d.brand) ? `<a class="hh-brand" href="${esc(fq('brand', d.brand))}" title="Show all ${esc(d.brand)} handhelds">${esc(d.brand)}</a> ${esc(d.name.slice(d.brand.length).trim())}` : esc(d.name));
+const dvNameLink = (d) => (d.name.startsWith(d.brand) ? `<a class="hh-brand" href="${esc(brandHref(d.brand))}" title="See all ${esc(d.brand)} handhelds">${esc(d.brand)}</a> ${esc(d.name.slice(d.brand.length).trim())}` : esc(d.name));
 const dvName = (d) => (d.name.startsWith(d.brand) ? `<span class="hh-brand">${esc(d.brand)}</span> ${esc(d.name.slice(d.brand.length).trim())}` : esc(d.name));
 const dvAmazon = (d) => `https://www.amazon.com/s?k=${encodeURIComponent(d.name + ' handheld')}&tag=${cfg.amazonTag}`;
 const similar = (d) => hhData.filter((x) => x !== d).map((x) => {
@@ -888,12 +890,13 @@ for (const d of hhData) {
   const sim = similar(d);
   const tags = [...d.form.map((t) => tagA('form', t)), ...d.size.map((t) => tagA('size', t)), ...d.os.map((t) => tagA('os', t)), ...d.cat.map((t) => tagA('cat', t))];
   const sameBrand = hhData.filter((x) => x.brand === d.brand).length;
-  const body = `<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/handhelds/">Handhelds</a> / <a href="${esc(fq('brand', d.brand))}">${esc(d.brand)}</a> / ${esc(d.name)} Specs</nav>
+  const body = `<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/handhelds/">Handhelds</a> / <a href="${esc(brandHref(d.brand))}">${esc(d.brand)}</a> / ${esc(d.name)} Specs</nav>
 <div class="dv">
 <aside class="dv-side">
   <h1 class="hh-title">${dvNameLink(d)}</h1>
   <div class="hh-img dv-img">${devIcon(d)}</div>
   <a class="btn hh-buy dv-buy" href="${esc(dvAmazon(d))}" target="_blank" rel="sponsored nofollow noopener">Check price on Amazon <small>→</small></a>
+  <a class="btn dv-cmp" href="/compare/?a=${d.slug}">Compare with another handheld</a>
   <div class="dv-box">${dvKv([['Released', relText(d)], ['OS', d.osText], ['Screen', d.screen], ['Best for', d.best.join(', ')], ['Price', d.priceText]])}</div>
   <h2 class="dv-sim">Similar Handhelds</h2>
   ${sim.map((x) => `<a class="hh-row" href="/handhelds/${x.slug}/"><span class="hh-rimg">${devIcon(x)}</span><span class="hh-rmain"><b>${dvName(x)}</b><span class="hh-rtags">${x.os.concat(x.form).slice(0, 2).map((t) => `<span class="hh-tag">${esc(t)}</span>`).join('')}</span></span><span class="hh-rside"><b class="hh-price">${esc(x.priceText)}</b></span></a>`).join('\n')}
@@ -903,19 +906,67 @@ for (const d of hhData) {
   <section class="dv-panel"><h2>Screen</h2>${dvKv([['Aspect ratio', d.aspect], ['Screen size', d.screenIn ? `${d.screenIn}"` : ''], ['Resolution', d.res], ['Refresh rate', d.hz ? `${d.hz} Hz` : ''], ['Screen type', d.panel], ['Pixel density', d.ppi]])}</section>
   <section class="dv-panel"><h2>Build and Ergonomics</h2>${dvKv([['Material', d.material], ['Weight', d.weight ? `${d.weight} g` : ''], ['Speaker placement', d.speaker], ['Charge port', d.charge]])}</section>
   <section class="dv-panel"><h2>Controls</h2>${dvKv([['Shoulder button layout', d.shoulder], ['Additional controls', d.controls]])}</section>
-  <section class="dv-panel"><h2>Technical Specs</h2>${dvKv([['Storage', d.storage], ['Battery', d.battery ? `${d.battery.toLocaleString('en-US')} mAh` : ''], ['RAM', d.ram], ['RAM type', d.ramType], ['Architecture', d.arch], ['Chipset', d.chip], ['CPU', d.cpu], ['GPU', d.gpu]])}<div class="hh-tags dv-tags">${tags.join('')}</div>${sameBrand > 1 ? `<p class="dv-brandlink"><a class="more" href="${esc(fq('brand', d.brand))}">See all ${sameBrand} ${esc(d.brand)} handhelds →</a></p>` : ''}</section>
+  <section class="dv-panel"><h2>Technical Specs</h2>${dvKv([['Storage', d.storage], ['Battery', d.battery ? `${d.battery.toLocaleString('en-US')} mAh` : ''], ['RAM', d.ram], ['RAM type', d.ramType], ['Architecture', d.arch], ['Chipset', d.chip], ['CPU', d.cpu], ['GPU', d.gpu]])}<div class="hh-tags dv-tags">${tags.join('')}</div>${sameBrand > 1 ? `<p class="dv-brandlink"><a class="more" href="${esc(brandHref(d.brand))}">See all ${sameBrand} ${esc(d.brand)} handhelds →</a></p>` : ''}</section>
   <p class="hh-note">* Upcoming or recently announced. Specs and prices are approximate and come from Retro Catalog's handheld database (<a href="https://retrocatalog.com" rel="noopener" target="_blank">retrocatalog.com</a>). Not every device is sold on Amazon, so the button searches Amazon for it. Check the current listing before you buy.</p>
   ${disclosureBox}
 </div>
 </div>`;
   write(`handhelds/${d.slug}`, page({ title: `${d.name} Specs, Price and Release Date | ${cfg.siteName}`, desc: `${d.name} specs: ${d.screen} screen, ${d.chip || d.osText}, ${d.battery ? d.battery.toLocaleString('en-US') + ' mAh battery, ' : ''}${d.priceText}. Best for ${d.best.join(', ') || 'retro games'}.`, url: `/handhelds/${d.slug}/`, body, wide: true, crumbs: [['Home', '/'], ['Handhelds', '/handhelds/'], [d.name, `/handhelds/${d.slug}/`]], product: { '@type': 'Product', name: d.name, brand: { '@type': 'Brand', name: d.brand }, category: 'Retro gaming handheld', description: `${d.name}: ${d.screen} screen, ${d.chip || d.osText}. Best for ${d.best.join(', ') || 'retro games'}.` } }));
 }
+
+// ---- brand pages ----
+const brandRow = (x) => `<a class="hh-row" href="/handhelds/${x.slug}/"><span class="hh-rimg">${devIcon(x)}</span><span class="hh-rmain"><b>${dvName(x)}</b><span class="hh-rtags">${x.form.concat(x.os, x.cat).map((t) => `<span class="hh-tag">${esc(t)}</span>`).join('')}</span></span><span class="hh-rside"><b class="hh-price">${esc(x.priceText)}</b><span>${esc(relText(x))}</span></span></a>`;
+const brands = Object.keys(brandCount).filter((b) => brandCount[b] > 1).sort((a, b) => brandCount[b] - brandCount[a] || a.localeCompare(b));
+for (const b of brands) {
+  const list = hhData.filter((d) => d.brand === b).sort((x, y) => y.released.localeCompare(x.released) || x.name.localeCompare(y.name));
+  const prices = list.map((d) => d.price).filter(Boolean);
+  const osList = [...new Set(list.flatMap((d) => d.os))];
+  const forms = [...new Set(list.flatMap((d) => d.form))];
+  const cats = [...new Set(list.flatMap((d) => d.cat))];
+  const latest = list.find((d) => !d.upcoming) || list[0];
+  const intro = `${b} has ${list.length} handhelds in our database${prices.length ? `, priced from about $${Math.min(...prices)} to $${Math.max(...prices)}` : ''}. They run ${osList.join(', ')} and come in ${forms.join(', ').toLowerCase()} designs. The newest release is the ${latest.name} (${relText(latest).replace(' *', '')}).`;
+  const body = `<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/handhelds/">Handhelds</a> / <a href="/handhelds/brand/">Brands</a> / ${esc(b)}</nav>
+<span class="pill">BRAND</span><h1>${esc(b)} Handhelds</h1>
+<p class="lead">${esc(intro)}</p>
+<p><a class="btn" href="/handhelds/?brand=${encodeURIComponent(b)}">Filter ${esc(b)} in the database</a> <a class="btn dv-cmp" href="/compare/?a=${list[0].slug}">Compare a ${esc(b)} handheld</a></p>
+<div class="hh-list hh-preview brand-list">${list.map(brandRow).join('\n')}</div>
+${cats.length ? `<p class="meta">Tags across ${esc(b)} devices: ${cats.map((c) => `<a class="hh-tag" href="${esc(fq('cat', c))}">${esc(c)}</a>`).join(' ')}</p>` : ''}
+<p class="hh-note">Specs and prices are approximate. Buttons on device pages search Amazon, and not every device is sold there.</p>`;
+  write(`handhelds/brand/${slugify(b)}`, page({ title: `${b} Handhelds: All ${list.length} Models, Specs and Prices | ${cfg.siteName}`, desc: `Every ${b} retro handheld in one place: ${list.length} models with specs, release dates and prices. ${intro.split('. ').slice(-1)[0]}`.slice(0, 300), url: `/handhelds/brand/${slugify(b)}/`, body, wide: true, crumbs: [['Home', '/'], ['Handhelds', '/handhelds/'], ['Brands', '/handhelds/brand/'], [b, `/handhelds/brand/${slugify(b)}/`]] }));
+}
+write('handhelds/brand', page({ title: `Handheld Brands: Anbernic, Retroid, AYANEO and More | ${cfg.siteName}`, desc: `Browse ${brands.length} retro handheld brands and see every model each one makes.`, url: '/handhelds/brand/', wide: true, crumbs: [['Home', '/'], ['Handhelds', '/handhelds/'], ['Brands', '/handhelds/brand/']], body: `<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/handhelds/">Handhelds</a> / Brands</nav>
+<span class="pill">BRANDS</span><h1>Handheld Brands</h1><p class="lead">Pick a brand to see every model it makes, newest first.</p>
+<div class="brand-grid">${brands.map((b) => `<a href="/handhelds/brand/${slugify(b)}/"><b>${esc(b)}</b><span>${brandCount[b]} handhelds</span></a>`).join('')}</div>` }));
+
+// ---- compare pages ----
+const PAIRS = [['Retroid Pocket 6', 'AYN Odin 3'], ['Retroid Pocket 6', 'Retroid Pocket G2'], ['Miyoo Mini Plus', 'Game Console R33S'], ['AYN Thor', 'Retroid Pocket Duo'], ['Valve Steam Deck OLED', 'Asus ROG Xbox Ally'], ['Asus ROG Ally X', 'Asus ROG Ally'], ['TRIMUI Brick', 'TRIMUI Brick Pro'], ['Nintendo Switch OLED', 'Valve Steam Deck OLED'], ['AYN Odin 2', 'Retroid Pocket 5'], ['Nintendo Switch Lite', 'Retroid Pocket 5']]
+  .map(([a, b]) => [hhData.find((d) => d.name === a), hhData.find((d) => d.name === b)]).filter(([a, b]) => a && b);
+const pairSlug = (a, b) => `${a.slug}-vs-${b.slug}`;
+const pairIcon = (d) => `<span class="cmp-sicon">${devIcon(d)}</span>`;
+const cmpSuggest = `<section id="cmp-sugg"><h2 class="cmp-sh">Suggestions<span></span></h2><div class="cmp-sgrid">${PAIRS.map(([a, b]) => `<a href="/compare/${pairSlug(a, b)}/" data-pair="${a.slug},${b.slug}">${pairIcon(a)}<b>${esc(a.name)} <i>vs.</i> ${esc(b.name)}</b>${pairIcon(b)}</a>`).join('')}</div></section>`;
+const cmpScripts = (init) => `<script id="hh-data" type="application/json">${JSON.stringify({ tag: cfg.amazonTag, devices: hhData }).replace(/</g, '\\u003c')}</script><script id="cmp-init" type="application/json">${JSON.stringify(init)}</script><script src="/compare.js" defer></script>`;
+const staticTable = (a, b) => `<div id="cmp-static"><table class="cmp-table"><caption>${esc(a.name)} vs ${esc(b.name)} key specs</caption><thead><tr><th></th><th>${esc(a.name)}</th><th>${esc(b.name)}</th></tr></thead><tbody>${[['Price', (d) => d.priceText], ['Released', relText], ['OS', (d) => d.osText.replace(/,\s*$/, '')], ['Screen', (d) => d.screen], ['Resolution', (d) => d.res], ['Refresh rate', (d) => (d.hz ? `${d.hz} Hz` : '')], ['Panel', (d) => d.panel], ['Weight', (d) => (d.weight ? `${d.weight} g` : '')], ['Battery', (d) => (d.battery ? `${d.battery.toLocaleString('en-US')} mAh` : '')], ['RAM', (d) => d.ram], ['Chipset', (d) => d.chip]].map(([l, f]) => `<tr><th scope="row">${l}</th><td>${esc(f(a)) || '?'}</td><td>${esc(f(b)) || '?'}</td></tr>`).join('')}</tbody></table></div>`;
+const cmpShell = (h1, extra) => `<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/handhelds/">Handhelds</a> / Comparison Tool</nav>
+<h1 id="cmp-h1" class="cmp-h1">${esc(h1)}</h1>
+<div class="cmp-pickers">
+<div class="cmp-pk"><label for="cmp-a">Compare</label><div class="cmp-sb"><input id="cmp-a" type="search" placeholder="Search" autocomplete="off" role="combobox" aria-expanded="true" aria-controls="cmp-a-list"><ul id="cmp-a-list" class="cmp-list" role="listbox" hidden></ul></div></div>
+<button type="button" id="cmp-swap" class="cmp-swap" aria-label="Swap devices">&#8646;</button>
+<div class="cmp-pk"><label for="cmp-b">With</label><div class="cmp-sb"><input id="cmp-b" type="search" placeholder="Search" autocomplete="off" role="combobox" aria-expanded="true" aria-controls="cmp-b-list"><ul id="cmp-b-list" class="cmp-list" role="listbox" hidden></ul></div></div>
+</div>
+${extra || ''}
+<div id="cmp-out"></div>
+${cmpSuggest}
+<p class="hh-note">Specs and prices are approximate and come from the same database as our <a href="/handhelds/">handheld list</a>. Green, red and yellow icons show which device ranks higher, lower or equal in each category.</p>`;
+write('compare', page({ title: `Compare Retro Handhelds Side by Side | ${cfg.siteName}`, desc: `Pick any two of ${hhData.length} retro handhelds and compare screen, weight, battery, RAM, chipset and price side by side.`, url: '/compare/', wide: true, scripts: cmpScripts({}), crumbs: [['Home', '/'], ['Compare', '/compare/']], body: cmpShell('Compare Gaming Handhelds') }));
+for (const [a, b] of PAIRS) {
+  write(`compare/${pairSlug(a, b)}`, page({ title: `${a.name} vs ${b.name}: Specs Comparison | ${cfg.siteName}`, desc: `${a.name} vs ${b.name} compared side by side: screen, weight, battery, RAM, chipset and price (${a.priceText} vs ${b.priceText}).`, url: `/compare/${pairSlug(a, b)}/`, wide: true, scripts: cmpScripts({ a: a.slug, b: b.slug }), crumbs: [['Home', '/'], ['Compare', '/compare/'], [`${a.name} vs ${b.name}`, `/compare/${pairSlug(a, b)}/`]], body: cmpShell(`${a.name} vs. ${b.name} Comparison`, staticTable(a, b)) }));
+}
 write('handhelds', page({ title: `Retro Handheld Database: Specs, Prices and Filters | ${cfg.siteName}`, desc: `Search and filter ${hhData.length} retro gaming handhelds by price, size, form factor, operating system, brand and specs. Compare screens, chips, batteries and more.`, url: '/handhelds/', body: hhBody, wide: true, scripts: hhScripts }));
 write('about', page({ title: `About | ${cfg.siteName}`, desc: 'About Pixel Pocket Guides.', url: '/about/', body: aboutBody }));
 write('affiliate-disclosure', page({ title: `Affiliate Disclosure | ${cfg.siteName}`, desc: 'Amazon Associates affiliate disclosure.', url: '/affiliate-disclosure/', body: disclosureBody }));
 write('privacy', page({ title: `Privacy Policy | ${cfg.siteName}`, desc: 'Privacy policy for Pixel Pocket Guides.', url: '/privacy/', body: privacyBody }));
 
-const urls = ['/', ...posts.map((p) => `/${p.slug}/`), '/handhelds/', ...hhData.map((d) => `/handhelds/${d.slug}/`), '/guides/', ...guides.map((g) => `/guides/${g.slug}/`), '/about/', '/affiliate-disclosure/', '/privacy/'];
+const urls = ['/', ...posts.map((p) => `/${p.slug}/`), '/handhelds/', '/handhelds/brand/', ...brands.map((b) => `/handhelds/brand/${slugify(b)}/`), '/compare/', ...PAIRS.map(([a, b]) => `/compare/${pairSlug(a, b)}/`), ...hhData.map((d) => `/handhelds/${d.slug}/`), '/guides/', ...guides.map((g) => `/guides/${g.slug}/`), '/about/', '/affiliate-disclosure/', '/privacy/'];
 fs.writeFileSync(path.join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${cfg.domain}${u}</loc><lastmod>${published}</lastmod></url>`).join('\n')}\n</urlset>\n`);
 fs.writeFileSync(path.join(out, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${cfg.domain}/sitemap.xml\n`);
 fs.writeFileSync(path.join(out, '_headers'), `/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  X-Frame-Options: DENY\n`);

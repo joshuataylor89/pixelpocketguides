@@ -95,13 +95,16 @@
     return '<svg viewBox="0 0 160 90" aria-hidden="true"><rect x="' + (big ? 4 : 10) + '" y="12" width="' + (big ? 152 : 140) + '" height="66" rx="22" fill="' + c + '"/><rect x="' + (big ? 36 : 40) + '" y="18" width="' + (big ? 88 : 80) + '" height="54" rx="3" fill="' + s + '"/><rect x="' + (big ? 15 : 20) + '" y="42" width="14" height="4" fill="' + s + '"/><rect x="' + (big ? 20 : 25) + '" y="37" width="4" height="14" fill="' + s + '"/><circle cx="136" cy="40" r="3.5" fill="' + s + '"/><circle cx="143" cy="47" r="3.5" fill="' + s + '"/></svg>';
   }
   function amazon(d) { return 'https://www.amazon.com/s?k=' + encodeURIComponent(d.name + ' handheld') + '&tag=' + TAG; }
+  var BC = {}; D.forEach(function (d) { BC[d.brand] = (BC[d.brand] || 0) + 1; });
+  function slugify(s) { return s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+  function brandHref(b) { return BC[b] > 1 ? '/handhelds/brand/' + slugify(b) + '/' : '/handhelds/?brand=' + encodeURIComponent(b); }
   function fq(k, v) { return '/handhelds/?' + k + '=' + encodeURIComponent(v); }
   function tagLink(k, v) { return '<a class="hh-tag" data-k="' + k + '" data-v="' + esc(v) + '" href="' + esc(fq(k, v)) + '" title="Show all ' + esc(v) + ' handhelds">' + esc(v) + '</a>'; }
   function nameHtml(d) {
     var b = d.brand, u = href(d);
     if (d.name.indexOf(b) !== 0) return '<a class="hh-nm" href="' + u + '">' + esc(d.name) + '</a>';
     var rest = d.name.slice(b.length).trim();
-    return '<a class="hh-brand" data-k="brand" data-v="' + esc(b) + '" href="' + esc(fq('brand', b)) + '" title="Show all ' + esc(b) + ' handhelds">' + esc(b) + '</a> <a class="hh-nm" href="' + u + '">' + esc(rest) + '</a>';
+    return '<a class="hh-brand" href="' + esc(brandHref(b)) + '" title="See all ' + esc(b) + ' handhelds">' + esc(b) + '</a> <a class="hh-nm" href="' + u + '">' + esc(rest) + '</a>';
   }
   function tagsHtml(d) { return d.form.map(function (x) { return tagLink('form', x); }).concat(d.size.map(function (x) { return tagLink('size', x); }), d.os.map(function (x) { return tagLink('os', x); }), d.cat.map(function (x) { return tagLink('cat', x); })).join(''); }
   function kv(rows) { return '<dl class="hh-kv">' + rows.filter(function (r) { return r[1] && r[1] !== '?'; }).map(function (r) { return '<div><dt>' + esc(r[0]) + '</dt><dd>' + r[1] + '</dd></div>'; }).join('') + '</dl>'; }
