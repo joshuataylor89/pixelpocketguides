@@ -95,15 +95,22 @@
     return '<svg viewBox="0 0 160 90" aria-hidden="true"><rect x="' + (big ? 4 : 10) + '" y="12" width="' + (big ? 152 : 140) + '" height="66" rx="22" fill="' + c + '"/><rect x="' + (big ? 36 : 40) + '" y="18" width="' + (big ? 88 : 80) + '" height="54" rx="3" fill="' + s + '"/><rect x="' + (big ? 15 : 20) + '" y="42" width="14" height="4" fill="' + s + '"/><rect x="' + (big ? 20 : 25) + '" y="37" width="4" height="14" fill="' + s + '"/><circle cx="136" cy="40" r="3.5" fill="' + s + '"/><circle cx="143" cy="47" r="3.5" fill="' + s + '"/></svg>';
   }
   function amazon(d) { return 'https://www.amazon.com/s?k=' + encodeURIComponent(d.name + ' handheld') + '&tag=' + TAG; }
-  function nameHtml(d) { var b = d.brand, rest = d.name.indexOf(b) === 0 ? d.name.slice(b.length).trim() : d.name; return d.name.indexOf(b) === 0 ? '<span class="hh-brand">' + esc(b) + '</span> ' + esc(rest) : esc(d.name); }
-  function tagsHtml(d) { var t = d.form.concat(d.os, d.cat); return t.map(function (x) { return '<span class="hh-tag">' + esc(x) + '</span>'; }).join(''); }
+  function fq(k, v) { return '/handhelds/?' + k + '=' + encodeURIComponent(v); }
+  function tagLink(k, v) { return '<a class="hh-tag" data-k="' + k + '" data-v="' + esc(v) + '" href="' + esc(fq(k, v)) + '" title="Show all ' + esc(v) + ' handhelds">' + esc(v) + '</a>'; }
+  function nameHtml(d) {
+    var b = d.brand, u = href(d);
+    if (d.name.indexOf(b) !== 0) return '<a class="hh-nm" href="' + u + '">' + esc(d.name) + '</a>';
+    var rest = d.name.slice(b.length).trim();
+    return '<a class="hh-brand" data-k="brand" data-v="' + esc(b) + '" href="' + esc(fq('brand', b)) + '" title="Show all ' + esc(b) + ' handhelds">' + esc(b) + '</a> <a class="hh-nm" href="' + u + '">' + esc(rest) + '</a>';
+  }
+  function tagsHtml(d) { return d.form.map(function (x) { return tagLink('form', x); }).concat(d.size.map(function (x) { return tagLink('size', x); }), d.os.map(function (x) { return tagLink('os', x); }), d.cat.map(function (x) { return tagLink('cat', x); })).join(''); }
   function kv(rows) { return '<dl class="hh-kv">' + rows.filter(function (r) { return r[1] && r[1] !== '?'; }).map(function (r) { return '<div><dt>' + esc(r[0]) + '</dt><dd>' + r[1] + '</dd></div>'; }).join('') + '</dl>'; }
   function top(d) { return [['Released', d.upcoming ? '<b class="hh-up">Upcoming *</b>' : esc(relText(d))], ['OS', esc(d.osText)], ['Screen', esc(d.screen)], ['Best for', esc(d.best.join(', '))], ['Price', '<b class="hh-price">' + esc(d.priceText) + '</b>']]; }
   function href(d) { return '/handhelds/' + d.slug + '/'; }
   function buy(d) { return '<a class="btn hh-buy" href="' + esc(amazon(d)) + '" target="_blank" rel="sponsored nofollow noopener">Search on Amazon <small>→</small></a>'; }
 
   function cardFull(d) {
-    return '<article class="hh-card"><h2 class="hh-title"><a href="' + href(d) + '">' + nameHtml(d) + '</a></h2><div class="hh-top"><a class="hh-img" href="' + href(d) + '">' + icon(d) + '</a><div>' + kv(top(d)) + '</div></div><div class="hh-tags">' + tagsHtml(d) + '</div>' +
+    return '<article class="hh-card"><h2 class="hh-title">' + nameHtml(d) + '</h2><div class="hh-top"><a class="hh-img" href="' + href(d) + '">' + icon(d) + '</a><div>' + kv(top(d)) + '</div></div><div class="hh-tags">' + tagsHtml(d) + '</div>' +
       '<h3>Screen</h3>' + kv([['Aspect ratio', esc(d.aspect)], ['Screen size', d.screenIn ? d.screenIn + '"' : ''], ['Resolution', esc(d.res)], ['Refresh rate', d.hz ? d.hz + ' Hz' : ''], ['Screen type', esc(d.panel)], ['Pixel density', esc(d.ppi)]]) +
       '<h3>Build and Ergonomics</h3>' + kv([['Material', esc(d.material)], ['Weight', d.weight ? d.weight + ' g' : ''], ['Speaker placement', esc(d.speaker)], ['Charge port', esc(d.charge)]]) +
       '<h3>Controls</h3>' + kv([['Shoulder button layout', esc(d.shoulder)], ['Additional controls', esc(d.controls)]]) +
@@ -111,10 +118,10 @@
       '<p><a class="more" href="' + href(d) + '">View full specs →</a></p><p>' + buy(d) + '</p></article>';
   }
   function cardRecap(d) {
-    return '<article class="hh-card hh-recap"><h2 class="hh-title"><a href="' + href(d) + '">' + nameHtml(d) + '</a></h2><div class="hh-top"><a class="hh-img" href="' + href(d) + '">' + icon(d) + '</a><div>' + kv(top(d)) + '</div></div><div class="hh-tags">' + tagsHtml(d) + '</div><p>' + buy(d) + '</p></article>';
+    return '<article class="hh-card hh-recap"><h2 class="hh-title">' + nameHtml(d) + '</h2><div class="hh-top"><a class="hh-img" href="' + href(d) + '">' + icon(d) + '</a><div>' + kv(top(d)) + '</div></div><div class="hh-tags">' + tagsHtml(d) + '</div><p>' + buy(d) + '</p></article>';
   }
   function rowPrev(d) {
-    return '<a class="hh-row" href="' + href(d) + '"><span class="hh-rimg">' + icon(d) + '</span><span class="hh-rmain"><b>' + nameHtml(d) + '</b><span class="hh-rtags">' + tagsHtml(d) + '</span></span><span class="hh-rside"><b class="hh-price">' + esc(d.priceText) + '</b><span>' + esc((d.aspect || '').split(',')[0]) + (d.screenIn ? ' • ' + d.screenIn + '"' : '') + '</span></span></a>';
+    return '<div class="hh-row"><a class="hh-rimg" href="' + href(d) + '" tabindex="-1" aria-hidden="true">' + icon(d) + '</a><span class="hh-rmain"><b>' + nameHtml(d) + '</b><span class="hh-rtags">' + tagsHtml(d) + '</span></span><a class="hh-rside" href="' + href(d) + '"><b class="hh-price">' + esc(d.priceText) + '</b><span>' + esc((d.aspect || '').split(',')[0]) + (d.screenIn ? ' \u2022 ' + d.screenIn + '"' : '') + '</span></a></div>';
   }
 
   var listEl = $('#hh-list'), countEl = $('#hh-count'), moreEl = $('#hh-more');
@@ -130,7 +137,19 @@
     var n = 0; LEAF.forEach(function (f) { n += Object.keys(state.sel[f.k]).length; });
     $('#hh-filter-btn').textContent = 'Filter' + (n ? ' (' + n + ')' : '');
     var chips = []; LEAF.forEach(function (f) { Object.keys(state.sel[f.k]).forEach(function (v) { chips.push('<button type="button" class="hh-chip" data-k="' + f.k + '" data-v="' + esc(v) + '">' + esc(v) + ' ×</button>'); }); });
+    syncUrl();
     $('#hh-active').innerHTML = chips.join('') + (chips.length ? '<button type="button" class="hh-clear" id="hh-clear-all">Clear all</button>' : '');
+  }
+  function syncUrl() {
+    try {
+      var q = []; LEAF.forEach(function (f) { Object.keys(state.sel[f.k]).forEach(function (v) { q.push(encodeURIComponent(f.k) + '=' + encodeURIComponent(v)); }); });
+      history.replaceState(null, '', location.pathname + (q.length ? '?' + q.join('&') : ''));
+    } catch (e) {}
+  }
+  function fromUrl() {
+    try {
+      new URLSearchParams(location.search).forEach(function (v, k) { var f = LEAF.filter(function (x) { return x.k === k; })[0]; if (f && f.counts[v]) state.sel[k][v] = 1; });
+    } catch (e) {}
   }
   function reset() { state.limit = 12; render(); }
 
@@ -161,6 +180,15 @@
     if (t.id === 'hh-sort') { state.sort = t.value; reset(); }
   });
   document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[data-k]') : null;
+    if (a && !e.metaKey && !e.ctrlKey && !e.shiftKey && e.button === 0) {
+      e.preventDefault();
+      LEAF.forEach(function (f) { state.sel[f.k] = {}; }); state.q = ''; $('#hh-q').value = '';
+      setSel(a.getAttribute('data-k'), a.getAttribute('data-v'), true);
+      buildPanel(); state.limit = state.view === 'preview' ? 40 : 12; render();
+      var top = $('#hh-count'); if (top && top.scrollIntoView) top.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
     var t = e.target.closest ? e.target.closest('button,[data-view]') : null;
     if (!t) return;
     if (t.hasAttribute('data-view')) { state.view = t.getAttribute('data-view'); try { localStorage.setItem('hh-view', state.view); } catch (x) {} state.limit = state.view === 'preview' ? 40 : 12; render(); }
@@ -174,5 +202,5 @@
   $('#hh-q').addEventListener('input', function (e) { clearTimeout(timer); var v = e.target.value; timer = setTimeout(function () { state.q = v; reset(); }, 120); });
   $('#hh-sort').innerHTML = Object.keys(SORTS).map(function (k) { return '<option value="' + k + '">' + SORTS[k] + '</option>'; }).join('');
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') document.body.classList.remove('hh-open'); });
-  buildPanel(); render();
+  fromUrl(); buildPanel(); render();
 })();

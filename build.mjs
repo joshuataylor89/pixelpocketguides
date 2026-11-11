@@ -816,7 +816,7 @@ const blogHome = `<section class="hero hero-modern">
 <h1>Retro handheld buying guides</h1>
 <p class="tagline">Find the right handheld faster with ranked picks, clear specs and side-by-side comparisons.</p>
 </section>
-<div class="sec-head"><span class="pill">THE BLOG</span><span class="sec-line"></span></div>
+<div class="sec-head"><span class="pill">LATEST</span><span class="sec-line"></span></div>
 <div class="feed">
 ${ordered.map(entryCard).join('\n')}
 </div>
@@ -870,6 +870,9 @@ const devIcon = (d) => {
 const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const relText = (d) => (d.upcoming ? 'Upcoming *' : `${MON[+d.released.split('-')[1] - 1]}. ${d.released.split('-')[0]}`);
 const dvKv = (rows) => `<dl class="hh-kv">${rows.filter((r) => r[1] && r[1] !== '?').map((r) => `<div><dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd></div>`).join('')}</dl>`;
+const fq = (k, v) => `/handhelds/?${k}=${encodeURIComponent(v)}`;
+const tagA = (k, v) => `<a class="hh-tag" href="${esc(fq(k, v))}" title="Show all ${esc(v)} handhelds">${esc(v)}</a>`;
+const dvNameLink = (d) => (d.name.startsWith(d.brand) ? `<a class="hh-brand" href="${esc(fq('brand', d.brand))}" title="Show all ${esc(d.brand)} handhelds">${esc(d.brand)}</a> ${esc(d.name.slice(d.brand.length).trim())}` : esc(d.name));
 const dvName = (d) => (d.name.startsWith(d.brand) ? `<span class="hh-brand">${esc(d.brand)}</span> ${esc(d.name.slice(d.brand.length).trim())}` : esc(d.name));
 const dvAmazon = (d) => `https://www.amazon.com/s?k=${encodeURIComponent(d.name + ' handheld')}&tag=${cfg.amazonTag}`;
 const similar = (d) => hhData.filter((x) => x !== d).map((x) => {
@@ -883,11 +886,12 @@ const similar = (d) => hhData.filter((x) => x !== d).map((x) => {
 }).sort((a, b) => b[0] - a[0]).slice(0, 6).map((p) => p[1]);
 for (const d of hhData) {
   const sim = similar(d);
-  const tags = [...d.form, ...d.size, ...d.os, ...d.cat];
-  const body = `<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/handhelds/">Handhelds</a> / ${esc(d.brand)} / ${esc(d.name)} Specs</nav>
+  const tags = [...d.form.map((t) => tagA('form', t)), ...d.size.map((t) => tagA('size', t)), ...d.os.map((t) => tagA('os', t)), ...d.cat.map((t) => tagA('cat', t))];
+  const sameBrand = hhData.filter((x) => x.brand === d.brand).length;
+  const body = `<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/handhelds/">Handhelds</a> / <a href="${esc(fq('brand', d.brand))}">${esc(d.brand)}</a> / ${esc(d.name)} Specs</nav>
 <div class="dv">
 <aside class="dv-side">
-  <h1 class="hh-title">${dvName(d)}</h1>
+  <h1 class="hh-title">${dvNameLink(d)}</h1>
   <div class="hh-img dv-img">${devIcon(d)}</div>
   <a class="btn hh-buy dv-buy" href="${esc(dvAmazon(d))}" target="_blank" rel="sponsored nofollow noopener">Check price on Amazon <small>→</small></a>
   <div class="dv-box">${dvKv([['Released', relText(d)], ['OS', d.osText], ['Screen', d.screen], ['Best for', d.best.join(', ')], ['Price', d.priceText]])}</div>
@@ -895,18 +899,18 @@ for (const d of hhData) {
   ${sim.map((x) => `<a class="hh-row" href="/handhelds/${x.slug}/"><span class="hh-rimg">${devIcon(x)}</span><span class="hh-rmain"><b>${dvName(x)}</b><span class="hh-rtags">${x.os.concat(x.form).slice(0, 2).map((t) => `<span class="hh-tag">${esc(t)}</span>`).join('')}</span></span><span class="hh-rside"><b class="hh-price">${esc(x.priceText)}</b></span></a>`).join('\n')}
 </aside>
 <div class="dv-main">
-  <section class="dv-panel"><h2>Best for</h2><div class="hh-tags">${d.best.map((t) => `<span class="hh-tag">${esc(t)}</span>`).join('')}</div></section>
+  <section class="dv-panel"><h2>Best for</h2><div class="hh-tags">${d.best.map((t) => tagA('best', t)).join('')}</div></section>
   <section class="dv-panel"><h2>Screen</h2>${dvKv([['Aspect ratio', d.aspect], ['Screen size', d.screenIn ? `${d.screenIn}"` : ''], ['Resolution', d.res], ['Refresh rate', d.hz ? `${d.hz} Hz` : ''], ['Screen type', d.panel], ['Pixel density', d.ppi]])}</section>
   <section class="dv-panel"><h2>Build and Ergonomics</h2>${dvKv([['Material', d.material], ['Weight', d.weight ? `${d.weight} g` : ''], ['Speaker placement', d.speaker], ['Charge port', d.charge]])}</section>
   <section class="dv-panel"><h2>Controls</h2>${dvKv([['Shoulder button layout', d.shoulder], ['Additional controls', d.controls]])}</section>
-  <section class="dv-panel"><h2>Technical Specs</h2>${dvKv([['Storage', d.storage], ['Battery', d.battery ? `${d.battery.toLocaleString('en-US')} mAh` : ''], ['RAM', d.ram], ['RAM type', d.ramType], ['Architecture', d.arch], ['Chipset', d.chip], ['CPU', d.cpu], ['GPU', d.gpu]])}<div class="hh-tags dv-tags">${tags.map((t) => `<span class="hh-tag">${esc(t)}</span>`).join('')}</div></section>
+  <section class="dv-panel"><h2>Technical Specs</h2>${dvKv([['Storage', d.storage], ['Battery', d.battery ? `${d.battery.toLocaleString('en-US')} mAh` : ''], ['RAM', d.ram], ['RAM type', d.ramType], ['Architecture', d.arch], ['Chipset', d.chip], ['CPU', d.cpu], ['GPU', d.gpu]])}<div class="hh-tags dv-tags">${tags.join('')}</div>${sameBrand > 1 ? `<p class="dv-brandlink"><a class="more" href="${esc(fq('brand', d.brand))}">See all ${sameBrand} ${esc(d.brand)} handhelds →</a></p>` : ''}</section>
   <p class="hh-note">* Upcoming or recently announced. Specs and prices are approximate and come from Retro Catalog's handheld database (<a href="https://retrocatalog.com" rel="noopener" target="_blank">retrocatalog.com</a>). Not every device is sold on Amazon, so the button searches Amazon for it. Check the current listing before you buy.</p>
   ${disclosureBox}
 </div>
 </div>`;
   write(`handhelds/${d.slug}`, page({ title: `${d.name} Specs, Price and Release Date | ${cfg.siteName}`, desc: `${d.name} specs: ${d.screen} screen, ${d.chip || d.osText}, ${d.battery ? d.battery.toLocaleString('en-US') + ' mAh battery, ' : ''}${d.priceText}. Best for ${d.best.join(', ') || 'retro games'}.`, url: `/handhelds/${d.slug}/`, body, wide: true, crumbs: [['Home', '/'], ['Handhelds', '/handhelds/'], [d.name, `/handhelds/${d.slug}/`]], product: { '@type': 'Product', name: d.name, brand: { '@type': 'Brand', name: d.brand }, category: 'Retro gaming handheld', description: `${d.name}: ${d.screen} screen, ${d.chip || d.osText}. Best for ${d.best.join(', ') || 'retro games'}.` } }));
 }
-write('handhelds', page({ title: `Retro Handheld Database: Specs, Prices and Filters | ${cfg.siteName}`, desc: 'Search and filter 120+ retro gaming handhelds by price, size, form factor, operating system, brand and specs. Compare screens, chips, batteries and more.', url: '/handhelds/', body: hhBody, wide: true, scripts: hhScripts }));
+write('handhelds', page({ title: `Retro Handheld Database: Specs, Prices and Filters | ${cfg.siteName}`, desc: `Search and filter ${hhData.length} retro gaming handhelds by price, size, form factor, operating system, brand and specs. Compare screens, chips, batteries and more.`, url: '/handhelds/', body: hhBody, wide: true, scripts: hhScripts }));
 write('about', page({ title: `About | ${cfg.siteName}`, desc: 'About Pixel Pocket Guides.', url: '/about/', body: aboutBody }));
 write('affiliate-disclosure', page({ title: `Affiliate Disclosure | ${cfg.siteName}`, desc: 'Amazon Associates affiliate disclosure.', url: '/affiliate-disclosure/', body: disclosureBody }));
 write('privacy', page({ title: `Privacy Policy | ${cfg.siteName}`, desc: 'Privacy policy for Pixel Pocket Guides.', url: '/privacy/', body: privacyBody }));

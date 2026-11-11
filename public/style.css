@@ -182,3 +182,15 @@ a.hh-img{text-decoration:none}
 .hero-modern .tagline{margin:0 auto;max-width:620px;color:var(--muted);font-size:clamp(17px,2.4vw,21px)}
 .sec-head{display:flex;align-items:center;gap:14px;margin:18px 0 18px}
 .sec-line{flex:1;height:2px;background:linear-gradient(90deg,var(--line),transparent)}
+
+/* clickable brands and tags */
+.hh-title .hh-brand,.hh-title .hh-nm{color:inherit}
+.hh-title .hh-brand{color:#9fb4ee}
+a.hh-brand{text-decoration:none}a.hh-brand:hover{text-decoration:underline;color:var(--accent)}
+.hh-title a.hh-nm:hover,a.hh-nm:hover{color:var(--accent)}
+a.hh-nm{color:inherit;text-decoration:none}
+a.hh-tag{text-decoration:none;transition:background .15s,color .15s}
+a.hh-tag:hover,a.hh-tag:focus-visible{background:#a8e8cf;color:#0d0f1f}
+.hh-rimg{display:block}.hh-rside{color:inherit;text-decoration:none;text-align:right}
+.hh-row:hover{border-color:var(--accent)}
+.dv-brandlink{margin:0 0 4px}

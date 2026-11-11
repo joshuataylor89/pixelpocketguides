@@ -5801,5 +5801,7186 @@
   "chip": "RockChip RK3566",
   "cpu": "Cortex-A55",
   "gpu": "Mali-G52 2EE"
+ },
+ {
+  "name": "Nintendo DS",
+  "brand": "Nintendo",
+  "released": "2004-11",
+  "upcoming": false,
+  "price": 40,
+  "priceText": "~$40",
+  "form": [
+   "Dual-Screen"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Ultra Budget",
+   "Original Hardware"
+  ],
+  "best": [
+   "NDS",
+   "SNES"
+  ],
+  "screen": "3.0 x2”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.0,
+  "res": "256 × 192",
+  "hz": null,
+  "panel": "LCD",
+  "ppi": "106 PPI",
+  "material": "Plastic",
+  "weight": 275,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "No L2/R2",
+  "controls": "Volume slider",
+  "storage": "256 KB serial flash memory",
+  "battery": 850,
+  "ram": "4 MB",
+  "ramGB": 0.00390625,
+  "ramType": "SRAM",
+  "arch": "ARM",
+  "chip": "Custom SoC",
+  "cpu": "ARM946E-S",
+  "gpu": "2D Graphics Engine"
+ },
+ {
+  "name": "Sony PSP-1000",
+  "brand": "Sony",
+  "released": "2005-03",
+  "upcoming": false,
+  "price": 60,
+  "priceText": "~$60",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Budget",
+   "Original Hardware"
+  ],
+  "best": [
+   "PSP",
+   "PS1"
+  ],
+  "screen": "4.3”, 30:17",
+  "aspect": "30:17",
+  "screenIn": 4.3,
+  "res": "480 x 272",
+  "hz": null,
+  "panel": "TFT",
+  "ppi": "128 PPI",
+  "material": "Plastic",
+  "weight": 280,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "No L2/R2",
+  "controls": "Home, volume up and down, music settings, brightness, wireless LAN switch",
+  "storage": "External Memory Stick PRO Duo",
+  "battery": 1800,
+  "ram": "32 MB",
+  "ramGB": 0.03125,
+  "ramType": "MIPS",
+  "arch": "MIPS",
+  "chip": "Allegrex",
+  "cpu": "MIPS R4000",
+  "gpu": "Custom Rendering Engine + Surface Engine"
+ },
+ {
+  "name": "Nintendo DS Lite",
+  "brand": "Nintendo",
+  "released": "2006-06",
+  "upcoming": false,
+  "price": 50,
+  "priceText": "~$50",
+  "form": [
+   "Dual-Screen"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Budget",
+   "Original Hardware"
+  ],
+  "best": [
+   "NDS",
+   "SNES"
+  ],
+  "screen": "3.12 x2”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.12,
+  "res": "256 × 192",
+  "hz": null,
+  "panel": "LCD",
+  "ppi": "102 PPI",
+  "material": "Plastic",
+  "weight": 218,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "No L2/R2",
+  "controls": "Volume slider",
+  "storage": "256 KB serial flash memory",
+  "battery": 1000,
+  "ram": "4 MB",
+  "ramGB": 0.00390625,
+  "ramType": "SRAM",
+  "arch": "ARM",
+  "chip": "Custom SoC",
+  "cpu": "ARM946E-S",
+  "gpu": "2D Graphics Engine"
+ },
+ {
+  "name": "Sony PSP-2000",
+  "brand": "Sony",
+  "released": "2007-09",
+  "upcoming": false,
+  "price": null,
+  "priceText": "Price varies",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Original Hardware"
+  ],
+  "best": [
+   "PSP",
+   "PS1"
+  ],
+  "screen": "4.3”, 30:17",
+  "aspect": "30:17",
+  "screenIn": 4.3,
+  "res": "480 x 272",
+  "hz": null,
+  "panel": "TFT",
+  "ppi": "128 PPI",
+  "material": "Plastic",
+  "weight": 189,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "No L2/R2",
+  "controls": "Home, volume up and down, music settings, brightness, wireless LAN switch",
+  "storage": "External Memory Stick PRO Duo",
+  "battery": 1200,
+  "ram": "64 MB",
+  "ramGB": 0.0625,
+  "ramType": "MIPS",
+  "arch": "MIPS",
+  "chip": "Allegrex",
+  "cpu": "MIPS R4000",
+  "gpu": "Custom Rendering Engine + Surface Engine"
+ },
+ {
+  "name": "Sony PSP-3000",
+  "brand": "Sony",
+  "released": "2008-10",
+  "upcoming": false,
+  "price": null,
+  "priceText": "Price varies",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Original Hardware"
+  ],
+  "best": [
+   "PSP",
+   "PS1"
+  ],
+  "screen": "4.3”, 30:17",
+  "aspect": "30:17",
+  "screenIn": 4.3,
+  "res": "480 x 272",
+  "hz": null,
+  "panel": "TFT",
+  "ppi": "128 PPI",
+  "material": "Plastic",
+  "weight": 189,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "No L2/R2",
+  "controls": "Home, volume up and down, music settings, brightness, wireless LAN switch",
+  "storage": "External Memory Stick PRO Duo",
+  "battery": 1200,
+  "ram": "64 MB",
+  "ramGB": 0.0625,
+  "ramType": "MIPS",
+  "arch": "MIPS",
+  "chip": "Allegrex",
+  "cpu": "MIPS R4000",
+  "gpu": "Custom Rendering Engine + Surface Engine"
+ },
+ {
+  "name": "Dingoo A320",
+  "brand": "Dingoo",
+  "released": "2009-01",
+  "upcoming": false,
+  "price": 70,
+  "priceText": "~$70",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "GBA",
+   "Game Boy"
+  ],
+  "screen": "2.8”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 2.8,
+  "res": "320 x 240",
+  "hz": 60,
+  "panel": "TFT",
+  "ppi": "142 PPI",
+  "material": "Plastic",
+  "weight": 110,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "No L2/R2",
+  "controls": "Reset, hold",
+  "storage": "1/2/4 GB & External MiniSD",
+  "battery": 1700,
+  "ram": "32 MB",
+  "ramGB": 0.03125,
+  "ramType": "SDRAM",
+  "arch": "MIPS",
+  "chip": "Ingenic JZ4732",
+  "cpu": "XBurst",
+  "gpu": "Chrontel 7024b"
+ },
+ {
+  "name": "Nintendo DSi",
+  "brand": "Nintendo",
+  "released": "2009-04",
+  "upcoming": false,
+  "price": 50,
+  "priceText": "~$50",
+  "form": [
+   "Dual-Screen"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Budget",
+   "Original Hardware"
+  ],
+  "best": [
+   "NDS",
+   "SNES"
+  ],
+  "screen": "3.25 x2”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.25,
+  "res": "256 × 192",
+  "hz": null,
+  "panel": "LCD",
+  "ppi": "98 PPI",
+  "material": "Plastic",
+  "weight": 214,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "No L2/R2",
+  "controls": "Volume up and down",
+  "storage": "256 MB NAND flash memory",
+  "battery": 840,
+  "ram": "16 MB",
+  "ramGB": 0.015625,
+  "ramType": "SRAM",
+  "arch": "ARM",
+  "chip": "Custom SoC",
+  "cpu": "ARM946E-S",
+  "gpu": "2D Graphics Engine"
+ },
+ {
+  "name": "Sony PSP Go",
+  "brand": "Sony",
+  "released": "2009-10",
+  "upcoming": false,
+  "price": null,
+  "priceText": "Price varies",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Original Hardware"
+  ],
+  "best": [
+   "PSP",
+   "PS1"
+  ],
+  "screen": "3.8”, 30:17",
+  "aspect": "30:17",
+  "screenIn": 3.8,
+  "res": "480 x 272",
+  "hz": null,
+  "panel": "TFT",
+  "ppi": "145 PPI",
+  "material": "Plastic",
+  "weight": 158,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "No L2/R2",
+  "controls": "Home, volume up and down, music settings, brightness, wireless LAN switch",
+  "storage": "16 GB",
+  "battery": 930,
+  "ram": "64 MB",
+  "ramGB": 0.0625,
+  "ramType": "MIPS",
+  "arch": "MIPS",
+  "chip": "Allegrex",
+  "cpu": "MIPS R4000",
+  "gpu": "Custom Rendering Engine + Surface Engine"
+ },
+ {
+  "name": "Nintendo DSi XL",
+  "brand": "Nintendo",
+  "released": "2010-03",
+  "upcoming": false,
+  "price": 80,
+  "priceText": "~$80",
+  "form": [
+   "Dual-Screen"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Budget",
+   "Original Hardware"
+  ],
+  "best": [
+   "NDS",
+   "SNES"
+  ],
+  "screen": "4.2 x2”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 4.2,
+  "res": "256 × 192",
+  "hz": null,
+  "panel": "IPS",
+  "ppi": "76 PPI",
+  "material": "Plastic",
+  "weight": 314,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "No L2/R2",
+  "controls": "Volume up and down",
+  "storage": "256 MB NAND flash memory",
+  "battery": 1050,
+  "ram": "16 MB",
+  "ramGB": 0.015625,
+  "ramType": "SRAM",
+  "arch": "ARM",
+  "chip": "Custom SoC",
+  "cpu": "ARM946E-S",
+  "gpu": "2D Graphics Engine"
+ },
+ {
+  "name": "Nintendo 3DS",
+  "brand": "Nintendo",
+  "released": "2011-03",
+  "upcoming": false,
+  "price": 100,
+  "priceText": "~$100",
+  "form": [
+   "Dual-Screen"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Budget",
+   "Original Hardware"
+  ],
+  "best": [
+   "3DS",
+   "NDS"
+  ],
+  "screen": "3.53, 3.02”, Top: 5:3 Bottom: 4:3",
+  "aspect": "Top: 5:3 Bottom: 4:3",
+  "screenIn": 3.53,
+  "res": "800 x 240, 320 x 240",
+  "hz": null,
+  "panel": "LCD",
+  "ppi": "236 PPI",
+  "material": "Plastic",
+  "weight": 235,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "No L2/R2",
+  "controls": "Home, volume slider, 3D depth slider, wireless switch",
+  "storage": "1 GB & External SD/SDHC",
+  "battery": 1300,
+  "ram": "128 MB",
+  "ramGB": 0.125,
+  "ramType": "ARM",
+  "arch": "ARM",
+  "chip": "CPU CTR",
+  "cpu": "ARM11",
+  "gpu": "Digital Media Professionals PICA200"
+ },
+ {
+  "name": "Sony Ericsson Xperia Play",
+  "brand": "Sony Ericsson",
+  "released": "2011-04",
+  "upcoming": false,
+  "price": 80,
+  "priceText": "~$80",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 2.3.7",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "N64",
+   "PS1"
+  ],
+  "screen": "4.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 4.0,
+  "res": "854 x 480",
+  "hz": null,
+  "panel": "TFT",
+  "ppi": "244 PPI",
+  "material": "Plastic",
+  "weight": 175,
+  "speaker": "Back",
+  "charge": "Bottom",
+  "shoulder": "No L2/R2",
+  "controls": "Home, back, volume up and down, menu, search",
+  "storage": "400 MB",
+  "battery": 1500,
+  "ram": "512 MB",
+  "ramGB": 0.5,
+  "ramType": "ARM",
+  "arch": "ARM",
+  "chip": "Qualcomm Snapdragon S2 MSM8255",
+  "cpu": "Scorpion",
+  "gpu": "Qualcomm Adreno 205"
+ },
+ {
+  "name": "Sony PSP Street",
+  "brand": "Sony",
+  "released": "2011-10",
+  "upcoming": false,
+  "price": null,
+  "priceText": "Price varies",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Original Hardware"
+  ],
+  "best": [
+   "PSP",
+   "PS1"
+  ],
+  "screen": "4.3”, 30:17",
+  "aspect": "30:17",
+  "screenIn": 4.3,
+  "res": "480 x 272",
+  "hz": null,
+  "panel": "TFT",
+  "ppi": "128 PPI",
+  "material": "Plastic",
+  "weight": 223,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "No L2/R2",
+  "controls": "Home, volume up and down",
+  "storage": "External Memory Stick PRO Duo",
+  "battery": 925,
+  "ram": "64 MB",
+  "ramGB": 0.0625,
+  "ramType": "MIPS",
+  "arch": "MIPS",
+  "chip": "Allegrex",
+  "cpu": "MIPS R4000",
+  "gpu": "Custom Rendering Engine + Surface Engine"
+ },
+ {
+  "name": "Sony PlayStation Vita",
+  "brand": "Sony",
+  "released": "2012-02",
+  "upcoming": false,
+  "price": null,
+  "priceText": "Price varies",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Original Hardware"
+  ],
+  "best": [
+   "PSP",
+   "PS1"
+  ],
+  "screen": "5.0”, 30:17",
+  "aspect": "30:17",
+  "screenIn": 5.0,
+  "res": "960 × 544",
+  "hz": null,
+  "panel": "OLED",
+  "ppi": "220 PPI",
+  "material": "Plastic",
+  "weight": 260,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "No L2/R2",
+  "controls": "Home, volume up and down, rear touchpad, accessory port",
+  "storage": "External PS Vita Memory Card",
+  "battery": 2210,
+  "ram": "512 MB",
+  "ramGB": 0.5,
+  "ramType": "ARM",
+  "arch": "ARM",
+  "chip": "Custom SoC",
+  "cpu": "Cortex-A9 MPCore",
+  "gpu": "PowerVR SGX543MP4+"
+ },
+ {
+  "name": "Nintendo 3DS XL",
+  "brand": "Nintendo",
+  "released": "2012-08",
+  "upcoming": false,
+  "price": 170,
+  "priceText": "~$170",
+  "form": [
+   "Dual-Screen"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Mid-Range",
+   "Original Hardware"
+  ],
+  "best": [
+   "3DS",
+   "NDS"
+  ],
+  "screen": "4.88, 4.18”, Top: 5:3 Bottom: 4:3",
+  "aspect": "Top: 5:3 Bottom: 4:3",
+  "screenIn": 4.88,
+  "res": "800 x 240, 320 x 240",
+  "hz": null,
+  "panel": "LCD",
+  "ppi": "171 PPI",
+  "material": "Plastic",
+  "weight": 336,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "No L2/R2",
+  "controls": "Home, volume slider, 3D depth slider, wireless switch",
+  "storage": "1 GB & External SD/SDHC",
+  "battery": 1750,
+  "ram": "128 MB",
+  "ramGB": 0.125,
+  "ramType": "ARM",
+  "arch": "ARM",
+  "chip": "CPU CTR",
+  "cpu": "ARM11",
+  "gpu": "Digital Media Professionals PICA200"
+ },
+ {
+  "name": "Nintendo 2DS",
+  "brand": "Nintendo",
+  "released": "2013-10",
+  "upcoming": false,
+  "price": 80,
+  "priceText": "~$80",
+  "form": [
+   "Vertical"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Budget",
+   "Original Hardware"
+  ],
+  "best": [
+   "3DS",
+   "NDS"
+  ],
+  "screen": "3.53, 3.02”, Top: 5:3 Bottom: 4:3",
+  "aspect": "Top: 5:3 Bottom: 4:3",
+  "screenIn": 3.53,
+  "res": "400 x 240, 320 x 240",
+  "hz": null,
+  "panel": "LCD",
+  "ppi": "132 PPI",
+  "material": "Plastic",
+  "weight": 260,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "No L2/R2",
+  "controls": "Home, volume slider, sleep switch",
+  "storage": "1 GB & External SD/SDHC",
+  "battery": 1300,
+  "ram": "128 MB",
+  "ramGB": 0.125,
+  "ramType": "ARM",
+  "arch": "ARM",
+  "chip": "CPU CTR B",
+  "cpu": "ARM11",
+  "gpu": "Digital Media Professionals PICA200"
+ },
+ {
+  "name": "Nintendo New 3DS XL",
+  "brand": "Nintendo",
+  "released": "2015-02",
+  "upcoming": false,
+  "price": 200,
+  "priceText": "~$200",
+  "form": [
+   "Dual-Screen"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Mid-Range",
+   "Staff Pick",
+   "Original Hardware"
+  ],
+  "best": [
+   "3DS",
+   "NDS"
+  ],
+  "screen": "4.88, 4.18”, Top: 5:3 Bottom: 4:3",
+  "aspect": "Top: 5:3 Bottom: 4:3",
+  "screenIn": 4.88,
+  "res": "800 x 240, 320 x 240",
+  "hz": null,
+  "panel": "IPS",
+  "ppi": "171 PPI",
+  "material": "Plastic",
+  "weight": 329,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Home, volume slider, 3D depth slider",
+  "storage": "1 GB",
+  "battery": 1750,
+  "ram": "256 MB",
+  "ramGB": 0.25,
+  "ramType": "ARM",
+  "arch": "ARM",
+  "chip": "CPU LGR A",
+  "cpu": "ARM11",
+  "gpu": "Digital Media Professionals PICA200"
+ },
+ {
+  "name": "Nintendo New 3DS",
+  "brand": "Nintendo",
+  "released": "2015-09",
+  "upcoming": false,
+  "price": 150,
+  "priceText": "~$150",
+  "form": [
+   "Dual-Screen"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Mid-Range",
+   "Original Hardware"
+  ],
+  "best": [
+   "3DS",
+   "NDS"
+  ],
+  "screen": "3.88, 3.33”, Top: 5:3 Bottom: 4:3",
+  "aspect": "Top: 5:3 Bottom: 4:3",
+  "screenIn": 3.88,
+  "res": "800 x 240, 320 x 240",
+  "hz": null,
+  "panel": "IPS",
+  "ppi": "215 PPI",
+  "material": "Plastic",
+  "weight": 253,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Home, volume slider, 3D depth slider",
+  "storage": "1 GB",
+  "battery": 1400,
+  "ram": "256 MB",
+  "ramGB": 0.25,
+  "ramType": "ARM",
+  "arch": "ARM",
+  "chip": "CPU LGR A",
+  "cpu": "ARM11",
+  "gpu": "Digital Media Professionals PICA200"
+ },
+ {
+  "name": "Nintendo Switch",
+  "brand": "Nintendo",
+  "released": "2017-03",
+  "upcoming": false,
+  "price": 300,
+  "priceText": "~$300",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Mid-Range",
+   "Powerful",
+   "Original Hardware"
+  ],
+  "best": [],
+  "screen": "6.2”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 6.2,
+  "res": "1280 × 720",
+  "hz": null,
+  "panel": "IPS",
+  "ppi": "236 PPI",
+  "material": "Plastic",
+  "weight": 297,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Home, volume up and down, capture",
+  "storage": "32 GB eMMC",
+  "battery": 4310,
+  "ram": "4 GB",
+  "ramGB": 4.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "Nvidia Tegra X1",
+  "cpu": "Cortex-A57",
+  "gpu": "Nvidia GM20B"
+ },
+ {
+  "name": "Nintendo New 2DS XL",
+  "brand": "Nintendo",
+  "released": "2017-07",
+  "upcoming": false,
+  "price": 160,
+  "priceText": "~$160",
+  "form": [
+   "Dual-Screen"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Mid-Range",
+   "Original Hardware"
+  ],
+  "best": [
+   "3DS",
+   "NDS"
+  ],
+  "screen": "4.88, 4.18”, Top: 5:3 Bottom: 4:3",
+  "aspect": "Top: 5:3 Bottom: 4:3",
+  "screenIn": 4.88,
+  "res": "800 x 240, 320 x 240",
+  "hz": null,
+  "panel": "LCD",
+  "ppi": "171 PPI",
+  "material": "Plastic",
+  "weight": 260,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Home, volume slider",
+  "storage": "1 GB",
+  "battery": 1400,
+  "ram": "256 MB",
+  "ramGB": 0.25,
+  "ramType": "ARM",
+  "arch": "ARM",
+  "chip": "CPU LGR A",
+  "cpu": "ARM11",
+  "gpu": "Digital Media Professionals PICA200"
+ },
+ {
+  "name": "HardKernel Odroid Go",
+  "brand": "HardKernel",
+  "released": "2018-01",
+  "upcoming": false,
+  "price": 30,
+  "priceText": "~$30",
+  "form": [
+   "Vertical"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Ultra Budget"
+  ],
+  "best": [
+   "Game Boy",
+   "GBC"
+  ],
+  "screen": "2.4”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 2.4,
+  "res": "320 x 240",
+  "hz": 60,
+  "panel": "TFT",
+  "ppi": "166 PPI",
+  "material": "Plastic",
+  "weight": 115,
+  "speaker": "Front",
+  "charge": "Ports and Connectivity",
+  "shoulder": "No L2/R2",
+  "controls": "Menu, volume",
+  "storage": "16 MB",
+  "battery": 1200,
+  "ram": "4MB PSRAM",
+  "ramGB": 0.00390625,
+  "ramType": "SRAM",
+  "arch": "Xtensa",
+  "chip": "Espressif Systems ESP32-WROVER-B",
+  "cpu": "Tensilica Xtensa LX6",
+  "gpu": "Small,"
+ },
+ {
+  "name": "Nintendo Switch Lite",
+  "brand": "Nintendo",
+  "released": "2019-09",
+  "upcoming": false,
+  "price": 200,
+  "priceText": "~$200",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Mid-Range",
+   "Powerful",
+   "Original Hardware"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "5.5”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.5,
+  "res": "1280 × 720",
+  "hz": null,
+  "panel": "IPS",
+  "ppi": "267 PPI",
+  "material": "Plastic",
+  "weight": 277,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Home, volume up and down, capture",
+  "storage": "32 GB eMMC",
+  "battery": 3570,
+  "ram": "4 GB",
+  "ramGB": 4.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "Nvidia Tegra X1+",
+  "cpu": "Cortex-A57",
+  "gpu": "Nvidia GM20B"
+ },
+ {
+  "name": "HardKernel Odroid Go Advance",
+  "brand": "HardKernel",
+  "released": "2020-02",
+  "upcoming": false,
+  "price": 63,
+  "priceText": "~$63",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "GBA",
+   "Game Gear"
+  ],
+  "screen": "3.5”, 3:2",
+  "aspect": "3:2",
+  "screenIn": 3.5,
+  "res": "480 x 320",
+  "hz": 60,
+  "panel": "TFT",
+  "ppi": "164 PPI",
+  "material": "Plastic or Metal (Aluminum)",
+  "weight": 170,
+  "speaker": "Front",
+  "charge": "Ports and Connectivity",
+  "shoulder": "No L2/R2",
+  "controls": "F1, F2, F3, F4, F5, F6",
+  "storage": "External MicroSD",
+  "battery": 3000,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "DDR3",
+  "arch": "ARM",
+  "chip": "RockChip RK3326",
+  "cpu": "Cortex-A35",
+  "gpu": "Mali-G31 MP2"
+ },
+ {
+  "name": "Retroid Pocket",
+  "brand": "Retroid",
+  "released": "2020-02",
+  "upcoming": false,
+  "price": 75,
+  "priceText": "~$75",
+  "form": [
+   "Vertical"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 6",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": 200,
+  "speaker": "Front",
+  "charge": "Ports and Connectivity",
+  "shoulder": "No L2/R2",
+  "controls": "Home, volume up and down",
+  "storage": "32 GB",
+  "battery": 4000,
+  "ram": "512 MB",
+  "ramGB": 0.5,
+  "ramType": "DDR2",
+  "arch": "ARM",
+  "chip": "MediaTek MT6580A",
+  "cpu": "Cortex-A7",
+  "gpu": "Mali-400 MP2"
+ },
+ {
+  "name": "PowKiddy V90",
+  "brand": "PowKiddy",
+  "released": "2020-06",
+  "upcoming": false,
+  "price": 40,
+  "priceText": "~$40",
+  "form": [
+   "Clamshell"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Ultra Budget"
+  ],
+  "best": [
+   "GBA",
+   "Game Boy"
+  ],
+  "screen": "2.8”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 2.8,
+  "res": "320 x 240",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "142 PPI",
+  "material": "Plastic",
+  "weight": 115,
+  "speaker": "Top",
+  "charge": "Ports and Connectivity",
+  "shoulder": "Side By Side",
+  "controls": "Menu",
+  "storage": "External MicroSD",
+  "battery": 1020,
+  "ram": "32 MB",
+  "ramGB": 0.03125,
+  "ramType": "ARM",
+  "arch": "ARM",
+  "chip": "Allwinner F1C100S",
+  "cpu": "ARM926EJ-S",
+  "gpu": "2D accelerator"
+ },
+ {
+  "name": "Retroid Pocket 2",
+  "brand": "Retroid",
+  "released": "2020-08",
+  "upcoming": false,
+  "price": 80,
+  "priceText": "~$80",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 8.1",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "N64",
+   "PS1"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": 196,
+  "speaker": "Front",
+  "charge": "Ports and Connectivity",
+  "shoulder": "Stacked",
+  "controls": "Home, vol +-",
+  "storage": "8 GB EMMC",
+  "battery": 4000,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "DDR3",
+  "arch": "ARM",
+  "chip": "MediaTek MT6580A",
+  "cpu": "Cortex-A7",
+  "gpu": "Mali-400 MP2"
+ },
+ {
+  "name": "Anbernic RG-351P",
+  "brand": "Anbernic",
+  "released": "2020-09",
+  "upcoming": false,
+  "price": 99,
+  "priceText": "~$99",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "GBA",
+   "Game Gear"
+  ],
+  "screen": "3.5”, 3:2",
+  "aspect": "3:2",
+  "screenIn": 3.5,
+  "res": "320 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "164 PPI",
+  "material": "Plastic",
+  "weight": 189,
+  "speaker": "Bottom",
+  "charge": "Ports and Connectivity",
+  "shoulder": "Side By Side",
+  "controls": "Reset",
+  "storage": "External MicroSD",
+  "battery": 3500,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "DDR3",
+  "arch": "ARM",
+  "chip": "RockChip RK3326",
+  "cpu": "Cortex-A35",
+  "gpu": "Mali-G31 MP2"
+ },
+ {
+  "name": "Anbernic RG-280V",
+  "brand": "Anbernic",
+  "released": "2020-11",
+  "upcoming": false,
+  "price": 70,
+  "priceText": "~$70",
+  "form": [
+   "Micro",
+   "Vertical"
+  ],
+  "size": [
+   "Micro"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "2.8”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 2.8,
+  "res": "320 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "206 PPI",
+  "material": "Plastic",
+  "weight": 125,
+  "speaker": "Back",
+  "charge": "Ports and Connectivity",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, reset",
+  "storage": "Dual External MicroSD",
+  "battery": 2100,
+  "ram": "512 MB",
+  "ramGB": 0.5,
+  "ramType": "DDR2",
+  "arch": "MIPS",
+  "chip": "Ingenic JZ4770",
+  "cpu": "XBurst",
+  "gpu": "Vivante GC860"
+ },
+ {
+  "name": "TRIMUI Model S",
+  "brand": "TRIMUI",
+  "released": "2020-11",
+  "upcoming": false,
+  "price": 50,
+  "priceText": "~$50",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "GBA",
+   "Game Boy"
+  ],
+  "screen": "2.0”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 2.0,
+  "res": "320 x 240",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "200 PPI",
+  "material": "Plastic & Aluminum combo",
+  "weight": 65,
+  "speaker": "Front",
+  "charge": "Ports and Connectivity",
+  "shoulder": "No L2/R2",
+  "controls": "Menu",
+  "storage": "64 MB",
+  "battery": 600,
+  "ram": "64 MB",
+  "ramGB": 0.0625,
+  "ramType": "ARM",
+  "arch": "ARM",
+  "chip": "Allwinner F1C200S",
+  "cpu": "ARM926EJ-S",
+  "gpu": "2D accelerator"
+ },
+ {
+  "name": "Anbernic RG-351M",
+  "brand": "Anbernic",
+  "released": "2021-01",
+  "upcoming": false,
+  "price": 140,
+  "priceText": "~$140",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "GBA",
+   "Game Gear"
+  ],
+  "screen": "3.5”, 3:2",
+  "aspect": "3:2",
+  "screenIn": 3.5,
+  "res": "320 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "164 PPI",
+  "material": "Metal (Aluminum) (Plastic side panels)",
+  "weight": 271,
+  "speaker": "Bottom",
+  "charge": "Ports and Connectivity",
+  "shoulder": "Side By Side",
+  "controls": "Reset",
+  "storage": "External MicroSD",
+  "battery": 3500,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "DDR3",
+  "arch": "ARM",
+  "chip": "RockChip RK3326",
+  "cpu": "Cortex-A35",
+  "gpu": "Mali-G31 MP2"
+ },
+ {
+  "name": "FunKey S",
+  "brand": "FunKey",
+  "released": "2021-01",
+  "upcoming": false,
+  "price": 70,
+  "priceText": "~$70",
+  "form": [
+   "Micro",
+   "Clamshell"
+  ],
+  "size": [
+   "Micro"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "Game Boy",
+   "GBC"
+  ],
+  "screen": "1.54”, 1:1",
+  "aspect": "1:1",
+  "screenIn": 1.54,
+  "res": "240 x 240",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "220 PPI",
+  "material": "Plastic",
+  "weight": 30,
+  "speaker": "Top",
+  "charge": "Ports and Connectivity",
+  "shoulder": "No L2/R2",
+  "controls": "Power/Function",
+  "storage": "MicroSD",
+  "battery": 410,
+  "ram": "64 MB",
+  "ramGB": 0.0625,
+  "ramType": "DDR2",
+  "arch": "ARM",
+  "chip": "Allwinner V3s",
+  "cpu": "Cortex-A7",
+  "gpu": "Micro,"
+ },
+ {
+  "name": "Anbernic RG-351V",
+  "brand": "Anbernic",
+  "released": "2021-03",
+  "upcoming": false,
+  "price": 109,
+  "priceText": "~$109",
+  "form": [
+   "Vertical"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": 230,
+  "speaker": "Front",
+  "charge": "Ports and Connectivity",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, reset, function button",
+  "storage": "Dual External MicroSD",
+  "battery": 3900,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "DDR3",
+  "arch": "ARM",
+  "chip": "RockChip RK3326",
+  "cpu": "Cortex-A35",
+  "gpu": "Mali-G31 MP2"
+ },
+ {
+  "name": "Anbernic RG-351MP",
+  "brand": "Anbernic",
+  "released": "2021-09",
+  "upcoming": false,
+  "price": 147,
+  "priceText": "~$147",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Metal (Aluminum)",
+  "weight": 271,
+  "speaker": "Bottom",
+  "charge": "Ports and Connectivity",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, reset",
+  "storage": "Dual External MicroSD",
+  "battery": 3500,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "DDR3",
+  "arch": "ARM",
+  "chip": "RockChip RK3326",
+  "cpu": "Cortex-A35",
+  "gpu": "Mali-G31 MP2"
+ },
+ {
+  "name": "Nintendo Switch OLED",
+  "brand": "Nintendo",
+  "released": "2021-10",
+  "upcoming": false,
+  "price": 350,
+  "priceText": "~$350",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Mid-Range",
+   "Powerful",
+   "Original Hardware"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "7.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 7.0,
+  "res": "1280 × 720",
+  "hz": null,
+  "panel": "OLED",
+  "ppi": "209 PPI",
+  "material": "Plastic",
+  "weight": 322,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Home, volume up and down, capture",
+  "storage": "64 GB eMMC",
+  "battery": 4310,
+  "ram": "4 GB",
+  "ramGB": 4.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "Nvidia Tegra X1+",
+  "cpu": "Cortex-A57",
+  "gpu": "Nvidia GM20B"
+ },
+ {
+  "name": "Miyoo Mini",
+  "brand": "Miyoo",
+  "released": "2021-12",
+  "upcoming": false,
+  "price": 52,
+  "priceText": "~$52",
+  "form": [
+   "Vertical"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "2.8”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 2.8,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "285 PPI",
+  "material": "Plastic",
+  "weight": 106,
+  "speaker": "Front",
+  "charge": "Ports and Connectivity",
+  "shoulder": "Side By Side",
+  "controls": "Menu",
+  "storage": "External MicroSD",
+  "battery": 2000,
+  "ram": "128 MB",
+  "ramGB": 0.125,
+  "ramType": "DDR3",
+  "arch": "ARM",
+  "chip": "SigmaStar SSD202D",
+  "cpu": "Cortex-A7",
+  "gpu": "Small,"
+ },
+ {
+  "name": "Anbernic RG-552",
+  "brand": "Anbernic",
+  "released": "2021-12",
+  "upcoming": false,
+  "price": 200,
+  "priceText": "~$200",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android",
+   "Linux"
+  ],
+  "osText": "Android 11, Linux",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "PSP",
+   "Dreamcast"
+  ],
+  "screen": "5.36”, 5:3",
+  "aspect": "5:3",
+  "screenIn": 5.36,
+  "res": "1920 x 1152",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "417 PPI",
+  "material": "Plastic",
+  "weight": 362,
+  "speaker": "Bottom",
+  "charge": "Ports and Connectivity",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, reset, function button (Android: home, Linux: hotkey)",
+  "storage": "64 GB eMMC",
+  "battery": 6400,
+  "ram": "4 GB",
+  "ramGB": 4.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "RockChip RK3399",
+  "cpu": "Cortex-A72",
+  "gpu": "Mali-T860 MP4"
+ },
+ {
+  "name": "Serious Play Digi Dock 2",
+  "brand": "Serious Play",
+  "released": "2022-01",
+  "upcoming": false,
+  "price": 299,
+  "priceText": "~$299",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android",
+   "Windows",
+   "Linux"
+  ],
+  "osText": "Android, Windows, Linux",
+  "cat": [],
+  "best": [
+   "PSP",
+   "Saturn"
+  ],
+  "screen": "5.5”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.5,
+  "res": "1920 x 1080 or 1080 x 720",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "400 PPI",
+  "material": "Metal (Aluminum)",
+  "weight": null,
+  "speaker": "Front",
+  "charge": "Ports and Connectivity",
+  "shoulder": "Side By Side",
+  "controls": "Home, screen switch",
+  "storage": "External MicroSD",
+  "battery": 10000,
+  "ram": "Core dependent",
+  "ramGB": null,
+  "ramType": "ARM, x86-64",
+  "arch": "ARM, x86-64",
+  "chip": "User chosen core",
+  "cpu": "Core dependent",
+  "gpu": "Core dependent"
+ },
+ {
+  "name": "One Netbook One XPlayer Mini",
+  "brand": "One Netbook",
+  "released": "2022-01",
+  "upcoming": false,
+  "price": 1039,
+  "priceText": "~$1039",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows"
+  ],
+  "osText": "Windows 10",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "7.0”, 16:10",
+  "aspect": "16:10",
+  "screenIn": 7.0,
+  "res": "1920 x 1200",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "323 PPI",
+  "material": "Plastic",
+  "weight": 589,
+  "speaker": "Front",
+  "charge": "Top and bottom",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, back/select, keyboard, desktop, turbo (TDP control)",
+  "storage": "512GB/1TB/2TB PCIE3 NVMe M.2 SSD",
+  "battery": 10455,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR4X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 5800U",
+  "cpu": "AMD Zen 3",
+  "gpu": "AMD Radeon RX Vega 8"
+ },
+ {
+  "name": "AYN Odin",
+  "brand": "AYN",
+  "released": "2022-01",
+  "upcoming": false,
+  "price": 199,
+  "priceText": "~$199",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android",
+   "Windows"
+  ],
+  "osText": "Android 10, Windows 10/11",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "5.98”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.98,
+  "res": "1920 x 1080",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "368 PPI",
+  "material": "Plastic",
+  "weight": 368,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Home, volume up and down, 2 programmable buttons on back",
+  "storage": "64 GB UFS 2.1",
+  "battery": 6600,
+  "ram": "4 GB",
+  "ramGB": 4.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "Qualcomm Snapdragon 845",
+  "cpu": "Qualcomm Kryo 385 Silver",
+  "gpu": "Qualcomm Adreno 630"
+ },
+ {
+  "name": "TinyCircuits Thumby",
+  "brand": "TinyCircuits",
+  "released": "2022-01",
+  "upcoming": false,
+  "price": 19,
+  "priceText": "~$19",
+  "form": [
+   "Micro",
+   "Vertical"
+  ],
+  "size": [
+   "Micro"
+  ],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Ultra Budget"
+  ],
+  "best": [
+   "Game Boy",
+   "GBC"
+  ],
+  "screen": "0.42”, 9:5",
+  "aspect": "9:5",
+  "screenIn": 0.42,
+  "res": "72 x 40",
+  "hz": 60,
+  "panel": "OLED",
+  "ppi": "196 PPI",
+  "material": "Plastic",
+  "weight": 5,
+  "speaker": "Back",
+  "charge": "Ports and Connectivity",
+  "shoulder": "No L2/R2",
+  "controls": "",
+  "storage": "2 MB",
+  "battery": 40,
+  "ram": "264 KB",
+  "ramGB": 264.0,
+  "ramType": "SRAM",
+  "arch": "ARM",
+  "chip": "Raspberry Pi RP2040",
+  "cpu": "Cortex-M0+",
+  "gpu": "Micro,"
+ },
+ {
+  "name": "PowKiddy X39",
+  "brand": "PowKiddy",
+  "released": "2022-01",
+  "upcoming": false,
+  "price": 45,
+  "priceText": "~$45",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "4.3”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 4.3,
+  "res": "480 x 272",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "128 PPI",
+  "material": "Plastic",
+  "weight": 190,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, menu, reset",
+  "storage": "External MicroSD",
+  "battery": 2500,
+  "ram": "128 MB",
+  "ramGB": 0.125,
+  "ramType": "LPDDR2",
+  "arch": "ARM",
+  "chip": "Actions Semiconductor ATM7051",
+  "cpu": "Cortex-A9",
+  "gpu": "PowerVR SGX540"
+ },
+ {
+  "name": "Valve Steam Deck",
+  "brand": "Valve",
+  "released": "2022-02",
+  "upcoming": false,
+  "price": 399,
+  "priceText": "~$399",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows",
+   "Linux"
+  ],
+  "osText": "Windows 11, Linux",
+  "cat": [],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "7.0”, 16:10",
+  "aspect": "16:10",
+  "screenIn": 7.0,
+  "res": "1280 x 800",
+  "hz": 60,
+  "panel": "LCD",
+  "ppi": "215 PPI",
+  "material": "Plastic",
+  "weight": 674,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, 4x assignable grip buttons (on back), view, options, steam, quick access",
+  "storage": "64 GB eMMC",
+  "battery": 5200,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5",
+  "arch": "x86-64",
+  "chip": "AMD Aerith",
+  "cpu": "AMD Zen 2",
+  "gpu": "AMD RDNA 2"
+ },
+ {
+  "name": "PowKiddy RGB10S",
+  "brand": "PowKiddy",
+  "released": "2022-03",
+  "upcoming": false,
+  "price": 80,
+  "priceText": "~$80",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android",
+   "Linux"
+  ],
+  "osText": "Android 11, Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "GBA",
+   "Game Gear"
+  ],
+  "screen": "3.5”, 3:2",
+  "aspect": "3:2",
+  "screenIn": 3.5,
+  "res": "480 x 320",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "164 PPI",
+  "material": "Plastic",
+  "weight": 143,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, WIFI switch",
+  "storage": "External MicroSD",
+  "battery": 3000,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "DDR3",
+  "arch": "ARM",
+  "chip": "RockChip RK3326",
+  "cpu": "Cortex-A35",
+  "gpu": "Mali-G31 MP2"
+ },
+ {
+  "name": "AYANEO Next",
+  "brand": "AYANEO",
+  "released": "2022-04",
+  "upcoming": false,
+  "price": 1265,
+  "priceText": "~$1265",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows"
+  ],
+  "osText": "Windows 10/11",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "7.0”, 16:10",
+  "aspect": "16:10",
+  "screenIn": 7.0,
+  "res": "1280 x 800",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "215 PPI",
+  "material": "Plastic",
+  "weight": 750,
+  "speaker": "Bottom",
+  "charge": "Ports and Connectivity",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, menu, windows, AYA space, task manager, fingerprint reader / power",
+  "storage": "1 TB",
+  "battery": 4100,
+  "ram": "16",
+  "ramGB": 16.0,
+  "ramType": "LPDDR4X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 5800U",
+  "cpu": "AMD Zen 3",
+  "gpu": "AMD Radeon RX Vega 8"
+ },
+ {
+  "name": "Anbernic RG-503",
+  "brand": "Anbernic",
+  "released": "2022-04",
+  "upcoming": false,
+  "price": 140,
+  "priceText": "~$140",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "4.95”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 4.95,
+  "res": "960 × 544",
+  "hz": 60,
+  "panel": "OLED",
+  "ppi": "222 PPI",
+  "material": "Plastic",
+  "weight": 236,
+  "speaker": "Bottom",
+  "charge": "Top",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, reset, function button",
+  "storage": "Dual External MicroSD",
+  "battery": 3500,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "RockChip RK3566",
+  "cpu": "Cortex-A55",
+  "gpu": "Mali-G52 2EE"
+ },
+ {
+  "name": "PowKiddy RGB20S",
+  "brand": "PowKiddy",
+  "released": "2022-05",
+  "upcoming": false,
+  "price": 80,
+  "priceText": "~$80",
+  "form": [
+   "Vertical"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": null,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, reset, function button, WIFI switch (but no internal wifi)",
+  "storage": "Dual External MicroSD",
+  "battery": 3500,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "DDR3",
+  "arch": "ARM",
+  "chip": "RockChip RK3326",
+  "cpu": "Cortex-A35",
+  "gpu": "Mali-G31 MP2"
+ },
+ {
+  "name": "Anbernic RG-353P",
+  "brand": "Anbernic",
+  "released": "2022-06",
+  "upcoming": false,
+  "price": 140,
+  "priceText": "~$140",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android",
+   "Linux"
+  ],
+  "osText": "Android 11, Linux",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": 210,
+  "speaker": "Bottom",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, reset, function button",
+  "storage": "32 GB eMMC 5.1",
+  "battery": 3500,
+  "ram": "2 GB",
+  "ramGB": 2.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "RockChip RK3566",
+  "cpu": "Cortex-A55",
+  "gpu": "Mali-G52 2EE"
+ },
+ {
+  "name": "AYN Odin Lite",
+  "brand": "AYN",
+  "released": "2022-07",
+  "upcoming": false,
+  "price": 165,
+  "priceText": "~$165",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 11",
+  "cat": [
+   "Mid-Range",
+   "Powerful"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "5.98”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.98,
+  "res": "1920 x 1080",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "368 PPI",
+  "material": "Plastic",
+  "weight": 280,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Home, volume up and down, 2 programmable buttons on back",
+  "storage": "64 GB",
+  "battery": 6600,
+  "ram": "4 GB",
+  "ramGB": 4.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "MediaTek Dimensity 900",
+  "cpu": "Cortex-A78",
+  "gpu": "Mali-G68 MC4"
+ },
+ {
+  "name": "Anbernic Win600",
+  "brand": "Anbernic",
+  "released": "2022-07",
+  "upcoming": false,
+  "price": 300,
+  "priceText": "~$300",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Windows",
+   "Linux"
+  ],
+  "osText": "Windows 10, Linux",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "GameCube",
+   "Wii"
+  ],
+  "screen": "5.94”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.94,
+  "res": "1280 x 720",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "247 PPI",
+  "material": "Plastic",
+  "weight": 493,
+  "speaker": "Bottom",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Home, volume up and down, menu, reset, mouse/gamepad switch, onscreen keyboard button, windows",
+  "storage": "replaceable M.2 2242 SATA SSD",
+  "battery": 9000,
+  "ram": "8 GB",
+  "ramGB": 8.0,
+  "ramType": "DDR4",
+  "arch": "x86-64",
+  "chip": "AMD Athlon Silver 3020e",
+  "cpu": "AMD Zen",
+  "gpu": "AMD Radeon RX Vega 3"
+ },
+ {
+  "name": "GamePad Digital GPD XP Plus",
+  "brand": "GPD",
+  "released": "2022-08",
+  "upcoming": false,
+  "price": 339,
+  "priceText": "~$339",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 11",
+  "cat": [
+   "Mid-Range",
+   "Powerful"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "6.81”, 20:9",
+  "aspect": "20:9",
+  "screenIn": 6.81,
+  "res": "2400 x 1080",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "386 PPI",
+  "material": "Plastic",
+  "weight": 375,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Home, back, volume up and down, screen mapping button, overview, fan control",
+  "storage": "128 GB UFS 3.1",
+  "battery": 7000,
+  "ram": "6 GB",
+  "ramGB": 6.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "MediaTek Dimensity 1200",
+  "cpu": "Cortex-A78",
+  "gpu": "Mali-G77 MC9"
+ },
+ {
+  "name": "TRIMUI Smart",
+  "brand": "TRIMUI",
+  "released": "2022-08",
+  "upcoming": false,
+  "price": 40,
+  "priceText": "~$40",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Ultra Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "2.4”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 2.4,
+  "res": "320 x 240",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "166 PPI",
+  "material": "Plastic",
+  "weight": 100,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "No L2/R2",
+  "controls": "Menu",
+  "storage": "8 GB eMMC",
+  "battery": 1200,
+  "ram": "128 MB",
+  "ramGB": 0.125,
+  "ramType": "LPDDR3",
+  "arch": "ARM",
+  "chip": "Allwinner S3",
+  "cpu": "Cortex-A7",
+  "gpu": "Small,"
+ },
+ {
+  "name": "Retroid Pocket 3",
+  "brand": "Retroid",
+  "released": "2022-08",
+  "upcoming": false,
+  "price": 120,
+  "priceText": "~$120",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 11",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "PSP",
+   "Dreamcast"
+  ],
+  "screen": "4.7”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 4.7,
+  "res": "1334 x 750",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "325 PPI",
+  "material": "Plastic",
+  "weight": 230,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Home, volume up and down",
+  "storage": "32 GB eMCP",
+  "battery": 4000,
+  "ram": "2 GB",
+  "ramGB": 2.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "UNISOC Tiger T310",
+  "cpu": "Cortex-A75",
+  "gpu": "PowerVR GE8300"
+ },
+ {
+  "name": "AYANEO Air",
+  "brand": "AYANEO",
+  "released": "2022-08",
+  "upcoming": false,
+  "price": 499,
+  "priceText": "~$499",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Windows",
+   "Linux"
+  ],
+  "osText": "Windows 11, Linux",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "5.5”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.5,
+  "res": "1920 x 1080",
+  "hz": 60,
+  "panel": "OLED",
+  "ppi": "400 PPI",
+  "material": "Plastic",
+  "weight": 410,
+  "speaker": "Bottom",
+  "charge": "Top and bottom",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, menu, windows, AYA space, task manager, fingerprint reader / power, 2 function buttons on top",
+  "storage": "128 GB",
+  "battery": 7350,
+  "ram": "8 GB",
+  "ramGB": 8.0,
+  "ramType": "LPDDR4X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 5 5560U",
+  "cpu": "AMD Zen 3",
+  "gpu": "AMD Radeon RX Vega 7"
+ },
+ {
+  "name": "Experimental Pi PiBoy XRS",
+  "brand": "Experimental Pi",
+  "released": "2022-09",
+  "upcoming": false,
+  "price": 150,
+  "priceText": "~$150",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": 330,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Menu",
+  "storage": "External MicroSD",
+  "battery": 5600,
+  "ram": "1",
+  "ramGB": 1.0,
+  "ramType": "ARM",
+  "arch": "ARM",
+  "chip": "Broadcom BCM2711",
+  "cpu": "Cortex-A72",
+  "gpu": "Broadcom VideoCore VI"
+ },
+ {
+  "name": "Anbernic RG-353VS",
+  "brand": "Anbernic",
+  "released": "2022-09",
+  "upcoming": false,
+  "price": 90,
+  "priceText": "~$90",
+  "form": [
+   "Vertical"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": 180,
+  "speaker": "Front",
+  "charge": "Top and bottom",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, menu, reset",
+  "storage": "Dual External MicroSD",
+  "battery": 3200,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "RockChip RK3566",
+  "cpu": "Cortex-A55",
+  "gpu": "Mali-G52 2EE"
+ },
+ {
+  "name": "Anbernic RG-353V",
+  "brand": "Anbernic",
+  "released": "2022-09",
+  "upcoming": false,
+  "price": 113,
+  "priceText": "~$113",
+  "form": [
+   "Vertical"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Android",
+   "Linux"
+  ],
+  "osText": "Android 11, Linux",
+  "cat": [],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": 180,
+  "speaker": "Front",
+  "charge": "Top and bottom",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, menu, reset",
+  "storage": "32 GB eMMC 5.1",
+  "battery": 3200,
+  "ram": "2 GB",
+  "ramGB": 2.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "RockChip RK3566",
+  "cpu": "Cortex-A55",
+  "gpu": "Mali-G52 2EE"
+ },
+ {
+  "name": "AYANEO Air Pro",
+  "brand": "AYANEO",
+  "released": "2022-09",
+  "upcoming": false,
+  "price": 899,
+  "priceText": "~$899",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Windows",
+   "Linux"
+  ],
+  "osText": "Windows 11, Linux",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "5.5”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.5,
+  "res": "1920 x 1080",
+  "hz": 60,
+  "panel": "OLED",
+  "ppi": "400 PPI",
+  "material": "Plastic",
+  "weight": 450,
+  "speaker": "Bottom",
+  "charge": "Top and bottom",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, menu, windows, AYA space, task manager, fingerprint reader / power, 2 function buttons on top",
+  "storage": "512 GB",
+  "battery": 10050,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR4X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 5825U",
+  "cpu": "AMD Zen 3",
+  "gpu": "AMD Radeon RX Vega 8"
+ },
+ {
+  "name": "AOKZOE A1",
+  "brand": "AOKZOE",
+  "released": "2022-09",
+  "upcoming": false,
+  "price": 899,
+  "priceText": "~$899",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows",
+   "Linux"
+  ],
+  "osText": "Windows 11, Linux",
+  "cat": [],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "8.0”, 16:10",
+  "aspect": "16:10",
+  "screenIn": 8.0,
+  "res": "1920 x 1200",
+  "hz": 120,
+  "panel": "IPS",
+  "ppi": "283 PPI",
+  "material": "Plastic",
+  "weight": 669,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Back, volume up and down, brightness, keyboard, function button",
+  "storage": "512 GB",
+  "battery": 48,
+  "ram": "16",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 6800U",
+  "cpu": "AMD Zen 3+",
+  "gpu": "AMD Radeon 680M"
+ },
+ {
+  "name": "HardKernel Odroid Go Ultra",
+  "brand": "HardKernel",
+  "released": "2022-10",
+  "upcoming": false,
+  "price": 111,
+  "priceText": "~$111",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "PSP",
+   "Dreamcast"
+  ],
+  "screen": "5.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.0,
+  "res": "854 x 480",
+  "hz": 60,
+  "panel": "TFT",
+  "ppi": "195 PPI",
+  "material": "Plastic",
+  "weight": 299,
+  "speaker": "Back",
+  "charge": "Top",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, reset, 6 function buttons",
+  "storage": "16 GB eMMC",
+  "battery": 4000,
+  "ram": "2 GB",
+  "ramGB": 2.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "Amlogic S922X",
+  "cpu": "Cortex-A73",
+  "gpu": "Mali-G52 MP6"
+ },
+ {
+  "name": "GamePad Digital GPD Win Max 2",
+  "brand": "GPD",
+  "released": "2022-10",
+  "upcoming": false,
+  "price": 899,
+  "priceText": "~$899",
+  "form": [
+   "Clamshell"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows"
+  ],
+  "osText": "Windows 11",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "10.1”, 16:10",
+  "aspect": "16:10",
+  "screenIn": 10.1,
+  "res": "2560 x 1600",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "298 PPI",
+  "material": "Metal (Magnesium Aluminum Alloy)",
+  "weight": 1005,
+  "speaker": "Side",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Menu, reset, full QWERTY keyboard (backlit), two mappable back buttons, fingerprint/power reader, gamepad/mouse switch",
+  "storage": "Dual NVMe SSD slots",
+  "battery": 65,
+  "ram": "16",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 6800U",
+  "cpu": "AMD Zen 3+",
+  "gpu": "AMD Radeon 680M"
+ },
+ {
+  "name": "Logitech G CLOUD",
+  "brand": "Logitech",
+  "released": "2022-10",
+  "upcoming": false,
+  "price": 300,
+  "priceText": "~$300",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 11",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "7.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 7.0,
+  "res": "1920 x 1080",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "314 PPI",
+  "material": "Plastic",
+  "weight": 463,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Home, volume up and down, Logitech g button, 2 function buttons",
+  "storage": "64 GB UFS",
+  "battery": 6000,
+  "ram": "4 GB",
+  "ramGB": 4.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "Qualcomm Snapdragon 720G",
+  "cpu": "Kryo 465 Gold",
+  "gpu": "Qualcomm Adreno 618"
+ },
+ {
+  "name": "Anbernic RG-353M",
+  "brand": "Anbernic",
+  "released": "2022-11",
+  "upcoming": false,
+  "price": 146,
+  "priceText": "~$146",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android",
+   "Linux"
+  ],
+  "osText": "Android 11, Linux",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Metal (Aluminum)",
+  "weight": 232,
+  "speaker": "Bottom",
+  "charge": "Top",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, reset, function button",
+  "storage": "32 GB eMMC 5.1",
+  "battery": 3500,
+  "ram": "2 GB",
+  "ramGB": 2.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "RockChip RK3566",
+  "cpu": "Cortex-A55",
+  "gpu": "Mali-G52 2EE"
+ },
+ {
+  "name": "One Netbook One XPlayer Mini Pro",
+  "brand": "One Netbook",
+  "released": "2022-11",
+  "upcoming": false,
+  "price": 919,
+  "priceText": "~$919",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows"
+  ],
+  "osText": "Windows 11",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "7.0”, 16:10",
+  "aspect": "16:10",
+  "screenIn": 7.0,
+  "res": "1920 x 1200",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "323 PPI",
+  "material": "Plastic",
+  "weight": 599,
+  "speaker": "Front",
+  "charge": "Top and bottom",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, back/select, keyboard, desktop, turbo (TDP control)",
+  "storage": "512GB/1TB/2TB PCIE3 NVMe M.2 2280 SSD",
+  "battery": 12450,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 6800U",
+  "cpu": "AMD Zen 3+",
+  "gpu": "AMD Radeon 680M"
+ },
+ {
+  "name": "Retroid Pocket 3 Plus",
+  "brand": "Retroid",
+  "released": "2022-11",
+  "upcoming": false,
+  "price": 149,
+  "priceText": "~$149",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 11",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "PSP",
+   "Dreamcast"
+  ],
+  "screen": "4.7”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 4.7,
+  "res": "1334 x 750",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "325 PPI",
+  "material": "Plastic, Metal (Aluminum)",
+  "weight": 230,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Home, volume up and down",
+  "storage": "128 GB eMMC",
+  "battery": 4500,
+  "ram": "4 GB",
+  "ramGB": 4.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "UNISOC Tiger T618",
+  "cpu": "Cortex-A75",
+  "gpu": "Mali-G52 MP2"
+ },
+ {
+  "name": "Anbernic RG-505",
+  "brand": "Anbernic",
+  "released": "2022-11",
+  "upcoming": false,
+  "price": 148,
+  "priceText": "~$148",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 12",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "PSP",
+   "Dreamcast"
+  ],
+  "screen": "4.95”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 4.95,
+  "res": "960 × 544",
+  "hz": 60,
+  "panel": "OLED",
+  "ppi": "222 PPI",
+  "material": "Plastic",
+  "weight": 286,
+  "speaker": "Bottom",
+  "charge": "Top",
+  "shoulder": "Side By Side",
+  "controls": "Home/Back, volume up and down, function button",
+  "storage": "128 GB eMMC 5.1",
+  "battery": 5000,
+  "ram": "4 GB",
+  "ramGB": 4.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "UNISOC Tiger T618",
+  "cpu": "Cortex-A75",
+  "gpu": "Mali-G52 MP2"
+ },
+ {
+  "name": "Retroflag GPi Case 2W",
+  "brand": "Retroflag",
+  "released": "2022-12",
+  "upcoming": false,
+  "price": 80,
+  "priceText": "~$80",
+  "form": [
+   "Vertical"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "3.0”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.0,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "266 PPI",
+  "material": "Plastic",
+  "weight": 224,
+  "speaker": "Front",
+  "charge": "Ports and Connectivity",
+  "shoulder": "No L2/R2",
+  "controls": "Hotkey, turbo, sleep",
+  "storage": "External MicroSD",
+  "battery": 2800,
+  "ram": "512 MB",
+  "ramGB": 0.5,
+  "ramType": "LPDDR2",
+  "arch": "ARM",
+  "chip": "Broadcom BCM2710A1",
+  "cpu": "Cortex-A53",
+  "gpu": "Broadcom VideoCore IV"
+ },
+ {
+  "name": "AYANEO 2",
+  "brand": "AYANEO",
+  "released": "2022-12",
+  "upcoming": false,
+  "price": 749,
+  "priceText": "~$749",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows",
+   "Linux"
+  ],
+  "osText": "Windows 11, Linux",
+  "cat": [],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "7.02”, 16:10",
+  "aspect": "16:10",
+  "screenIn": 7.02,
+  "res": "1920 x 1200",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "322 PPI",
+  "material": "Plastic",
+  "weight": 647,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, fingerprint/power reader, 4 programmable buttons",
+  "storage": "512 GB",
+  "battery": 50,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 6800U",
+  "cpu": "AMD Zen 3+",
+  "gpu": "AMD Radeon 680M"
+ },
+ {
+  "name": "GR3000",
+  "brand": "GR3000",
+  "released": "2022-12",
+  "upcoming": false,
+  "price": 35,
+  "priceText": "~$35",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Ultra Budget"
+  ],
+  "best": [
+   "SNES",
+   "NEO GEO"
+  ],
+  "screen": "5.1”, 2:1",
+  "aspect": "2:1",
+  "screenIn": 5.1,
+  "res": "800 x 400",
+  "hz": 60,
+  "panel": "TFT",
+  "ppi": "175 PPI",
+  "material": "Plastic",
+  "weight": null,
+  "speaker": "Back",
+  "charge": "Top",
+  "shoulder": "Side By Side",
+  "controls": "Home, volume up and down",
+  "storage": "External MicroSD",
+  "battery": 1500,
+  "ram": "256 MB",
+  "ramGB": 0.25,
+  "ramType": "DDR3",
+  "arch": "ARM",
+  "chip": "Actions Semiconductor ATM7051",
+  "cpu": "Cortex-A9",
+  "gpu": "PowerVR SGX540"
+ },
+ {
+  "name": "Game Kiddy GKD Mini Plus",
+  "brand": "Game Kiddy",
+  "released": "2023-01",
+  "upcoming": false,
+  "price": 109,
+  "priceText": "~$109",
+  "form": [
+   "Vertical"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": null,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, menu, brightness, 2 side buttons mapped to A & B for vertical/tate mode games",
+  "storage": "Dual External MicroSD",
+  "battery": 3000,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "RockChip RK3566",
+  "cpu": "Cortex-A55",
+  "gpu": "Mali-G52 2EE"
+ },
+ {
+  "name": "Game Kiddy GKD Mini Plus Classic",
+  "brand": "Game Kiddy",
+  "released": "2023-01",
+  "upcoming": false,
+  "price": 139,
+  "priceText": "~$139",
+  "form": [
+   "Vertical"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Metal (Aluminum)",
+  "weight": null,
+  "speaker": "Back",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, menu, brightness, 2 side buttons mapped to A & B for vertical/tate mode games",
+  "storage": "Dual External MicroSD",
+  "battery": 3000,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "RockChip RK3566",
+  "cpu": "Cortex-A55",
+  "gpu": "Mali-G52 2EE"
+ },
+ {
+  "name": "Razer Edge 5G",
+  "brand": "Razer",
+  "released": "2023-02",
+  "upcoming": false,
+  "price": 399,
+  "priceText": "~$399",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 12",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "6.8”, 20:9",
+  "aspect": "20:9",
+  "screenIn": 6.8,
+  "res": "2400 x 1080",
+  "hz": 144,
+  "panel": "AMOLED",
+  "ppi": "387 PPI",
+  "material": "Plastic",
+  "weight": 401,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "4 function buttons",
+  "storage": "128 GB UFS 3.1",
+  "battery": 5000,
+  "ram": "6 GB",
+  "ramGB": 6.0,
+  "ramType": "LPDDR5",
+  "arch": "ARM",
+  "chip": "Qualcomm Snapdragon G3x Gen 1",
+  "cpu": "Cortex-X2",
+  "gpu": "Qualcomm Adreno 660"
+ },
+ {
+  "name": "One Netbook OneXPlayer 2",
+  "brand": "One Netbook",
+  "released": "2023-02",
+  "upcoming": false,
+  "price": 900,
+  "priceText": "~$900",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows"
+  ],
+  "osText": "Windows 11",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "8.4”, 16:10",
+  "aspect": "16:10",
+  "screenIn": 8.4,
+  "res": "2560 x 1600",
+  "hz": 120,
+  "panel": "IPS",
+  "ppi": "359 PPI",
+  "material": "Plastic",
+  "weight": 862,
+  "speaker": "Bottom",
+  "charge": "Top and bottom",
+  "shoulder": "Stacked",
+  "controls": "?",
+  "storage": "512 GB",
+  "battery": 17100,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 6800U",
+  "cpu": "AMD Zen 3+",
+  "gpu": "AMD Radeon 680M"
+ },
+ {
+  "name": "Miyoo Mini Plus",
+  "brand": "Miyoo",
+  "released": "2023-03",
+  "upcoming": false,
+  "price": 50,
+  "priceText": "~$50",
+  "form": [
+   "Vertical"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": 162,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, menu",
+  "storage": "External MicroSD",
+  "battery": 3000,
+  "ram": "128 MB",
+  "ramGB": 0.125,
+  "ramType": "DDR3",
+  "arch": "ARM",
+  "chip": "SigmaStar SSD202D",
+  "cpu": "Cortex-A7",
+  "gpu": "Small,"
+ },
+ {
+  "name": "PowKiddy RK2023",
+  "brand": "PowKiddy",
+  "released": "2023-03",
+  "upcoming": false,
+  "price": 75,
+  "priceText": "~$75",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": 175,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, reset",
+  "storage": "Dual External MicroSD",
+  "battery": 3500,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "RockChip RK3566",
+  "cpu": "Cortex-A55",
+  "gpu": "Mali-G52 2EE"
+ },
+ {
+  "name": "GamePad Digital GPD Win 4",
+  "brand": "GPD",
+  "released": "2023-03",
+  "upcoming": false,
+  "price": 799,
+  "priceText": "~$799",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Windows"
+  ],
+  "osText": "Windows",
+  "cat": [
+   "High-End",
+   "Powerful"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "6.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 6.0,
+  "res": "1920 x 1080",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "367 PPI",
+  "material": "Plastic",
+  "weight": 566,
+  "speaker": "Front",
+  "charge": "Top and bottom",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, 2 rear function buttons, QWERTY keyboard (physical keys), mouse/gamepad switch, fingerprint reader, optical mouse sensor",
+  "storage": "512 GB",
+  "battery": 45,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 6800U",
+  "cpu": "AMD Zen 3+",
+  "gpu": "AMD Radeon 680M"
+ },
+ {
+  "name": "Anbernic RG-405M",
+  "brand": "Anbernic",
+  "released": "2023-03",
+  "upcoming": false,
+  "price": 168,
+  "priceText": "~$168",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 12",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "4.0”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 4.0,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "200 PPI",
+  "material": "Metal (Aluminum)",
+  "weight": 265,
+  "speaker": "Bottom",
+  "charge": "Top",
+  "shoulder": "Side By Side",
+  "controls": "Home, volume up and down",
+  "storage": "128 GB eMMC",
+  "battery": 4500,
+  "ram": "4 GB",
+  "ramGB": 4.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "UNISOC Tiger T618",
+  "cpu": "Cortex-A75",
+  "gpu": "Mali-G52 MP2"
+ },
+ {
+  "name": "Data Frog SF2000",
+  "brand": "Datafrog",
+  "released": "2023-04",
+  "upcoming": false,
+  "price": 24,
+  "priceText": "~$24",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Ultra Budget"
+  ],
+  "best": [
+   "GBA",
+   "Game Boy"
+  ],
+  "screen": "2.8”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 2.8,
+  "res": "320 x 240",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "142 PPI",
+  "material": "Plastic",
+  "weight": null,
+  "speaker": "Back",
+  "charge": "Bottom",
+  "shoulder": "No L2/R2",
+  "controls": "",
+  "storage": "External MicroSD",
+  "battery": 1500,
+  "ram": "128 MB",
+  "ramGB": 0.125,
+  "ramType": "DDR2",
+  "arch": "MIPS",
+  "chip": "Hi-Chip Semiconductor B210",
+  "cpu": "MIPS24KEc",
+  "gpu": "Mali-400 MP2"
+ },
+ {
+  "name": "Retroid Pocket Flip",
+  "brand": "Retroid",
+  "released": "2023-04",
+  "upcoming": false,
+  "price": 159,
+  "priceText": "~$159",
+  "form": [
+   "Clamshell"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 11",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "PSP",
+   "Dreamcast"
+  ],
+  "screen": "4.7”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 4.7,
+  "res": "1334 x 750",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "325 PPI",
+  "material": "Plastic",
+  "weight": 270,
+  "speaker": "Back",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, programmable M1/M2 shoulder buttons",
+  "storage": "128 GB eMMC 5.1",
+  "battery": 5000,
+  "ram": "4 GB",
+  "ramGB": 4.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "UNISOC Tiger T618",
+  "cpu": "Cortex-A75",
+  "gpu": "Mali-G52 MP2"
+ },
+ {
+  "name": "PowKiddy X55",
+  "brand": "PowKiddy",
+  "released": "2023-05",
+  "upcoming": false,
+  "price": 90,
+  "priceText": "~$90",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "5.5”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.5,
+  "res": "1280 x 720",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "267 PPI",
+  "material": "Plastic",
+  "weight": 293,
+  "speaker": "Bottom",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Volume+-",
+  "storage": "16 GB",
+  "battery": 4000,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "RockChip RK3566",
+  "cpu": "Cortex-A55",
+  "gpu": "Mali-G52 2EE"
+ },
+ {
+  "name": "Anbernic RG-353PS",
+  "brand": "Anbernic",
+  "released": "2023-05",
+  "upcoming": false,
+  "price": 87,
+  "priceText": "~$87",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": 210,
+  "speaker": "Bottom",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, reset, function button",
+  "storage": "Dual External MicroSD",
+  "battery": 3500,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "RockChip RK3566",
+  "cpu": "Cortex-A55",
+  "gpu": "Mali-G52 2EE"
+ },
+ {
+  "name": "PowKiddy X28",
+  "brand": "PowKiddy",
+  "released": "2023-05",
+  "upcoming": false,
+  "price": 150,
+  "priceText": "~$150",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 11",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "PSP",
+   "Dreamcast"
+  ],
+  "screen": "5.5”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.5,
+  "res": "1280 x 720",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "267 PPI",
+  "material": "Plastic",
+  "weight": 296,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Home, back, volume up and down, App drawer, screen mapping button",
+  "storage": "64 GB eMMC",
+  "battery": 5000,
+  "ram": "4 GB",
+  "ramGB": 4.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "UNISOC Tiger T618",
+  "cpu": "Cortex-A75",
+  "gpu": "Mali-G52 MP2"
+ },
+ {
+  "name": "SZDIIER D-007",
+  "brand": "SZDIIER",
+  "released": "2023-05",
+  "upcoming": false,
+  "price": 67,
+  "priceText": "~$67",
+  "form": [
+   "Vertical"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": 400,
+  "speaker": "Back",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, menu, reset",
+  "storage": "8 GB eMMC",
+  "battery": 3500,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "DDR3",
+  "arch": "ARM",
+  "chip": "RockChip RK3326",
+  "cpu": "Cortex-A35",
+  "gpu": "Mali-G31 MP2"
+ },
+ {
+  "name": "Funny Playing Retro Pixel Pocket",
+  "brand": "Funny Playing",
+  "released": "2023-05",
+  "upcoming": false,
+  "price": 80,
+  "priceText": "~$80",
+  "form": [
+   "Vertical"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 7.1",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "Game Boy",
+   "GBC"
+  ],
+  "screen": "3.0”, 1:1",
+  "aspect": "1:1",
+  "screenIn": 3.0,
+  "res": "720 x 720",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "339 PPI",
+  "material": "Plastic",
+  "weight": null,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "No L2/R2",
+  "controls": "Clickable Volume up and down and brightness wheels",
+  "storage": "8 GB eMMC",
+  "battery": 3000,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR3",
+  "arch": "ARM",
+  "chip": "Allwinner A64",
+  "cpu": "Cortex-A53",
+  "gpu": "Mali-400 MP2"
+ },
+ {
+  "name": "Pimax Portal",
+  "brand": "Pimax",
+  "released": "2023-05",
+  "upcoming": false,
+  "price": 299,
+  "priceText": "~$299",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 10",
+  "cat": [
+   "Mid-Range",
+   "Powerful"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "5.5”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.5,
+  "res": "3840 x 2160",
+  "hz": 144,
+  "panel": "LCD",
+  "ppi": "801 PPI",
+  "material": "Plastic",
+  "weight": null,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Lots",
+  "storage": "128 GB",
+  "battery": 4000,
+  "ram": "8 GB",
+  "ramGB": 8.0,
+  "ramType": "ARM",
+  "arch": "ARM",
+  "chip": "Qualcomm Snapdragon XR2",
+  "cpu": "Kryo 585 Prime",
+  "gpu": "Qualcomm Adreno 650"
+ },
+ {
+  "name": "AYN Loki Max",
+  "brand": "AYN",
+  "released": "2023-06",
+  "upcoming": false,
+  "price": 775,
+  "priceText": "~$775",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Windows",
+   "Linux"
+  ],
+  "osText": "Windows 11, Linux",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "6.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 6.0,
+  "res": "1920 x 1080",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "367 PPI",
+  "material": "Plastic",
+  "weight": 568,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Home, back, volume up and down, menu, turbo, 2 programmable buttons on back",
+  "storage": "512 GB",
+  "battery": 46,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 6800U",
+  "cpu": "AMD Zen 3+",
+  "gpu": "AMD Radeon 680M"
+ },
+ {
+  "name": "AYN Loki",
+  "brand": "AYN",
+  "released": "2023-06",
+  "upcoming": false,
+  "price": 490,
+  "priceText": "~$490",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Windows",
+   "Linux"
+  ],
+  "osText": "Windows 11, Linux",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "6.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 6.0,
+  "res": "1920 x 1080",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "367 PPI",
+  "material": "Plastic",
+  "weight": 568,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Home, back, volume up and down, menu, turbo, 2 programmable buttons on back",
+  "storage": "256 GB",
+  "battery": 40,
+  "ram": "8 GB",
+  "ramGB": 8.0,
+  "ramType": "LPDDR5",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 5 6600U",
+  "cpu": "AMD Zen 3+",
+  "gpu": "AMD Radeon 660M"
+ },
+ {
+  "name": "Asus ROG Ally",
+  "brand": "Asus",
+  "released": "2023-06",
+  "upcoming": false,
+  "price": 599,
+  "priceText": "~$599",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows"
+  ],
+  "osText": "Windows 11",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "7.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 7.0,
+  "res": "1920 x 1080",
+  "hz": 120,
+  "panel": "IPS",
+  "ppi": "314 PPI",
+  "material": "Plastic",
+  "weight": 608,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, menu, M1/M2 buttons on back, power/fingerprint, view, command center, armoury crate",
+  "storage": "512 GB M.2 2230 NVMe SSD",
+  "battery": 40,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen Z1",
+  "cpu": "AMD Zen 4",
+  "gpu": "AMD Radeon 780M"
+ },
+ {
+  "name": "Anbernic RG NANO",
+  "brand": "Anbernic",
+  "released": "2023-06",
+  "upcoming": false,
+  "price": 60,
+  "priceText": "~$60",
+  "form": [
+   "Micro",
+   "Vertical"
+  ],
+  "size": [
+   "Micro"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "Game Boy",
+   "GBC"
+  ],
+  "screen": "1.54”, 1:1",
+  "aspect": "1:1",
+  "screenIn": 1.54,
+  "res": "240 x 240",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "220 PPI",
+  "material": "Metal (Aluminum)",
+  "weight": 75,
+  "speaker": "Bottom",
+  "charge": "Top",
+  "shoulder": "No L2/R2",
+  "controls": "",
+  "storage": "External MicroSD",
+  "battery": 1050,
+  "ram": "64 MB",
+  "ramGB": 0.0625,
+  "ramType": "DDR2",
+  "arch": "ARM",
+  "chip": "Allwinner V3s",
+  "cpu": "Cortex-A7",
+  "gpu": "Micro,"
+ },
+ {
+  "name": "AYANEO Air Plus",
+  "brand": "AYANEO",
+  "released": "2023-06",
+  "upcoming": false,
+  "price": 600,
+  "priceText": "~$600",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Windows",
+   "Linux"
+  ],
+  "osText": "Windows, Linux",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "6.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 6.0,
+  "res": "1920 x 1080",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "367 PPI",
+  "material": "Plastic",
+  "weight": 510,
+  "speaker": "Bottom",
+  "charge": "Top and bottom",
+  "shoulder": "Stacked",
+  "controls": "Menu, windows, AYA space, task manager",
+  "storage": "128 GB",
+  "battery": 46,
+  "ram": "8 GB",
+  "ramGB": 8.0,
+  "ramType": "LPDDR5",
+  "arch": "x86-64",
+  "chip": "AMD Mendocino 7320U",
+  "cpu": "AMD Zen 2",
+  "gpu": "AMD Radeon 610M"
+ },
+ {
+  "name": "AYANEO 2S",
+  "brand": "AYANEO",
+  "released": "2023-06",
+  "upcoming": false,
+  "price": 949,
+  "priceText": "~$949",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows"
+  ],
+  "osText": "Windows 11",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "7.0”, 16:10",
+  "aspect": "16:10",
+  "screenIn": 7.0,
+  "res": "1920 x 1200",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "323 PPI",
+  "material": "Plastic",
+  "weight": 667,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, fingerprint/power reader, 4 programmable buttons",
+  "storage": "512 GB",
+  "battery": 50,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 7840U",
+  "cpu": "AMD Zen 4",
+  "gpu": "AMD Radeon 780M"
+ },
+ {
+  "name": "AOKZOE A1 PRO",
+  "brand": "AOKZOE",
+  "released": "2023-06",
+  "upcoming": false,
+  "price": 799,
+  "priceText": "~$799",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows",
+   "Linux"
+  ],
+  "osText": "Windows 11, Linux",
+  "cat": [],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "8.0”, 16:10",
+  "aspect": "16:10",
+  "screenIn": 8.0,
+  "res": "1920 x 1200",
+  "hz": 120,
+  "panel": "IPS",
+  "ppi": "283 PPI",
+  "material": "Plastic",
+  "weight": 729,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Back, volume up and down, brightness, keyboard, function button",
+  "storage": "512 GB",
+  "battery": 65,
+  "ram": "32 GB",
+  "ramGB": 32.0,
+  "ramType": "LPDDR5X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 7840U",
+  "cpu": "AMD Zen 4",
+  "gpu": "AMD Radeon 780M"
+ },
+ {
+  "name": "ClockworkPi uConsole",
+  "brand": "ClockworkPi",
+  "released": "2023-06",
+  "upcoming": false,
+  "price": 139,
+  "priceText": "~$139",
+  "form": [
+   "Vertical"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "5.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.0,
+  "res": "1280 x 720",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "293 PPI",
+  "material": "Metal (Aluminum)",
+  "weight": null,
+  "speaker": "Side",
+  "charge": "Side",
+  "shoulder": "No L2/R2",
+  "controls": "Full QWERTY keyboard (backlit), l/r mouse buttons",
+  "storage": "MicroSD",
+  "battery": 18650,
+  "ram": "Core dependent",
+  "ramGB": null,
+  "ramType": "ARM, RISC-V",
+  "arch": "ARM, RISC-V",
+  "chip": "User chosen core",
+  "cpu": "Core dependent",
+  "gpu": "Core dependent"
+ },
+ {
+  "name": "BOYHOM X6",
+  "brand": "BOYHOM",
+  "released": "2023-07",
+  "upcoming": false,
+  "price": 25,
+  "priceText": "~$25",
+  "form": [
+   "Vertical"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Ultra Budget"
+  ],
+  "best": [
+   "SNES",
+   "NEO GEO"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": null,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "No L2/R2",
+  "controls": "Menu, reset, volume +/-",
+  "storage": "External MicroSD",
+  "battery": 2000,
+  "ram": "? DDR",
+  "ramGB": null,
+  "ramType": "DDR",
+  "arch": "MIPS32",
+  "chip": "Actions Semiconductor ATJ2273S",
+  "cpu": "Actions Semiconductor ATJ2273S",
+  "gpu": "Vertical,"
+ },
+ {
+  "name": "PowKiddy RGB10MAX3 Pro",
+  "brand": "PowKiddy",
+  "released": "2023-07",
+  "upcoming": false,
+  "price": 115,
+  "priceText": "~$115",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android",
+   "Linux"
+  ],
+  "osText": "Android, Linux",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "PSP",
+   "Dreamcast"
+  ],
+  "screen": "5.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.0,
+  "res": "854 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "195 PPI",
+  "material": "Plastic",
+  "weight": null,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, function 1 & 2",
+  "storage": "16 GB eMMC",
+  "battery": 4000,
+  "ram": "2 GB",
+  "ramGB": 2.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "Amlogic A311D",
+  "cpu": "Cortex-A73",
+  "gpu": "Mali-G52 MP4"
+ },
+ {
+  "name": "Game Console R35S",
+  "brand": "Game Console",
+  "released": "2023-07",
+  "upcoming": false,
+  "price": 50,
+  "priceText": "~$50",
+  "form": [
+   "Vertical"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": null,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, reset, function button",
+  "storage": "Dual External MicroSD",
+  "battery": 3500,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "RockChip RK3326",
+  "cpu": "Cortex-A35",
+  "gpu": "Mali-G31 MP2"
+ },
+ {
+  "name": "KT Pocket KT-R1",
+  "brand": "KT Pocket",
+  "released": "2023-07",
+  "upcoming": false,
+  "price": 170,
+  "priceText": "~$170",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 12",
+  "cat": [
+   "Mid-Range",
+   "Powerful"
+  ],
+  "best": [
+   "GBA",
+   "Game Gear"
+  ],
+  "screen": "4.5”, 3:2",
+  "aspect": "3:2",
+  "screenIn": 4.5,
+  "res": "1620 x 1080",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "432 PPI",
+  "material": "Plastic or Metal (Aluminum)",
+  "weight": 260,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Side By Side",
+  "controls": "Home, volume up and down, menu",
+  "storage": "64",
+  "battery": 7000,
+  "ram": "4",
+  "ramGB": 4.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "MediaTek Helio G99",
+  "cpu": "Cortex-A76",
+  "gpu": "Mali-G57 MC2"
+ },
+ {
+  "name": "Abxylute Cloud",
+  "brand": "Abxylute",
+  "released": "2023-07",
+  "upcoming": false,
+  "price": 200,
+  "priceText": "~$200",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 12",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "PSP",
+   "Dreamcast"
+  ],
+  "screen": "7.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 7.0,
+  "res": "1920 x 1080",
+  "hz": 60,
+  "panel": "LTPS",
+  "ppi": "314 PPI",
+  "material": "Plastic",
+  "weight": 410,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "?",
+  "storage": "64 GB",
+  "battery": 5200,
+  "ram": "4 GB",
+  "ramGB": 4.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "MediaTek MT8365",
+  "cpu": "Cortex-A53",
+  "gpu": "Mali-G52 MC1"
+ },
+ {
+  "name": "AYANEO Geek 1S",
+  "brand": "AYANEO",
+  "released": "2023-07",
+  "upcoming": false,
+  "price": 699,
+  "priceText": "~$699",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows"
+  ],
+  "osText": "Windows 11",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "7.0”, 16:10",
+  "aspect": "16:10",
+  "screenIn": 7.0,
+  "res": "1920 x 1200",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "323 PPI",
+  "material": "Plastic",
+  "weight": 672,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, fingerprint/power reader, 4 programmable buttons",
+  "storage": "512 GB",
+  "battery": 50,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 7840U",
+  "cpu": "AMD Zen 4",
+  "gpu": "AMD Radeon 780M"
+ },
+ {
+  "name": "AYANEO Air 1S",
+  "brand": "AYANEO",
+  "released": "2023-07",
+  "upcoming": false,
+  "price": 799,
+  "priceText": "~$799",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Windows",
+   "Linux"
+  ],
+  "osText": "Windows 11, Linux",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "5.5”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.5,
+  "res": "1920 x 1080",
+  "hz": 60,
+  "panel": "OLED",
+  "ppi": "400 PPI",
+  "material": "Plastic",
+  "weight": 450,
+  "speaker": "Bottom",
+  "charge": "Top and bottom",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, menu, windows, AYA space, task manager, fingerprint reader / power, 2 function buttons on top",
+  "storage": "512 GB",
+  "battery": 28,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 7840U",
+  "cpu": "AMD Zen 4",
+  "gpu": "AMD Radeon 780M"
+ },
+ {
+  "name": "Retroid Pocket 2S",
+  "brand": "Retroid",
+  "released": "2023-08",
+  "upcoming": false,
+  "price": 99,
+  "priceText": "~$99",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 11",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic or Metal (Aluminum)",
+  "weight": 200,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Home, back, volume up and down, programmable button",
+  "storage": "32 GB",
+  "battery": 4000,
+  "ram": "3 GB",
+  "ramGB": 3.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "UNISOC Tiger T610",
+  "cpu": "Cortex-A75",
+  "gpu": "Mali-G52 MP2"
+ },
+ {
+  "name": "AYN Loki Zero",
+  "brand": "AYN",
+  "released": "2023-08",
+  "upcoming": false,
+  "price": 249,
+  "priceText": "~$249",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Windows",
+   "Linux"
+  ],
+  "osText": "Windows 11, Linux",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "6.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 6.0,
+  "res": "1920 x 1080",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "367 PPI",
+  "material": "Plastic",
+  "weight": null,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Home, back, volume up and down, menu, turbo, 2 programmable buttons on back",
+  "storage": "64 GB",
+  "battery": 40,
+  "ram": "4 GB",
+  "ramGB": 4.0,
+  "ramType": "DDR4",
+  "arch": "x86-64",
+  "chip": "AMD Athlon Silver 3050e",
+  "cpu": "AMD Zen",
+  "gpu": "AMD Radeon RX Vega 3"
+ },
+ {
+  "name": "PowKiddy RGB30",
+  "brand": "PowKiddy",
+  "released": "2023-09",
+  "upcoming": false,
+  "price": 90,
+  "priceText": "~$90",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "Arcade",
+   "Game Boy"
+  ],
+  "screen": "4.0”, 1:1",
+  "aspect": "1:1",
+  "screenIn": 4.0,
+  "res": "720 x 720",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "254 PPI",
+  "material": "Plastic",
+  "weight": 207,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, reset",
+  "storage": "Dual External MicroSD",
+  "battery": 4100,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "RockChip RK3566",
+  "cpu": "Cortex-A55",
+  "gpu": "Mali-G52 2EE"
+ },
+ {
+  "name": "Anbernic RG-405V",
+  "brand": "Anbernic",
+  "released": "2023-09",
+  "upcoming": false,
+  "price": 138,
+  "priceText": "~$138",
+  "form": [
+   "Vertical"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 12",
+  "cat": [
+   "Mid-Range"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "4.0”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 4.0,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "200 PPI",
+  "material": "Plastic",
+  "weight": 282,
+  "speaker": "Bottom",
+  "charge": "Top",
+  "shoulder": "Side By Side",
+  "controls": "Home/Back, volume up and down, reset",
+  "storage": "128 GB eMMC",
+  "battery": 5500,
+  "ram": "4 GB",
+  "ramGB": 4.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "UNISOC Tiger T618",
+  "cpu": "Cortex-A75",
+  "gpu": "Mali-G52 MP2"
+ },
+ {
+  "name": "One Netbook OneXFly",
+  "brand": "One Netbook",
+  "released": "2023-09",
+  "upcoming": false,
+  "price": 739,
+  "priceText": "~$739",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows"
+  ],
+  "osText": "Windows 11",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "7.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 7.0,
+  "res": "1920 x 1080",
+  "hz": 120,
+  "panel": "IPS",
+  "ppi": "314 PPI",
+  "material": "Plastic",
+  "weight": 580,
+  "speaker": "Bottom",
+  "charge": "Top and bottom",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, 2 programmable shoulder buttons",
+  "storage": "M.2 2280 SSD",
+  "battery": 48,
+  "ram": "32 GB",
+  "ramGB": 32.0,
+  "ramType": "LPDDR5X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 7840U",
+  "cpu": "AMD Zen 4",
+  "gpu": "AMD Radeon 780M"
+ },
+ {
+  "name": "AYN Loki Mini Pro",
+  "brand": "AYN",
+  "released": "2023-09",
+  "upcoming": false,
+  "price": 420,
+  "priceText": "~$420",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Windows",
+   "Linux"
+  ],
+  "osText": "Windows 11, Linux",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "6.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 6.0,
+  "res": "1920 x 1080",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "367 PPI",
+  "material": "Plastic",
+  "weight": null,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Home, back, volume up and down, menu, turbo, 2 programmable buttons on back",
+  "storage": "128 GB",
+  "battery": 46,
+  "ram": "8 GB",
+  "ramGB": 8.0,
+  "ramType": "LPDDR5",
+  "arch": "x86-64",
+  "chip": "AMD Mendocino 7320U",
+  "cpu": "AMD Zen 2",
+  "gpu": "AMD Radeon 610M"
+ },
+ {
+  "name": "AYANEO Pocket Air",
+  "brand": "AYANEO",
+  "released": "2023-09",
+  "upcoming": false,
+  "price": 279,
+  "priceText": "~$279",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 12",
+  "cat": [
+   "Mid-Range",
+   "Powerful"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "5.5”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.5,
+  "res": "1920 x 1080",
+  "hz": 60,
+  "panel": "AMOLED",
+  "ppi": "400 PPI",
+  "material": "Plastic",
+  "weight": 380,
+  "speaker": "Bottom",
+  "charge": "Top and bottom",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, menu, windows, AYA space, task manager, fingerprint reader / power, 2 function buttons on top",
+  "storage": "128 GB",
+  "battery": 7350,
+  "ram": "6 GB",
+  "ramGB": 6.0,
+  "ramType": "ARM",
+  "arch": "ARM",
+  "chip": "MediaTek Dimensity 1200",
+  "cpu": "Cortex-A78",
+  "gpu": "Mali-G77 MC9"
+ },
+ {
+  "name": "SJGAM M17",
+  "brand": "SJGAM",
+  "released": "2023-09",
+  "upcoming": false,
+  "price": 35,
+  "priceText": "~$35",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Ultra Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "4.3”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 4.3,
+  "res": "480 x 272",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "128 PPI",
+  "material": "Plastic",
+  "weight": null,
+  "speaker": "Back",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down",
+  "storage": "4 GB eMMC",
+  "battery": 1500,
+  "ram": "256 MB",
+  "ramGB": 0.25,
+  "ramType": "LPDDR3",
+  "arch": "ARM",
+  "chip": "RockChip RK3126C",
+  "cpu": "Cortex-A7",
+  "gpu": "Mali-400 MP2"
+ },
+ {
+  "name": "AYANEO Kun",
+  "brand": "AYANEO",
+  "released": "2023-10",
+  "upcoming": false,
+  "price": 999,
+  "priceText": "~$999",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows",
+   "Linux"
+  ],
+  "osText": "Windows 11, Linux",
+  "cat": [],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "8.4”, 16:10",
+  "aspect": "16:10",
+  "screenIn": 8.4,
+  "res": "2560 x 1600",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "359 PPI",
+  "material": "Plastic",
+  "weight": 950,
+  "speaker": "Bottom",
+  "charge": "Top and bottom",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, dual trackpads, four programmable back buttons, fingerprint reader/power",
+  "storage": "512 GB",
+  "battery": 75,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 7840U",
+  "cpu": "AMD Zen 4",
+  "gpu": "AMD Radeon 780M"
+ },
+ {
+  "name": "AYN Odin 2",
+  "brand": "AYN",
+  "released": "2023-10",
+  "upcoming": false,
+  "price": 299,
+  "priceText": "~$299",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 13",
+  "cat": [
+   "Mid-Range",
+   "Powerful"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "6.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 6.0,
+  "res": "1920 x 1080",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "367 PPI",
+  "material": "Plastic",
+  "weight": 420,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Home, back, volume up and down, 2 programmable buttons on back, fingerprint/power reader",
+  "storage": "128 GB",
+  "battery": 8000,
+  "ram": "8 GB",
+  "ramGB": 8.0,
+  "ramType": "LPDDR5X",
+  "arch": "ARM",
+  "chip": "Qualcomm Snapdragon 8 Gen 2",
+  "cpu": "Cortex-X3",
+  "gpu": "Qualcomm Adreno 740"
+ },
+ {
+  "name": "Lenovo Legion Go",
+  "brand": "Lenovo",
+  "released": "2023-10",
+  "upcoming": false,
+  "price": 799,
+  "priceText": "~$799",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows"
+  ],
+  "osText": "Windows 11",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "8.8”, 16:10",
+  "aspect": "16:10",
+  "screenIn": 8.8,
+  "res": "2560 x 1600",
+  "hz": 144,
+  "panel": "IPS",
+  "ppi": "343 PPI",
+  "material": "Plastic",
+  "weight": 854,
+  "speaker": "Top",
+  "charge": "Top and bottom",
+  "shoulder": "Stacked",
+  "controls": "M1/M2/M3/M4 on sides and back, scroll wheel, trackpad",
+  "storage": "512 GB",
+  "battery": 49,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen Z1 Extreme",
+  "cpu": "AMD Zen 4",
+  "gpu": "AMD Radeon 780M"
+ },
+ {
+  "name": "Game Console R36S",
+  "brand": "Game Console",
+  "released": "2023-10",
+  "upcoming": false,
+  "price": 40,
+  "priceText": "~$40",
+  "form": [
+   "Vertical"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Ultra Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": 187,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, reset, function",
+  "storage": "Dual External MicroSD",
+  "battery": 3500,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "DDR3",
+  "arch": "ARM",
+  "chip": "RockChip RK3326",
+  "cpu": "Cortex-A35",
+  "gpu": "Mali-G31 MP2"
+ },
+ {
+  "name": "TRIMUI Smart Pro",
+  "brand": "TRIMUI",
+  "released": "2023-11",
+  "upcoming": false,
+  "price": 70,
+  "priceText": "~$70",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget",
+   "Staff Pick"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "4.96”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 4.96,
+  "res": "1280 x 720",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "296 PPI",
+  "material": "Plastic",
+  "weight": 231,
+  "speaker": "Back",
+  "charge": "Top and bottom",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, menu, function switch, sleep",
+  "storage": "8 GB eMMC",
+  "battery": 5000,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "Allwinner A133 Plus",
+  "cpu": "Cortex-A53",
+  "gpu": "PowerVR GE8300"
+ },
+ {
+  "name": "MagicX XU10",
+  "brand": "MagicX",
+  "released": "2023-11",
+  "upcoming": false,
+  "price": 70,
+  "priceText": "~$70",
+  "form": [
+   "Vertical"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "N64",
+   "PS1"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": 193,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, reset, function button",
+  "storage": "Dual External MicroSD",
+  "battery": 3000,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "Rockchip RK3326(S?)",
+  "cpu": "Cortex-A35",
+  "gpu": "Mali-G31 2EE"
+ },
+ {
+  "name": "Valve Steam Deck OLED",
+  "brand": "Valve",
+  "released": "2023-11",
+  "upcoming": false,
+  "price": 790,
+  "priceText": "~$790",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows",
+   "Linux"
+  ],
+  "osText": "Windows 11, Linux",
+  "cat": [],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "7.4”, 16:10",
+  "aspect": "16:10",
+  "screenIn": 7.4,
+  "res": "1280 x 800",
+  "hz": 90,
+  "panel": "OLED",
+  "ppi": "203 PPI",
+  "material": "Plastic",
+  "weight": 640,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, 4x assignable grip buttons (on back), view, options, steam, quick access",
+  "storage": "512 GB",
+  "battery": 6470,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5",
+  "arch": "x86-64",
+  "chip": "AMD Sephiroth",
+  "cpu": "AMD Zen 2",
+  "gpu": "AMD RDNA 2"
+ },
+ {
+  "name": "Anbernic RG ARC-S",
+  "brand": "Anbernic",
+  "released": "2023-11",
+  "upcoming": false,
+  "price": 78,
+  "priceText": "~$78",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "Sega Genesis",
+   "PS1"
+  ],
+  "screen": "4.0”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 4.0,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "200 PPI",
+  "material": "Plastic",
+  "weight": 240,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, reset, function",
+  "storage": "Dual External MicroSD",
+  "battery": 3500,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "RockChip RK3566",
+  "cpu": "Cortex-A55",
+  "gpu": "Mali-G52 2EE"
+ },
+ {
+  "name": "Anbernic RG ARC-D",
+  "brand": "Anbernic",
+  "released": "2023-11",
+  "upcoming": false,
+  "price": 98,
+  "priceText": "~$98",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android",
+   "Linux"
+  ],
+  "osText": "Android 11, Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "Sega Genesis",
+   "PS1"
+  ],
+  "screen": "4.0”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 4.0,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "200 PPI",
+  "material": "Plastic",
+  "weight": 240,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, reset, function",
+  "storage": "32 GB MicroSD",
+  "battery": 3500,
+  "ram": "2 GB",
+  "ramGB": 2.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "RockChip RK3566",
+  "cpu": "Cortex-A55",
+  "gpu": "Mali-G52 2EE"
+ },
+ {
+  "name": "Anbernic RG-35XX Plus",
+  "brand": "Anbernic",
+  "released": "2023-11",
+  "upcoming": false,
+  "price": 64,
+  "priceText": "~$64",
+  "form": [
+   "Vertical"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": 186,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, menu, reset",
+  "storage": "Dual External MicroSD",
+  "battery": 3300,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "Allwinner H700",
+  "cpu": "Cortex-A53",
+  "gpu": "Mali-G31 MP2"
+ },
+ {
+  "name": "GAMEMT E6",
+  "brand": "GAMEMT",
+  "released": "2023-12",
+  "upcoming": false,
+  "price": 55,
+  "priceText": "~$55",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 8.1",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "5.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.0,
+  "res": "854 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "195 PPI",
+  "material": "Plastic",
+  "weight": 208,
+  "speaker": "Back",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Menu, volume -+",
+  "storage": "External MicroSD",
+  "battery": 5000,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "DDR3",
+  "arch": "ARM",
+  "chip": "RockChip RK3326",
+  "cpu": "Cortex-A35",
+  "gpu": "Mali-G31 MP2"
+ },
+ {
+  "name": "AYANEO Slide",
+  "brand": "AYANEO",
+  "released": "2023-12",
+  "upcoming": false,
+  "price": 699,
+  "priceText": "~$699",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Windows",
+   "Linux"
+  ],
+  "osText": "Windows 11, Linux",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "6.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 6.0,
+  "res": "1920 x 1080",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "367 PPI",
+  "material": "Plastic",
+  "weight": 650,
+  "speaker": "Bottom",
+  "charge": "Top and bottom",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, LC/RC shoulder buttons, full QWERTY keyboard",
+  "storage": "512 GB",
+  "battery": 46,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 7840U",
+  "cpu": "AMD Zen 4",
+  "gpu": "AMD Radeon 780M"
+ },
+ {
+  "name": "Data Frog GB300",
+  "brand": "Datafrog",
+  "released": "2023-12",
+  "upcoming": false,
+  "price": 15,
+  "priceText": "~$15",
+  "form": [
+   "Vertical"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Proprietary"
+  ],
+  "osText": "Proprietary",
+  "cat": [
+   "Ultra Budget"
+  ],
+  "best": [
+   "GBA",
+   "Game Boy"
+  ],
+  "screen": "2.8”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 2.8,
+  "res": "320 x 240",
+  "hz": 60,
+  "panel": "TFT",
+  "ppi": "142 PPI",
+  "material": "Plastic",
+  "weight": null,
+  "speaker": "Back",
+  "charge": "Top",
+  "shoulder": "No L2/R2",
+  "controls": "",
+  "storage": "External MicroSD",
+  "battery": 800,
+  "ram": "128 MB",
+  "ramGB": 0.125,
+  "ramType": "DDR2",
+  "arch": "MIPS",
+  "chip": "Hi-Chip Semiconductor B210",
+  "cpu": "MIPS24KEc",
+  "gpu": "Mali-400 MP2"
+ },
+ {
+  "name": "Game Console R33S",
+  "brand": "Game Console",
+  "released": "2024-01",
+  "upcoming": false,
+  "price": 48,
+  "priceText": "~$48",
+  "form": [
+   "Vertical"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": 162,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, menu",
+  "storage": "32GB",
+  "battery": 3200,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "DDR3",
+  "arch": "ARM",
+  "chip": "RockChip RK3326",
+  "cpu": "Cortex-A35",
+  "gpu": "Mali-G31 MP2"
+ },
+ {
+  "name": "SJGAM M18",
+  "brand": "SJGAM",
+  "released": "2024-01",
+  "upcoming": false,
+  "price": 76,
+  "priceText": "~$76",
+  "form": [
+   "Vertical"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "4.3”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 4.3,
+  "res": "480 x 272",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "128 PPI",
+  "material": "Plastic",
+  "weight": 450,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down",
+  "storage": "4 GB eMMC",
+  "battery": 4000,
+  "ram": "768 MB",
+  "ramGB": 0.75,
+  "ramType": "DDR3",
+  "arch": "ARM",
+  "chip": "RockChip RK3566",
+  "cpu": "Cortex-A55",
+  "gpu": "Mali-G52 2EE"
+ },
+ {
+  "name": "Anbernic RG-35XX H",
+  "brand": "Anbernic",
+  "released": "2024-01",
+  "upcoming": false,
+  "price": 68,
+  "priceText": "~$68",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget",
+   "Staff Pick"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": 180,
+  "speaker": "Bottom",
+  "charge": "Top",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, reset",
+  "storage": "Dual External MicroSD",
+  "battery": 3300,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "Allwinner H700",
+  "cpu": "Cortex-A53",
+  "gpu": "Mali-G31 MP2"
+ },
+ {
+  "name": "Retroid Pocket 4 Pro",
+  "brand": "Retroid",
+  "released": "2024-01",
+  "upcoming": false,
+  "price": 199,
+  "priceText": "~$199",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 13",
+  "cat": [
+   "Mid-Range",
+   "Powerful"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "4.7”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 4.7,
+  "res": "1334 x 750",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "325 PPI",
+  "material": "Plastic",
+  "weight": 261,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Home, back, volume up and down",
+  "storage": "128 GB UFS 3.1",
+  "battery": 5000,
+  "ram": "8 GB",
+  "ramGB": 8.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "MediaTek Dimensity 1100",
+  "cpu": "Cortex-A78",
+  "gpu": "Mali-G77 MC9"
+ },
+ {
+  "name": "Game Kiddy GKD Pixel",
+  "brand": "Game Kiddy",
+  "released": "2024-01",
+  "upcoming": false,
+  "price": 76,
+  "priceText": "~$76",
+  "form": [
+   "Micro",
+   "Vertical"
+  ],
+  "size": [
+   "Micro"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "2.31”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 2.31,
+  "res": "320 x 240",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "173 PPI",
+  "material": "Metal (Aluminum)",
+  "weight": 107,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, menu",
+  "storage": "External MicroSD",
+  "battery": 1300,
+  "ram": "128 MB",
+  "ramGB": 0.125,
+  "ramType": "DDR2",
+  "arch": "MIPS",
+  "chip": "Ingenic X1830",
+  "cpu": "XBurst",
+  "gpu": "Micro,"
+ },
+ {
+  "name": "TJD T101",
+  "brand": "TJD",
+  "released": "2024-01",
+  "upcoming": false,
+  "price": 599,
+  "priceText": "~$599",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows"
+  ],
+  "osText": "Windows 11",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "10.1”, 16:10",
+  "aspect": "16:10",
+  "screenIn": 10.1,
+  "res": "1920 x 1200",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "224 PPI",
+  "material": "Plastic",
+  "weight": 890,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, menu, windows, keyboard, brightness, fingerprint/power reader",
+  "storage": "512 GB",
+  "battery": 60,
+  "ram": "16",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 5 7640U",
+  "cpu": "AMD Zen 4",
+  "gpu": "AMD Radeon 760M"
+ },
+ {
+  "name": "Retroid Pocket 4",
+  "brand": "Retroid",
+  "released": "2024-01",
+  "upcoming": false,
+  "price": 149,
+  "priceText": "~$149",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 11",
+  "cat": [
+   "Mid-Range",
+   "Powerful"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "4.7”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 4.7,
+  "res": "1334 x 750",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "325 PPI",
+  "material": "Plastic",
+  "weight": 261,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Home, back, volume up and down",
+  "storage": "128 GB UFS 3.1",
+  "battery": 5000,
+  "ram": "4 GB",
+  "ramGB": 4.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "MediaTek Dimensity 900",
+  "cpu": "Cortex-A78",
+  "gpu": "Mali-G68 MC4"
+ },
+ {
+  "name": "One Netbook OneXPlayer X1",
+  "brand": "One Netbook",
+  "released": "2024-02",
+  "upcoming": false,
+  "price": 1099,
+  "priceText": "~$1099",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows"
+  ],
+  "osText": "Windows 11",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "10.95”, 16:10",
+  "aspect": "16:10",
+  "screenIn": 10.95,
+  "res": "2560 x 1600",
+  "hz": 120,
+  "panel": "LTPS",
+  "ppi": "275 PPI",
+  "material": "Plastic",
+  "weight": 789,
+  "speaker": "Bottom",
+  "charge": "Top and bottom",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, fingerprint/power reader, 4 programmable buttons",
+  "storage": "1 TB",
+  "battery": 65,
+  "ram": "32 GB",
+  "ramGB": 32.0,
+  "ramType": "LPDDR5X",
+  "arch": "x86-64",
+  "chip": "Intel Core Ultra 7 155H",
+  "cpu": "Intel Meteor Lake 6x P Cores",
+  "gpu": "Intel Arc"
+ },
+ {
+  "name": "AYANEO Next Lite",
+  "brand": "AYANEO",
+  "released": "2024-02",
+  "upcoming": false,
+  "price": 299,
+  "priceText": "~$299",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows",
+   "Linux"
+  ],
+  "osText": "Windows 11, Linux",
+  "cat": [],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "7.0”, 16:10",
+  "aspect": "16:10",
+  "screenIn": 7.0,
+  "res": "1280 x 800",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "215 PPI",
+  "material": "Plastic",
+  "weight": 720,
+  "speaker": "Bottom",
+  "charge": "Top and bottom",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, menu, windows, AYA space, task manager, fingerprint reader / power",
+  "storage": "128GB",
+  "battery": 4100,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR4X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 5 4500U",
+  "cpu": "AMD Zen 2",
+  "gpu": "AMD Radeon RX Vega 6"
+ },
+ {
+  "name": "AOKZOE A2",
+  "brand": "AOKZOE",
+  "released": "2024-02",
+  "upcoming": false,
+  "price": 599,
+  "priceText": "~$599",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows",
+   "Linux"
+  ],
+  "osText": "Windows 11, Linux",
+  "cat": [],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "7.0”, 16:10",
+  "aspect": "16:10",
+  "screenIn": 7.0,
+  "res": "1920 x 1200",
+  "hz": 120,
+  "panel": "IPS",
+  "ppi": "323 PPI",
+  "material": "Plastic",
+  "weight": 649,
+  "speaker": "Bottom",
+  "charge": "Top and bottom",
+  "shoulder": "Stacked",
+  "controls": "Keyboard, turbo, ?",
+  "storage": "512 GB",
+  "battery": 48,
+  "ram": "32 GB",
+  "ramGB": 32.0,
+  "ramType": "LPDDR5X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 7840U",
+  "cpu": "AMD Zen 4",
+  "gpu": "AMD Radeon 780M"
+ },
+ {
+  "name": "GameForce ACE",
+  "brand": "GameForce",
+  "released": "2024-02",
+  "upcoming": false,
+  "price": 162,
+  "priceText": "~$162",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 13",
+  "cat": [
+   "Mid-Range",
+   "Powerful"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "5.5”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.5,
+  "res": "1920 x 1080",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "400 PPI",
+  "material": "Plastic",
+  "weight": null,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Home, volume up and down, function",
+  "storage": "256 GB eMMC",
+  "battery": 7200,
+  "ram": "8 GB",
+  "ramGB": 8.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "RockChip RK3588S",
+  "cpu": "Cortex-A76",
+  "gpu": "Mali-G610 MP4"
+ },
+ {
+  "name": "PowKiddy RGB10MAX3",
+  "brand": "PowKiddy",
+  "released": "2024-02",
+  "upcoming": false,
+  "price": 90,
+  "priceText": "~$90",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "5.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.0,
+  "res": "1280 x 720",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "293 PPI",
+  "material": "Plastic",
+  "weight": 342,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, reset",
+  "storage": "Dual External MicroSD",
+  "battery": 4000,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "RockChip RK3566",
+  "cpu": "Cortex-A55",
+  "gpu": "Mali-G52 2EE"
+ },
+ {
+  "name": "Anbernic RG-556",
+  "brand": "Anbernic",
+  "released": "2024-03",
+  "upcoming": false,
+  "price": 175,
+  "priceText": "~$175",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 13",
+  "cat": [
+   "Mid-Range",
+   "Powerful"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "5.48”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.48,
+  "res": "1920 x 1080",
+  "hz": 60,
+  "panel": "AMOLED",
+  "ppi": "401 PPI",
+  "material": "Plastic",
+  "weight": 331,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Home/Back, volume up and down, menu",
+  "storage": "128 GB UFS 2.2",
+  "battery": 5500,
+  "ram": "8 GB",
+  "ramGB": 8.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "UNISOC Tiger T820",
+  "cpu": "Cortex-A76",
+  "gpu": "Mali-G57 MP4"
+ },
+ {
+  "name": "MSI Claw A1M",
+  "brand": "MSI",
+  "released": "2024-03",
+  "upcoming": false,
+  "price": 699,
+  "priceText": "~$699",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows"
+  ],
+  "osText": "Windows 11",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "7.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 7.0,
+  "res": "1920 x 1080",
+  "hz": 120,
+  "panel": "IPS",
+  "ppi": "314 PPI",
+  "material": "Plastic",
+  "weight": 675,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, menu, fingerprint/power, view, msi center m, quick settings, macro 1/2",
+  "storage": "512 GB",
+  "battery": 53,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5",
+  "arch": "x86-64",
+  "chip": "Intel Core Ultra 5 135H",
+  "cpu": "Intel Meteor Lake 4x P Cores",
+  "gpu": "Intel Arc"
+ },
+ {
+  "name": "Game Console R50S",
+  "brand": "Game Console",
+  "released": "2024-03",
+  "upcoming": false,
+  "price": 70,
+  "priceText": "~$70",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "5.1”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.1,
+  "res": "854 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "192 PPI",
+  "material": "Plastic",
+  "weight": 300,
+  "speaker": "Bottom",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, reset, 2 function buttons",
+  "storage": "Dual External MicroSD",
+  "battery": 4200,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "DDR3",
+  "arch": "ARM",
+  "chip": "RockChip RK3326",
+  "cpu": "Cortex-A35",
+  "gpu": "Mali-G31 MP2"
+ },
+ {
+  "name": "Anbernic RG-35XX",
+  "brand": "Anbernic",
+  "released": "2024-03",
+  "upcoming": false,
+  "price": 50,
+  "priceText": "~$50",
+  "form": [
+   "Vertical"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": 175,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, menu, reset",
+  "storage": "Dual External MicroSD",
+  "battery": 2600,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "Allwinner H700",
+  "cpu": "Cortex-A53",
+  "gpu": "Mali-G31 MP2"
+ },
+ {
+  "name": "AYANEO Flip KB",
+  "brand": "AYANEO",
+  "released": "2024-04",
+  "upcoming": false,
+  "price": 699,
+  "priceText": "~$699",
+  "form": [
+   "Clamshell"
+  ],
+  "size": [],
+  "os": [
+   "Windows"
+  ],
+  "osText": "Windows 11",
+  "cat": [
+   "High-End",
+   "Powerful"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "7.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 7.0,
+  "res": "1920 x 1080",
+  "hz": 144,
+  "panel": "IPS",
+  "ppi": "314 PPI",
+  "material": "Plastic",
+  "weight": 650,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, fingerprint/power, full QWERTY keyboard, LC/RC shoulder buttons",
+  "storage": "512 GB",
+  "battery": 45,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 8840U",
+  "cpu": "AMD Zen 4",
+  "gpu": "AMD Radeon 780M"
+ },
+ {
+  "name": "AYANEO Flip DS",
+  "brand": "AYANEO",
+  "released": "2024-04",
+  "upcoming": false,
+  "price": 739,
+  "priceText": "~$739",
+  "form": [
+   "Dual-Screen"
+  ],
+  "size": [],
+  "os": [
+   "Windows"
+  ],
+  "osText": "Windows 11",
+  "cat": [
+   "High-End",
+   "Powerful"
+  ],
+  "best": [
+   "3DS",
+   "NDS"
+  ],
+  "screen": "Main: 7.0 Secondary: 3.5”, Main: 16:9 Secondary: 3:2",
+  "aspect": "Main: 16:9 Secondary: 3:2",
+  "screenIn": 7.0,
+  "res": "144 Hz",
+  "hz": 144,
+  "panel": "IPS",
+  "ppi": "319 PPI",
+  "material": "Plastic",
+  "weight": 650,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, fingerprint/power, LC/RC shoulder buttons, dual screen key",
+  "storage": "512 GB",
+  "battery": 45,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 8840U",
+  "cpu": "AMD Zen 4",
+  "gpu": "AMD Radeon 780M"
+ },
+ {
+  "name": "SZDIIER D-R35S Plus",
+  "brand": "SZDIIER",
+  "released": "2024-04",
+  "upcoming": false,
+  "price": 40,
+  "priceText": "~$40",
+  "form": [
+   "Vertical"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Ultra Budget"
+  ],
+  "best": [
+   "SNES",
+   "NEO GEO"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": null,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, reset",
+  "storage": "External MicroSD",
+  "battery": 3000,
+  "ram": "64 MB",
+  "ramGB": 0.0625,
+  "ramType": "DDR2",
+  "arch": "ARM",
+  "chip": "V.R. Technology VT569B",
+  "cpu": "Cortex-A7",
+  "gpu": "Vivante 3D GPU"
+ },
+ {
+  "name": "PowKiddy RGB20SX",
+  "brand": "PowKiddy",
+  "released": "2024-04",
+  "upcoming": false,
+  "price": 60,
+  "priceText": "~$60",
+  "form": [
+   "Vertical"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "Arcade",
+   "Game Boy"
+  ],
+  "screen": "4.0”, 1:1",
+  "aspect": "1:1",
+  "screenIn": 4.0,
+  "res": "720 x 720",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "254 PPI",
+  "material": "Plastic",
+  "weight": 240,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, menu, reset",
+  "storage": "Dual External MicroSD",
+  "battery": 5000,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "RockChip RK3566",
+  "cpu": "Cortex-A55",
+  "gpu": "Mali-G52 2EE"
+ },
+ {
+  "name": "Anbernic RG-28XX",
+  "brand": "Anbernic",
+  "released": "2024-04",
+  "upcoming": false,
+  "price": 48,
+  "priceText": "~$48",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "2.83”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 2.83,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "282 PPI",
+  "material": "Plastic",
+  "weight": 123,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, menu, reset",
+  "storage": "Dual External MicroSD",
+  "battery": 3100,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "Allwinner H700",
+  "cpu": "Cortex-A53",
+  "gpu": "Mali-G31 MP2"
+ },
+ {
+  "name": "GamePad Digital GPD Win Mini 2024",
+  "brand": "GPD",
+  "released": "2024-04",
+  "upcoming": false,
+  "price": null,
+  "priceText": "Price varies",
+  "form": [
+   "Clamshell"
+  ],
+  "size": [],
+  "os": [
+   "Windows",
+   "Linux"
+  ],
+  "osText": "Windows 11, Linux",
+  "cat": [
+   "Powerful"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "7.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 7.0,
+  "res": "1920 x 1080",
+  "hz": 60,
+  "panel": "LTPS",
+  "ppi": "314 PPI",
+  "material": "Plastic, Aluminum & Magnesium Alloy combination",
+  "weight": 520,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Menu, reset, L4/R4 programmable buttons, full QWERTY keyboard, mouse/gamepad switch",
+  "storage": "512 GB",
+  "battery": 44,
+  "ram": "16 GB",
+  "ramGB": 16.0,
+  "ramType": "LPDDR5",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 8840U",
+  "cpu": "AMD Zen 4",
+  "gpu": "AMD Radeon 780M"
+ },
+ {
+  "name": "SJGAM M19",
+  "brand": "SJGAM",
+  "released": "2024-04",
+  "upcoming": false,
+  "price": 55,
+  "priceText": "~$55",
+  "form": [
+   "Vertical"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": 159,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down",
+  "storage": "External MicroSD",
+  "battery": 3000,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "RockChip RK3566",
+  "cpu": "Cortex-A55",
+  "gpu": "Mali-G52 2EE"
+ },
+ {
+  "name": "Miyoo A30",
+  "brand": "Miyoo",
+  "released": "2024-05",
+  "upcoming": false,
+  "price": 49,
+  "priceText": "~$49",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "2.8”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 2.8,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "285 PPI",
+  "material": "Plastic",
+  "weight": 115,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, reset",
+  "storage": "External MicroSD",
+  "battery": 2600,
+  "ram": "512 MB",
+  "ramGB": 0.5,
+  "ramType": "ARM",
+  "arch": "ARM",
+  "chip": "Allwinner A33",
+  "cpu": "Cortex-A7",
+  "gpu": "Mali-400 MP2"
+ },
+ {
+  "name": "Anbernic RG-35XX SP",
+  "brand": "Anbernic",
+  "released": "2024-05",
+  "upcoming": false,
+  "price": 65,
+  "priceText": "~$65",
+  "form": [
+   "Clamshell"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget",
+   "Staff Pick"
+  ],
+  "best": [
+   "GBA",
+   "PS1"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": 197,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, menu, reset",
+  "storage": "Dual External MicroSD",
+  "battery": 3300,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "Allwinner H700",
+  "cpu": "Cortex-A53",
+  "gpu": "Mali-G31 MP2"
+ },
+ {
+  "name": "BOYHOM R40S",
+  "brand": "BOYHOM",
+  "released": "2024-05",
+  "upcoming": false,
+  "price": 70,
+  "priceText": "~$70",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "Arcade",
+   "Game Boy"
+  ],
+  "screen": "4.0”, 1:1",
+  "aspect": "1:1",
+  "screenIn": 4.0,
+  "res": "720 x 720",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "254 PPI",
+  "material": "Plastic",
+  "weight": 211,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, reset",
+  "storage": "Dual External MicroSD",
+  "battery": 4000,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "RockChip RK3566",
+  "cpu": "Cortex-A55",
+  "gpu": "Mali-G52 2EE"
+ },
+ {
+  "name": "AYANEO Pocket S",
+  "brand": "AYANEO",
+  "released": "2024-05",
+  "upcoming": false,
+  "price": 399,
+  "priceText": "~$399",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 13",
+  "cat": [
+   "Mid-Range",
+   "Powerful"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "6.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 6.0,
+  "res": "2560 x 1440 or 1920 x 1080",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "489 PPI",
+  "material": "Metal (Aluminum)",
+  "weight": 350,
+  "speaker": "Bottom",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, fingerprint/power, LC/RC shoulder buttons, performance switch",
+  "storage": "128 GB UFS 3.1",
+  "battery": 6000,
+  "ram": "12 GB",
+  "ramGB": 12.0,
+  "ramType": "LPDDR5X",
+  "arch": "ARM",
+  "chip": "Qualcomm Snapdragon G3x Gen 2",
+  "cpu": "Qualcomm Kryo Prime Ultra",
+  "gpu": "Qualcomm Adreno A32"
+ },
+ {
+  "name": "Anbernic RG Cube",
+  "brand": "Anbernic",
+  "released": "2024-06",
+  "upcoming": false,
+  "price": 170,
+  "priceText": "~$170",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 13",
+  "cat": [
+   "Mid-Range",
+   "Powerful"
+  ],
+  "best": [
+   "Arcade",
+   "Game Boy"
+  ],
+  "screen": "3.95”, 1:1",
+  "aspect": "1:1",
+  "screenIn": 3.95,
+  "res": "720 x 720",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "257 PPI",
+  "material": "Plastic",
+  "weight": 256,
+  "speaker": "Bottom",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Home/Back, volume up and down, menu",
+  "storage": "128 GB UFS 2.2",
+  "battery": 5200,
+  "ram": "8 GB",
+  "ramGB": 8.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "UNISOC Tiger T820",
+  "cpu": "Cortex-A76",
+  "gpu": "Mali-G57 MP4"
+ },
+ {
+  "name": "GAMEMT E6 Plus",
+  "brand": "GAMEMT",
+  "released": "2024-06",
+  "upcoming": false,
+  "price": 75,
+  "priceText": "~$75",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android",
+   "Linux"
+  ],
+  "osText": "Android 11, Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "5.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.0,
+  "res": "1280 x 720",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "293 PPI",
+  "material": "Plastic",
+  "weight": null,
+  "speaker": "Back",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Menu, volume -+",
+  "storage": "32 GB eMMC",
+  "battery": 5000,
+  "ram": "2 GB",
+  "ramGB": 2.0,
+  "ramType": "LPDDR4X",
+  "arch": "ARM",
+  "chip": "RockChip RK3566",
+  "cpu": "Cortex-A55",
+  "gpu": "Mali-G52 2EE"
+ },
+ {
+  "name": "PowKiddy V10",
+  "brand": "PowKiddy",
+  "released": "2024-06",
+  "upcoming": false,
+  "price": 40,
+  "priceText": "~$40",
+  "form": [
+   "Vertical"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Ultra Budget"
+  ],
+  "best": [
+   "GBA",
+   "Game Gear"
+  ],
+  "screen": "3.5”, 3:2",
+  "aspect": "3:2",
+  "screenIn": 3.5,
+  "res": "480 x 320",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "164 PPI",
+  "material": "Plastic",
+  "weight": 150,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, reset",
+  "storage": "External MicroSD",
+  "battery": 3000,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "DDR3",
+  "arch": "ARM",
+  "chip": "Rockchip RK3326",
+  "cpu": "Cortex-A35",
+  "gpu": "Mali-G31 MP2"
+ },
+ {
+  "name": "AYN Odin 2 Mini",
+  "brand": "AYN",
+  "released": "2024-06",
+  "upcoming": false,
+  "price": 339,
+  "priceText": "~$339",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Android"
+  ],
+  "osText": "Android 13",
+  "cat": [
+   "Mid-Range",
+   "Powerful"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "5.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.0,
+  "res": "1920 x 1080",
+  "hz": 60,
+  "panel": "Mini LED",
+  "ppi": "440 PPI",
+  "material": "Plastic",
+  "weight": 320,
+  "speaker": "Front",
+  "charge": "Bottom",
+  "shoulder": "Stacked",
+  "controls": "Home, back, volume up and down",
+  "storage": "128 GB",
+  "battery": 5000,
+  "ram": "8 GB",
+  "ramGB": 8.0,
+  "ramType": "LPDDR5X",
+  "arch": "ARM",
+  "chip": "Qualcomm Snapdragon 8 Gen 2",
+  "cpu": "Cortex-X3",
+  "gpu": "Qualcomm Adreno 740"
+ },
+ {
+  "name": "SJGAM M21",
+  "brand": "SJGAM",
+  "released": "2024-07",
+  "upcoming": false,
+  "price": 40,
+  "priceText": "~$40",
+  "form": [
+   "Vertical"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Ultra Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "3.5”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 3.5,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "TFT",
+  "ppi": "228 PPI",
+  "material": "Plastic",
+  "weight": 208,
+  "speaker": "Front",
+  "charge": "Ports and Connectivity",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, menu",
+  "storage": "3000 mAh",
+  "battery": 3000,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "DDR4",
+  "arch": "ARM",
+  "chip": "\"N909\"",
+  "cpu": "Cortex-A7",
+  "gpu": "Mali-400 MP2"
+ },
+ {
+  "name": "GAMEMT E5",
+  "brand": "GAMEMT",
+  "released": "2024-07",
+  "upcoming": false,
+  "price": 40,
+  "priceText": "~$40",
+  "form": [
+   "Vertical"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Ultra Budget"
+  ],
+  "best": [
+   "SNES",
+   "NEO GEO"
+  ],
+  "screen": "5.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 5.0,
+  "res": "960 x 544",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "220 PPI",
+  "material": "Plastic",
+  "weight": null,
+  "speaker": "Back",
+  "charge": "Top",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, menu",
+  "storage": "External MicroSD",
+  "battery": 5000,
+  "ram": "64 MB",
+  "ramGB": 0.0625,
+  "ramType": "DDR2",
+  "arch": "ARM",
+  "chip": "V.R. Technology VT569B",
+  "cpu": "Cortex-A7",
+  "gpu": "Vivante 3D GPU"
+ },
+ {
+  "name": "One Netbook OneXPlayer X1 Mini",
+  "brand": "One Netbook",
+  "released": "2024-07",
+  "upcoming": false,
+  "price": 799,
+  "priceText": "~$799",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Windows"
+  ],
+  "osText": "Windows 11",
+  "cat": [
+   "High-End",
+   "Powerful"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "8.8”, 16:10",
+  "aspect": "16:10",
+  "screenIn": 8.8,
+  "res": "2560 x 1600",
+  "hz": 120,
+  "panel": "IPS",
+  "ppi": "343 PPI",
+  "material": "Plastic",
+  "weight": 960,
+  "speaker": "Bottom",
+  "charge": "Top and bottom",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, fingerprint/power reader, 4 programmable buttons, turbo",
+  "storage": "Swappable M.2 2230 NVMe SSD",
+  "battery": 65,
+  "ram": "32 GB",
+  "ramGB": 32.0,
+  "ramType": "LPDDR5X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen 7 8840U",
+  "cpu": "AMD Zen 4",
+  "gpu": "AMD Radeon 780M"
+ },
+ {
+  "name": "Anbernic RG-40XXH",
+  "brand": "Anbernic",
+  "released": "2024-07",
+  "upcoming": false,
+  "price": 70,
+  "priceText": "~$70",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget",
+   "Staff Pick"
+  ],
+  "best": [
+   "Dreamcast",
+   "N64"
+  ],
+  "screen": "4.0”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 4.0,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "200 PPI",
+  "material": "Plastic",
+  "weight": 208,
+  "speaker": "Bottom",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, menu, reset",
+  "storage": "Dual External MicroSD",
+  "battery": 3200,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "LPDDR4",
+  "arch": "ARM",
+  "chip": "Allwinner H700",
+  "cpu": "Cortex-A53",
+  "gpu": "Mali-G31 MP2"
+ },
+ {
+  "name": "Asus ROG Ally X",
+  "brand": "Asus",
+  "released": "2024-07",
+  "upcoming": false,
+  "price": 799,
+  "priceText": "~$799",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Big"
+  ],
+  "os": [
+   "Windows"
+  ],
+  "osText": "Windows 11",
+  "cat": [
+   "High-End"
+  ],
+  "best": [
+   "PS2",
+   "GameCube"
+  ],
+  "screen": "7.0”, 16:9",
+  "aspect": "16:9",
+  "screenIn": 7.0,
+  "res": "1920 x 1080",
+  "hz": 120,
+  "panel": "IPS",
+  "ppi": "314 PPI",
+  "material": "Plastic",
+  "weight": 678,
+  "speaker": "Front",
+  "charge": "Top",
+  "shoulder": "Stacked",
+  "controls": "Volume up and down, menu, M1/M2 buttons on back, power/fingerprint, view, command center, armoury crate",
+  "storage": "1 TB M.2 2280 NVMe SSD",
+  "battery": 80,
+  "ram": "24 GB",
+  "ramGB": 24.0,
+  "ramType": "LPDDR5X",
+  "arch": "x86-64",
+  "chip": "AMD Ryzen Z1 Extreme",
+  "cpu": "AMD Zen 4",
+  "gpu": "AMD Radeon 780M"
+ },
+ {
+  "name": "MagicX XU Mini M",
+  "brand": "MagicX",
+  "released": "2024-07",
+  "upcoming": false,
+  "price": 50,
+  "priceText": "~$50",
+  "form": [
+   "Horizontal"
+  ],
+  "size": [
+   "Small"
+  ],
+  "os": [
+   "Linux"
+  ],
+  "osText": "Linux",
+  "cat": [
+   "Budget"
+  ],
+  "best": [
+   "PS1",
+   "SNES"
+  ],
+  "screen": "2.8”, 4:3",
+  "aspect": "4:3",
+  "screenIn": 2.8,
+  "res": "640 x 480",
+  "hz": 60,
+  "panel": "IPS",
+  "ppi": "285 PPI",
+  "material": "Plastic",
+  "weight": 120,
+  "speaker": "Bottom",
+  "charge": "Top",
+  "shoulder": "Side By Side",
+  "controls": "Volume up and down, reset, function button",
+  "storage": "Dual External MicroSD",
+  "battery": 2600,
+  "ram": "1 GB",
+  "ramGB": 1.0,
+  "ramType": "DDR3",
+  "arch": "ARM",
+  "chip": "RockChip RK3326",
+  "cpu": "Cortex-A35",
+  "gpu": "Mali-G31 MP2"
  }
 ]
