@@ -102,27 +102,25 @@ const faqBlock = (items) => `<h2>Quick answers</h2><div class="faq">${items
 const microSD = `https://www.amazon.com/s?k=${encodeURIComponent('microSD card 256GB')}&tag=${cfg.amazonTag}`;
 
 // ---------- Page shell ----------
-function page({ title, desc, url, body, type = 'website', datePublished, canonical, wide = false, scripts = '' }) {
+function page({ title, desc, url, body, type = 'website', datePublished, canonical, wide = false, scripts = '', crumbs = null, product = null }) {
   const full = cfg.domain + url;
-  const ld =
-    type === 'article'
-      ? `<script type="application/ld+json">${JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'Article',
-          headline: title,
-          description: desc,
-          datePublished,
-          dateModified: datePublished,
-          mainEntityOfPage: full,
-          author: { '@type': 'Organization', name: cfg.siteName },
-          publisher: { '@type': 'Organization', name: cfg.siteName }
-        })}</script>`
-      : '';
+  const graph = [];
+  if (type === 'article') {
+    graph.push({ '@context': 'https://schema.org', '@type': 'Article', headline: title, description: desc, image: `${cfg.domain}/og-image.png`, datePublished, dateModified: datePublished, mainEntityOfPage: full, author: { '@type': 'Organization', name: cfg.siteName, url: cfg.domain }, publisher: { '@type': 'Organization', name: cfg.siteName, url: cfg.domain } });
+    const faqs = [...String(body).matchAll(/<details><summary>([\s\S]*?)<\/summary><p>([\s\S]*?)<\/p><\/details>/g)].map((m) => ({ '@type': 'Question', name: m[1].replace(/<[^>]+>/g, ''), acceptedAnswer: { '@type': 'Answer', text: m[2].replace(/<[^>]+>/g, '') } }));
+    if (faqs.length) graph.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs });
+  }
+  if (url === '/') graph.push({ '@context': 'https://schema.org', '@type': 'WebSite', name: cfg.siteName, url: cfg.domain + '/' });
+  if (crumbs) graph.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: crumbs.map(([n, u], k) => ({ '@type': 'ListItem', position: k + 1, name: n, item: cfg.domain + u })) });
+  if (product) graph.push({ '@context': 'https://schema.org', '@type': 'Product', ...product, url: full });
+  const ld = graph.map((g) => `<script type="application/ld+json">${JSON.stringify(g)}</script>`).join('\n');
   return `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0d0f1f">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${canonical || full}">
@@ -794,7 +792,7 @@ for (const d of hhData) {
   ${disclosureBox}
 </div>
 </div>`;
-  write(`handhelds/${d.slug}`, page({ title: `${d.name} Specs, Price and Release Date | ${cfg.siteName}`, desc: `${d.name} specs: ${d.screen} screen, ${d.chip || d.osText}, ${d.battery ? d.battery.toLocaleString('en-US') + ' mAh battery, ' : ''}${d.priceText}. Best for ${d.best.join(', ') || 'retro games'}.`, url: `/handhelds/${d.slug}/`, body, wide: true }));
+  write(`handhelds/${d.slug}`, page({ title: `${d.name} Specs, Price and Release Date | ${cfg.siteName}`, desc: `${d.name} specs: ${d.screen} screen, ${d.chip || d.osText}, ${d.battery ? d.battery.toLocaleString('en-US') + ' mAh battery, ' : ''}${d.priceText}. Best for ${d.best.join(', ') || 'retro games'}.`, url: `/handhelds/${d.slug}/`, body, wide: true, crumbs: [['Home', '/'], ['Handhelds', '/handhelds/'], [d.name, `/handhelds/${d.slug}/`]], product: { '@type': 'Product', name: d.name, brand: { '@type': 'Brand', name: d.brand }, category: 'Retro gaming handheld', description: `${d.name}: ${d.screen} screen, ${d.chip || d.osText}. Best for ${d.best.join(', ') || 'retro games'}.` } }));
 }
 write('handhelds', page({ title: `Retro Handheld Database: Specs, Prices and Filters | ${cfg.siteName}`, desc: 'Search and filter 120+ retro gaming handhelds by price, size, form factor, operating system, brand and specs. Compare screens, chips, batteries and more.', url: '/handhelds/', body: hhBody, wide: true, scripts: hhScripts }));
 write('about', page({ title: `About | ${cfg.siteName}`, desc: 'About Pixel Pocket Guides.', url: '/about/', body: aboutBody }));
