@@ -8,18 +8,41 @@
     "badge": "Best Overall",
     "amazonQuery": "Anbernic RG Cube handheld",
     "asin": "",
-    "image": "",
+    "image": "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/513eycG0kHL.jpg",
     "specs": [
-      ["Screen", "3.95\" square (1:1) IPS, 720×720"],
-      ["Chip / RAM", "Unisoc T820 / 8GB"],
-      ["Battery", "5,200mAh"],
-      ["OS", "Android 13"],
-      ["Plays well", "Up to PS2 and Dreamcast with upscaling (some stutter), plus DS and 3DS"]
+      [
+        "Screen",
+        "3.95\" square (1:1) IPS, 720×720"
+      ],
+      [
+        "Chip / RAM",
+        "Unisoc T820 / 8GB"
+      ],
+      [
+        "Battery",
+        "5,200mAh"
+      ],
+      [
+        "OS",
+        "Android 13"
+      ],
+      [
+        "Plays well",
+        "Up to PS2 and Dreamcast with upscaling (some stutter), plus DS and 3DS"
+      ]
     ],
     "bestFor": "One device that covers everything from Game Boy to PS2",
-    "pros": ["Square screen suits Game Boy, arcade and DS games without stretching", "Hall-effect sticks, Wi-Fi, Bluetooth and video out", "Comfortable rear grips and a big battery"],
-    "cons": ["Square screen is not ideal for widescreen games", "Not a vertical Game Boy shape"],
-    "verdict": "The most versatile pick on the list. The square screen sounds like a gimmick, but it makes DS games and arcade shooters genuinely playable while still handling 8- and 16-bit classics cleanly. Reviewers at GamesRadar named it their best retro handheld overall."
+    "pros": [
+      "Square screen suits Game Boy, arcade and DS games without stretching",
+      "Hall-effect sticks, Wi-Fi, Bluetooth and video out",
+      "Comfortable rear grips and a big battery"
+    ],
+    "cons": [
+      "Square screen is not ideal for widescreen games",
+      "Not a vertical Game Boy shape"
+    ],
+    "verdict": "The most versatile pick on the list. The square screen sounds like a gimmick, but it makes DS games and arcade shooters genuinely playable while still handling 8- and 16-bit classics cleanly. Reviewers at GamesRadar named it their best retro handheld overall.",
+    "link": "https://link.amazon/B0idynw8T"
   },
   {
     "id": "pocket-air-mini",
@@ -30,17 +53,38 @@
     "badge": "Best Value Android",
     "amazonQuery": "AYANEO Pocket Air Mini",
     "asin": "",
-    "image": "",
+    "image": "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61ENLTU9xzL._AC_SL1000_.jpg",
     "specs": [
-      ["Screen", "4.2\" 4:3 display"],
-      ["OS", "Android 11 (AYASpace front-end)"],
-      ["Controls", "Hall joysticks and analog triggers"],
-      ["Plays well", "Up to Dreamcast upscaled; only a handful of PS2 and GameCube games"]
+      [
+        "Screen",
+        "4.2\" 4:3 display"
+      ],
+      [
+        "OS",
+        "Android 11 (AYASpace front-end)"
+      ],
+      [
+        "Controls",
+        "Hall joysticks and analog triggers"
+      ],
+      [
+        "Plays well",
+        "Up to Dreamcast upscaled; only a handful of PS2 and GameCube games"
+      ]
     ],
     "bestFor": "Android flexibility and premium build on a budget",
-    "pros": ["Build quality that feels like a more expensive device", "4:3 screen fits retro games well", "Hall sticks and analog triggers at this price"],
-    "cons": ["Thick around the grips", "Limited PS2 and GameCube performance", "One reviewer reported visible screen ghosting"],
-    "verdict": "Retro Dodo ranks it first in its list, largely on price-to-quality. It is the cheapest way here to get an Android handheld with proper sticks and triggers. If screen ghosting bothers you, check the return policy and test it early."
+    "pros": [
+      "Build quality that feels like a more expensive device",
+      "4:3 screen fits retro games well",
+      "Hall sticks and analog triggers at this price"
+    ],
+    "cons": [
+      "Thick around the grips",
+      "Limited PS2 and GameCube performance",
+      "One reviewer reported visible screen ghosting"
+    ],
+    "verdict": "Retro Dodo ranks it first in its list, largely on price-to-quality. It is the cheapest way here to get an Android handheld with proper sticks and triggers. If screen ghosting bothers you, check the return policy and test it early.",
+    "link": "https://link.amazon/B0aDlccPN"
   },
   {
     "id": "trimui-brick",
@@ -51,17 +95,38 @@
     "badge": "Best Pocket Carry",
     "amazonQuery": "TRIMUI Brick retro handheld",
     "asin": "",
-    "image": "",
+    "image": "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/617ZTYQXDfL._AC_SL1200_.jpg",
     "specs": [
-      ["Screen", "3.2\" 4:3 IPS, 1024×768"],
-      ["Battery", "3,000mAh"],
-      ["OS", "Linux (simple stock OS, custom firmware available)"],
-      ["Plays well", "Game Boy through PS1; some N64 and Dreamcast"]
+      [
+        "Screen",
+        "3.2\" 4:3 IPS, 1024×768"
+      ],
+      [
+        "Battery",
+        "3,000mAh"
+      ],
+      [
+        "OS",
+        "Linux (simple stock OS, custom firmware available)"
+      ],
+      [
+        "Plays well",
+        "Game Boy through PS1; some N64 and Dreamcast"
+      ]
     ],
     "bestFor": "A sleek, pocket-sized handheld that just works",
-    "pros": ["Sharp, bright screen for its size", "Swappable shoulder buttons in the box", "Easy stock OS and good community support"],
-    "cons": ["No analog sticks (D-pad can mimic one)", "Small screen and no video out", "Can run warm in heavy use"],
-    "verdict": "A tiny, well-designed brick that plays the 8-, 16- and 32-bit libraries well. Retro Catalog named it best budget handheld overall, and Retro Dodo compares the feel to a deck of cards."
+    "pros": [
+      "Sharp, bright screen for its size",
+      "Swappable shoulder buttons in the box",
+      "Easy stock OS and good community support"
+    ],
+    "cons": [
+      "No analog sticks (D-pad can mimic one)",
+      "Small screen and no video out",
+      "Can run warm in heavy use"
+    ],
+    "verdict": "A tiny, well-designed brick that plays the 8-, 16- and 32-bit libraries well. Retro Catalog named it best budget handheld overall, and Retro Dodo compares the feel to a deck of cards.",
+    "link": "https://link.amazon/B0goi00ps"
   },
   {
     "id": "rg35xxsp",
@@ -74,15 +139,38 @@
     "asin": "",
     "image": "",
     "specs": [
-      ["Screen", "3.5\" IPS, 640×480"],
-      ["Chip / RAM", "Allwinner H700 / 1GB"],
-      ["Battery", "3,300mAh"],
-      ["Extras", "HDMI out, Wi-Fi, Bluetooth, microSD up to 512GB"],
-      ["Plays well", "GBA, SNES, PS1, some Dreamcast"]
+      [
+        "Screen",
+        "3.5\" IPS, 640×480"
+      ],
+      [
+        "Chip / RAM",
+        "Allwinner H700 / 1GB"
+      ],
+      [
+        "Battery",
+        "3,300mAh"
+      ],
+      [
+        "Extras",
+        "HDMI out, Wi-Fi, Bluetooth, microSD up to 512GB"
+      ],
+      [
+        "Plays well",
+        "GBA, SNES, PS1, some Dreamcast"
+      ]
     ],
     "bestFor": "Game Boy Advance SP nostalgia",
-    "pros": ["Folds shut to protect the screen", "Fits a pocket neatly", "Far nicer backlit screen than an original GBA SP"],
-    "cons": ["Flat D-pad and buttons, like the original SP", "Gets warm under load", "No PS2 support"],
+    "pros": [
+      "Folds shut to protect the screen",
+      "Fits a pocket neatly",
+      "Far nicer backlit screen than an original GBA SP"
+    ],
+    "cons": [
+      "Flat D-pad and buttons, like the original SP",
+      "Gets warm under load",
+      "No PS2 support"
+    ],
     "verdict": "If you want the fold-up shape, this is the easy buy. GamesRadar calls it the best clamshell, and it can play more than GBA games, including PS1 and some Dreamcast."
   },
   {
@@ -96,15 +184,37 @@
     "asin": "",
     "image": "",
     "specs": [
-      ["Screen", "6\" 1080p IPS"],
-      ["Chip / RAM", "Snapdragon 8 Gen 2 / up to 16GB"],
-      ["Battery", "8,000mAh"],
-      ["OS", "Android"],
-      ["Plays well", "PS2, GameCube, PSP and everything older; Android games and cloud streaming"]
+      [
+        "Screen",
+        "6\" 1080p IPS"
+      ],
+      [
+        "Chip / RAM",
+        "Snapdragon 8 Gen 2 / up to 16GB"
+      ],
+      [
+        "Battery",
+        "8,000mAh"
+      ],
+      [
+        "OS",
+        "Android"
+      ],
+      [
+        "Plays well",
+        "PS2, GameCube, PSP and everything older; Android games and cloud streaming"
+      ]
     ],
     "bestFor": "Someone who wants to play PS2 and GameCube without compromise",
-    "pros": ["Handles PS2 and GameCube with smooth frame rates", "Big, sharp 1080p screen", "Comfortable shape for long sessions"],
-    "cons": ["Expensive and overkill if you only play 8- and 16-bit games", "Face buttons are on the small side"],
+    "pros": [
+      "Handles PS2 and GameCube with smooth frame rates",
+      "Big, sharp 1080p screen",
+      "Comfortable shape for long sessions"
+    ],
+    "cons": [
+      "Expensive and overkill if you only play 8- and 16-bit games",
+      "Face buttons are on the small side"
+    ],
     "verdict": "GamesRadar names it the best handheld for PS2, and Retro Dodo calls it close to flawless. It is the splurge pick, and the right one if the person you are shopping for already owns a big retro library."
   },
   {
@@ -118,13 +228,29 @@
     "asin": "",
     "image": "",
     "specs": [
-      ["Screen", "3.5\" LCD, 615 PPI"],
-      ["Tech", "FPGA hardware recreation, not software emulation"],
-      ["Plays", "Original Game Boy, Game Boy Color and Game Boy Advance cartridges; adapters add Game Gear, Lynx and Neo Geo Pocket"]
+      [
+        "Screen",
+        "3.5\" LCD, 615 PPI"
+      ],
+      [
+        "Tech",
+        "FPGA hardware recreation, not software emulation"
+      ],
+      [
+        "Plays",
+        "Original Game Boy, Game Boy Color and Game Boy Advance cartridges; adapters add Game Gear, Lynx and Neo Geo Pocket"
+      ]
     ],
     "bestFor": "Game Boy collectors who want to use their real cartridges",
-    "pros": ["Superb build quality and a stunning screen", "Plays real cartridges with high accuracy", "Large community of extra cores"],
-    "cons": ["High price", "Often sold out, so verify the seller before buying"],
+    "pros": [
+      "Superb build quality and a stunning screen",
+      "Plays real cartridges with high accuracy",
+      "Large community of extra cores"
+    ],
+    "cons": [
+      "High price",
+      "Often sold out, so verify the seller before buying"
+    ],
     "verdict": "Not an emulation handheld in the usual sense, which makes it a distinctive gift for a collector. Reviewers rate it among the finest handhelds for original carts. Stock is inconsistent, so check who is selling it on Amazon."
   },
   {
@@ -138,15 +264,37 @@
     "asin": "",
     "image": "",
     "specs": [
-      ["Screen", "4\" vertical IPS, 800×480"],
-      ["Chip / RAM", "Allwinner A133P / 2GB"],
-      ["Battery", "4,300mAh"],
-      ["OS", "Android 10"],
-      ["Plays well", "Nintendo DS and vertical arcade shooters"]
+      [
+        "Screen",
+        "4\" vertical IPS, 800×480"
+      ],
+      [
+        "Chip / RAM",
+        "Allwinner A133P / 2GB"
+      ],
+      [
+        "Battery",
+        "4,300mAh"
+      ],
+      [
+        "OS",
+        "Android 10"
+      ],
+      [
+        "Plays well",
+        "Nintendo DS and vertical arcade shooters"
+      ]
     ],
     "bestFor": "DS fans and arcade shmup players",
-    "pros": ["Tall screen suits DS and vertical shooters", "Hall-effect stick and save states", "Surprisingly comfortable"],
-    "cons": ["Not ideal for every console's aspect ratio", "Buttons can feel crunchy"],
+    "pros": [
+      "Tall screen suits DS and vertical shooters",
+      "Hall-effect stick and save states",
+      "Surprisingly comfortable"
+    ],
+    "cons": [
+      "Not ideal for every console's aspect ratio",
+      "Buttons can feel crunchy"
+    ],
     "verdict": "A niche pick that does its niche well. GamesRadar tested it for a month and liked it for DS games and arcade shooters, with the caveat that a used DS can cost less."
   },
   {
@@ -160,15 +308,37 @@
     "asin": "",
     "image": "",
     "specs": [
-      ["Screen", "4.7\" LTPS, 120Hz"],
-      ["Chip / RAM", "Dimensity 8300 / 12GB"],
-      ["Weight", "About 350g"],
-      ["OS", "Android"],
-      ["Plays well", "PS2 and GameCube at 2–3x resolution"]
+      [
+        "Screen",
+        "4.7\" LTPS, 120Hz"
+      ],
+      [
+        "Chip / RAM",
+        "Dimensity 8300 / 12GB"
+      ],
+      [
+        "Weight",
+        "About 350g"
+      ],
+      [
+        "OS",
+        "Android"
+      ],
+      [
+        "Plays well",
+        "PS2 and GameCube at 2–3x resolution"
+      ]
     ],
     "bestFor": "A premium-feeling Android handheld with strong PS2 performance",
-    "pros": ["Metal shell and gorgeous display", "Comfortable sticks and face buttons", "Great PS2 and GameCube performance"],
-    "cons": ["Clunky launcher and pre-installed AI apps", "Loud fan and clicky shoulder buttons"],
+    "pros": [
+      "Metal shell and gorgeous display",
+      "Comfortable sticks and face buttons",
+      "Great PS2 and GameCube performance"
+    ],
+    "cons": [
+      "Clunky launcher and pre-installed AI apps",
+      "Loud fan and clicky shoulder buttons"
+    ],
     "verdict": "The hardware is excellent and the software is the weak spot, according to Retro Dodo. Early coverage calls it the strongest Anbernic Android device so far."
   },
   {
@@ -182,13 +352,29 @@
     "asin": "",
     "image": "",
     "specs": [
-      ["Screen", "2.8\" IPS"],
-      ["Games", "Pre-installed set (Capcom or Taito editions) plus Evercade cartridges"],
-      ["Extras", "3.5mm audio jack, USB-C charging"]
+      [
+        "Screen",
+        "2.8\" IPS"
+      ],
+      [
+        "Games",
+        "Pre-installed set (Capcom or Taito editions) plus Evercade cartridges"
+      ],
+      [
+        "Extras",
+        "3.5mm audio jack, USB-C charging"
+      ]
     ],
     "bestFor": "Kids, gamers who hate tinkering and anyone who likes physical cartridges",
-    "pros": ["Pick up and play, with nothing to set up", "Officially licensed games", "Works with the Evercade cartridge library"],
-    "cons": ["You cannot add your own game files", "D-pad is not to everyone's taste"],
+    "pros": [
+      "Pick up and play, with nothing to set up",
+      "Officially licensed games",
+      "Works with the Evercade cartridge library"
+    ],
+    "cons": [
+      "You cannot add your own game files",
+      "D-pad is not to everyone's taste"
+    ],
     "verdict": "The least fussy gift on this list. It is not a ROM machine, and that is the point: the games are included and the cartridge library keeps growing."
   },
   {
@@ -202,15 +388,38 @@
     "asin": "",
     "image": "",
     "specs": [
-      ["Screen", "2.83\" IPS, 480p"],
-      ["Battery", "3,100mAh"],
-      ["Weight", "About 125g"],
-      ["Extras", "Mini HDMI out, USB-C controller support, microSD up to 512GB"],
-      ["Plays well", "8- and 16-bit systems and PS1; some Dreamcast"]
+      [
+        "Screen",
+        "2.83\" IPS, 480p"
+      ],
+      [
+        "Battery",
+        "3,100mAh"
+      ],
+      [
+        "Weight",
+        "About 125g"
+      ],
+      [
+        "Extras",
+        "Mini HDMI out, USB-C controller support, microSD up to 512GB"
+      ],
+      [
+        "Plays well",
+        "8- and 16-bit systems and PS1; some Dreamcast"
+      ]
     ],
     "bestFor": "A tiny, cheap handheld that fits in any pocket",
-    "pros": ["Truly pocketable, Game Boy Micro style", "Good battery life", "HDMI out for the TV"],
-    "cons": ["Small and a bit cramped", "Shoulder buttons rattle", "No PS2"],
+    "pros": [
+      "Truly pocketable, Game Boy Micro style",
+      "Good battery life",
+      "HDMI out for the TV"
+    ],
+    "cons": [
+      "Small and a bit cramped",
+      "Shoulder buttons rattle",
+      "No PS2"
+    ],
     "verdict": "A fun little device for the price. GamesRadar picked it as the best budget retro handheld and notes that it handles PS1 better than you would expect."
   },
   {
@@ -224,14 +433,33 @@
     "asin": "",
     "image": "",
     "specs": [
-      ["Screen", "3.5\" IPS, 640×480"],
-      ["Chip / RAM", "Allwinner H700 / 1GB"],
-      ["OS", "Linux (custom firmware recommended)"],
-      ["Plays well", "Up to Dreamcast, DS, PS1, some PSP"]
+      [
+        "Screen",
+        "3.5\" IPS, 640×480"
+      ],
+      [
+        "Chip / RAM",
+        "Allwinner H700 / 1GB"
+      ],
+      [
+        "OS",
+        "Linux (custom firmware recommended)"
+      ],
+      [
+        "Plays well",
+        "Up to Dreamcast, DS, PS1, some PSP"
+      ]
     ],
     "bestFor": "The cheapest solid Game Boy-style handheld",
-    "pros": ["Very affordable", "Wi-Fi and a bigger battery than the original RG35XX", "Pocket-friendly DMG-style shell"],
-    "cons": ["Basic stock OS (custom firmware helps)", "Uncomfortable shoulder buttons"],
+    "pros": [
+      "Very affordable",
+      "Wi-Fi and a bigger battery than the original RG35XX",
+      "Pocket-friendly DMG-style shell"
+    ],
+    "cons": [
+      "Basic stock OS (custom firmware helps)",
+      "Uncomfortable shoulder buttons"
+    ],
     "verdict": "Still a solid starter handheld, though Retro Dodo notes Anbernic has newer alternatives. Good if the budget is tight and you do not mind installing custom firmware."
   }
 ]

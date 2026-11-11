@@ -18,7 +18,9 @@ const disclosureBox = `<div class="disclosure"><b>Affiliate disclosure:</b> ${DI
 // If a product has an "asin", link straight to the product page. Otherwise link to an
 // Amazon search for that product. Either way the affiliate tag from config.json is added.
 const amazonLink = (p) =>
-  p.asin
+  p.link
+    ? p.link
+    : p.asin
     ? `https://www.amazon.com/dp/${p.asin}?tag=${cfg.amazonTag}`
     : `https://www.amazon.com/s?k=${encodeURIComponent(p.amazonQuery)}&tag=${cfg.amazonTag}`;
 const buyBtn = (p) =>
