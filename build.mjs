@@ -149,7 +149,7 @@ ${ld}
 <body>
 <header class="site"><div class="wrap">
   <a class="logo" href="/">PIXEL<span>POCKET</span><br>GUIDES</a>
-  <nav><a href="/">Home</a><a href="/best-retro-handhelds-holiday-2026/">Top 10</a><a href="/retro-handheld-buying-guide-by-price-2026/">By Price</a><a href="/handhelds/">Handhelds</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav>
+  <nav aria-label="Main">${[['/', 'Home'], ['/handhelds/', 'Handhelds<span class="nm"> Database</span>'], ['/guides/', 'Guides'], ['/about/', 'About']].map(([h, t]) => `<a href="${h}"${(h === '/' ? url === '/' : url.startsWith(h)) ? ' class="active" aria-current="page"' : ''}>${t}</a>`).join('')}</nav>
 </div></header>
 <main class="wrap${wide ? ' wide' : ''}">
 ${body}
