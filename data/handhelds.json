@@ -12298,7 +12298,15 @@
   "chip": "Allwinner H700",
   "cpu": "Cortex-A53",
   "gpu": "Mali-G31 MP2",
-  "asin": "B0D1R7MYDN"
+  "asin": "B0D1R7MYDN",
+  "accessories": [
+   {
+    "title": "Ultra-Thin Colorful Protective Case for Anbernic RG28XX (storage box protector, 13 × 2.3 × 7.5 cm)",
+    "url": "https://s.click.aliexpress.com/e/_c4LeVVAR",
+    "store": "AliExpress",
+    "price": "about $9"
+   }
+  ]
  },
  {
   "name": "GamePad Digital GPD Win Mini 2024",

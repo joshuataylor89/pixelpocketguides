@@ -735,6 +735,7 @@ const aboutBody = `<article><h1>About ${esc(cfg.siteName)}</h1>
 const disclosureBody = `<article><h1>Affiliate Disclosure</h1>
 <p><b>${DISCLOSURE}</b></p>
 <p>${esc(cfg.siteName)} is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. When you click a link to Amazon on this site and make a qualifying purchase, we may earn a commission at no extra cost to you.</p>
+<p>Some links on this site go to AliExpress. If you buy through one of those links, we may also earn a commission from AliExpress at no extra cost to you. These links are marked as sponsored.</p>
 <p>Commissions do not change what we recommend or how we rank products. Prices and availability on Amazon change at any time, so please check the Amazon listing for current information.</p></article>`;
 
 const privacyBody = `<article><h1>Privacy Policy</h1>
@@ -914,6 +915,7 @@ for (const d of hhData) {
   ${sim.map((x) => `<a class="hh-row" href="/handhelds/${x.slug}/"><span class="hh-rimg">${devIcon(x)}</span><span class="hh-rmain"><b>${dvName(x)}</b><span class="hh-rtags">${x.os.concat(x.form).slice(0, 2).map((t) => `<span class="hh-tag">${esc(t)}</span>`).join('')}</span></span><span class="hh-rside"><b class="hh-price">${esc(x.priceText)}</b></span></a>`).join('\n')}
 </aside>
 <div class="dv-main">
+  ${d.accessories ? `<section class="dv-panel"><h2>Accessories</h2><ul class="acc">${d.accessories.map((a) => `<li><a href="${esc(a.url)}" target="_blank" rel="sponsored nofollow noopener">${esc(a.title)}</a><span>${esc(a.store)}${a.price ? ` · ${esc(a.price)}` : ''}</span></li>`).join('')}</ul><p class="hh-note">Sponsored link. Prices change, so check the listing.</p></section>` : ''}
   <section class="dv-panel"><h2>Best for</h2><div class="hh-tags">${d.best.map((t) => tagA('best', t)).join('')}</div></section>
   <section class="dv-panel"><h2>Screen</h2>${dvKv([['Aspect ratio', d.aspect], ['Screen size', d.screenIn ? `${d.screenIn}"` : ''], ['Resolution', d.res], ['Refresh rate', d.hz ? `${d.hz} Hz` : ''], ['Screen type', d.panel], ['Pixel density', d.ppi]])}</section>
   <section class="dv-panel"><h2>Build and Ergonomics</h2>${dvKv([['Material', d.material], ['Weight', d.weight ? `${d.weight} g` : ''], ['Speaker placement', d.speaker], ['Charge port', d.charge]])}</section>
