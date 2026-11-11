@@ -66,3 +66,4 @@ footer.site a{color:var(--muted)}
 .entry h2 a:hover{color:var(--accent)}
 .entry p{margin:6px 0}
 .more{font-weight:700}
+.sizes{margin:10px 0 0;font-size:15px;color:var(--muted)} .sizes a{font-weight:700}

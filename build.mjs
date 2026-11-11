@@ -385,8 +385,8 @@ ${disclosureBox}
 // POST 5: microSD cards
 {
   const slug = 'best-microsd-cards-for-retro-handhelds-2026';
-  const title = 'Best microSD Cards for Retro Handhelds (Top 10 Brands, 2026)';
-  const desc = 'The best microSD cards for retro gaming handhelds in 2026: Samsung, SanDisk, Lexar, Kingston and six more brands compared, with size, speed and fake-card tips. All on Amazon.';
+  const title = 'microSD Cards for Retro Handhelds Guide';
+  const desc = 'Upgrade the cheap microSD card in your retro handheld: Samsung, SanDisk, Lexar, Kingston and six more brands in 128GB, 256GB, 512GB and 1TB, with size, speed and fake-card tips.';
   const link = (q) => `https://www.amazon.com/s?k=${encodeURIComponent(q)}&tag=${cfg.amazonTag}`;
   const btn = (q) => `<a class="btn" href="${esc(link(q))}" target="_blank" rel="sponsored nofollow noopener">Check price on Amazon <small>→</small></a>`;
   const cards = [
@@ -406,16 +406,15 @@ ${disclosureBox}
 <div>
 <div class="rank">#${i + 1}</div>
 <h3 id="${esc(c[0].toLowerCase().replace(/[^a-z0-9]+/g, '-'))}-card">${esc(c[0])} <span class="badge">${esc(c[2])}</span></h3>
-<p class="price">Popular line: ${esc(c[1])}</p>
 <p>${esc(c[4])}</p>
-<div class="proscons"><div class="pro"><span class="h">Pros</span><ul><li>${esc(c[5])}</li></ul></div><div class="con"><span class="h">Cons</span><ul><li>${esc(c[6])}</li></ul></div></div>
 ${c[7] ? `<a class="btn" href="${esc(c[7])}" target="_blank" rel="sponsored nofollow noopener">Check price on Amazon <small>→</small></a>` : btn(c[3])}
+<p class="sizes"><b>Pick a size:</b> ${['128GB', '256GB', '512GB', '1TB'].map((z) => `<a href="${esc((c[9] && c[9][z]) || link(c[0] + ' microSD card ' + z))}" target="_blank" rel="sponsored nofollow noopener">${z}</a>`).join(' · ')}</p>
 </div></section>`;
   const body = `<article>
 <span class="pill">ACCESSORIES · STORAGE</span>
 <h1>${esc(title)}</h1>
 <p class="meta">Updated ${esc(cfg.updated)}</p>
-<p class="lead">Almost every retro handheld needs a microSD card for games, saves and emulator files, and the card you pick affects how fast games load and how safe your saves are. Here are 10 microSD card brands that work well in retro handhelds, from the trusted favorites to budget picks, all sold on Amazon. <a href="#samsung">Samsung</a> and <a href="#sandisk">SanDisk</a> are our top two.</p>
+<p class="lead">The first thing you will want to do with a retro handheld is remove the cheap, unbranded microSD card it ships with and upgrade. Almost every retro handheld needs a microSD card for games, saves and emulator files, and the card you pick affects how fast games load and how safe your saves are. Here are 10 microSD card brands that work well in retro handhelds, from the trusted favorites to budget picks, all sold on Amazon.</p>
 <p>Short on time? For most handhelds, buy a <b>256GB Samsung or SanDisk card</b>. They are the safest, easiest choices.</p>
 
 <h2>How much storage do you need?</h2>
@@ -423,6 +422,7 @@ ${c[7] ? `<a class="btn" href="${esc(c[7])}" target="_blank" rel="sponsored nofo
 <li><b>128GB:</b> plenty for 8-bit, 16-bit, Game Boy Advance and most PS1 libraries.</li>
 <li><b>256GB:</b> the sweet spot for most people. Covers big PS1 collections, PSP and DS plus extras.</li>
 <li><b>512GB:</b> for PS2, GameCube and Dreamcast libraries, which take much more space. Some handhelds list a maximum card size, so check yours before buying.</li>
+<li><b>1TB:</b> room for a huge library of everything, with space left over. Confirm your handheld supports a card this large first, since many cap card size.</li>
 </ul>
 
 <h2>Speed labels in plain English</h2>
@@ -453,18 +453,9 @@ ${cards.map(brandCard).join('\n')}
 
 <p>Looking for a handheld to put it in? See our <a href="/best-retro-handhelds-holiday-2026/">Top 10 Retro Handhelds</a>, the <a href="/retro-handheld-buying-guide-by-price-2026/">buying guide by price</a>, or the Top 5 <a href="/best-vertical-retro-handhelds-2026/">vertical</a> and <a href="/best-horizontal-retro-handhelds-2026/">horizontal</a> picks.</p>
 
-${faqBlock([
-  ['What is the best microSD card for retro handhelds?', 'For most people, a <a href="#samsung">Samsung</a> or <a href="#sandisk">SanDisk</a> 256GB card. Both are reliable and easy to find.'],
-  ['What size microSD card should I buy?', '256GB is the best all-around choice. Go to 512GB if you want PS2, GameCube or Dreamcast games, and check your handheld limit first.'],
-  ['Do I need an A2 card?', 'No. A1 or A2 cards help Android handhelds load apps and games faster, but a good U3 card is fine for most retro libraries.'],
-  ['Why do I need a microSD card at all?', 'Most emulation handhelds ship with little or no game storage. The card holds your games, saves and emulator files.'],
-  ['How do I know if a microSD card is fake?', 'Buy from Amazon or an authorized seller and test the card with a free tool such as H2testw or F3 when it arrives.']
-])}
-<h2>Where this guide comes from</h2>
-<p>This guide is based on general buying experience with microSD cards and common recommendations in retro handheld communities. We have not lab-tested these cards. Models, speeds and prices change often, so check the current Amazon listing before you buy.</p>
 ${disclosureBox}
 </article>`;
-  posts.push({ slug, title, desc, body, blurb: 'Samsung, SanDisk and eight more brands ranked, with size and speed advice and how to avoid fake cards.', kicker: 'MICROSD' });
+  posts.push({ slug, title, desc, body, blurb: 'Upgrade the cheap card in your handheld: Samsung, SanDisk and eight more brands, with size and speed advice and how to avoid fake cards.', kicker: 'MICROSD' });
 }
 
 // ---------- Static pages ----------
@@ -531,6 +522,7 @@ const guidesIndexBody = `<section class="hero">
 <p>Practical how-tos for getting the most out of your retro handheld.</p>
 </section>
 <div class="cards">
+${posts.filter((p) => p.slug === 'best-microsd-cards-for-retro-handhelds-2026').map((p) => `<a class="postcard" href="/${p.slug}/"><span class="pill">GUIDE</span><h2>${esc(p.title)}</h2><p>${esc(p.blurb)}</p></a>`).join('\n')}
 ${guides.map((g) => `<a class="postcard" href="/guides/${g.slug}/"><span class="pill">${esc(g.kicker)}</span><h2>${esc(g.title)}</h2><p>${esc(g.blurb)}</p></a>`).join('\n')}
 </div>
 <div class="disclosure">${DISCLOSURE} <a href="/affiliate-disclosure/">Learn more</a>.</div>`;
