@@ -460,6 +460,66 @@ ${disclosureBox}
   posts.push({ slug, title, desc, body, blurb: 'Upgrade the cheap card in your handheld: Samsung, SanDisk and eight more brands, with size and speed advice and how to avoid fake cards.', kicker: 'MICROSD' });
 }
 
+// POST 6: Steam Deck feature
+{
+  const slug = 'steam-deck-still-a-beast-2026';
+  const title = 'Why the Steam Deck OLED Is Still a Beast in 2026';
+  const desc = 'The Steam Deck OLED is still one of the best handhelds to buy in 2026: a huge Steam library, class-leading real-world battery life, a comfortable build and a gorgeous HDR OLED screen. See the 2TB bundle on Amazon.';
+  const deck = 'https://link.amazon/B0cevdy0G';
+  const img = 'https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61XBCgb6nnL._SL1500_.jpg';
+  const dbtn = `<a class="btn" href="${esc(deck)}" target="_blank" rel="sponsored nofollow noopener">Check price on Amazon <small>→</small></a>`;
+  const body = `<article>
+<span class="pill">FEATURE · STEAM DECK</span>
+<h1>${esc(title)}</h1>
+<p class="meta">Updated ${esc(cfg.updated)}</p>
+<p class="lead">Newer handhelds keep arriving, and the Steam Deck keeps winning people over. In 2026 the Steam Deck OLED is still a great little machine: it plays your Steam library on the go, it lasts longer in real use than rivals with bigger batteries, it is comfortable for long sessions, and its OLED screen looks fantastic. Here is why this Valve handheld is still a beast.</p>
+
+<section class="product">
+<div class="thumb"><img src="${esc(img)}" alt="Valve Steam Deck OLED 2TB handheld gaming console bundle" loading="lazy"></div>
+<div>
+<div class="rank">FEATURED</div>
+<h3>Valve Steam Deck OLED 2TB bundle <span class="badge">Still a Beast</span></h3>
+<p>7.4" HDR OLED display at 90Hz, Wi-Fi 6E and 2TB of storage for PC gaming on the go. This Amazon bundle is a 7-in-1 kit that adds a carrying case, a hub, a controller, two protective cases, a screen protector and a 32GB USB drive, so you are ready to play out of the box.</p>
+${dbtn}
+</div></section>
+
+<h2>1. Your Steam library, anywhere</h2>
+<p>The biggest reason to love the Steam Deck is simple: it plays Steam games. If you want to play your Steam library and you are not chasing bleeding-edge graphics, reviewer Jessica Conditt of Engadget says the Steam Deck is "still a great little machine." For everyone who enjoys the huge catalog of PC games on Steam, that is exactly what you want in a handheld.</p>
+
+<h2>2. Battery life that keeps going</h2>
+<p>Battery life is where the Steam Deck stands out. Rival handhelds such as the Xbox Ally and the Legion Go line have larger batteries on paper, but in real-world play Valve's handheld often comes out on top, because rivals tend to drain faster once they leave low-power modes and run at full strength. If you want to play for hours on end, the Steam Deck gives you the best shot at a handheld that lasts.</p>
+
+<h2>3. Comfortable for long sessions</h2>
+<p>Besides the Nintendo Switch 2, the Steam Deck is the lightest handheld in its class, which makes it one of the most comfortable for long gaming sessions. That matters on a long trip, a couch session or a late night with a big game.</p>
+
+<h2>4. A gorgeous HDR OLED screen</h2>
+<p>The Steam Deck OLED is the model Valve sells today, and it has a 7.4-inch HDR OLED display with a 90Hz refresh rate. Among the big handhelds, only the Steam Deck and the Switch 2 support HDR, so games look rich and bright whether you play in handheld mode or on the go.</p>
+
+<h2>5. SteamOS: simple and made for gaming</h2>
+<p>The Steam Deck runs SteamOS, a console-style system built for games, so you pick up the Deck and play. The Xbox Ally line is often criticized for Windows, and the Steam Deck skips all that.</p>
+
+<h2>6. Strong value against the competition</h2>
+<p>Next to the Steam Deck's main competitors, the Asus ROG Xbox Ally X and the Lenovo Legion Go line, the Steam Deck OLED costs less when you buy it straight from the source. That makes it one of the better ways into PC handheld gaming. Check Amazon for the current price on the bundle below.</p>
+
+<h2>Why the 2TB bundle is a great way to buy</h2>
+<ul>
+<li><b>2TB of storage:</b> room for a huge Steam library with no need to uninstall games.</li>
+<li><b>7.4" HDR OLED, 90Hz:</b> the screen is a big part of why this Deck feels premium.</li>
+<li><b>Wi-Fi 6E:</b> fast wireless for downloads and streaming.</li>
+<li><b>7-in-1 kit:</b> carrying case, hub, controller, two protective cases, screen protector and a 32GB USB drive.</li>
+</ul>
+<p>${dbtn}</p>
+
+<h2>Want to see more handhelds?</h2>
+<p>The Steam Deck is a PC handheld. If you want emulation machines for classic games, see our <a href="/best-retro-handhelds-holiday-2026/">Top 10 Retro Handhelds</a>, the <a href="/best-horizontal-retro-handhelds-2026/">Top 5 Horizontal picks</a> and our <a href="/best-microsd-cards-for-retro-handhelds-2026/">microSD card guide</a>.</p>
+
+<h2>Source</h2>
+<p>Based on reporting by Deven McClure at <a href="https://www.engadget.com/2248094/is-steam-deck-still-worth-it/" rel="noopener" target="_blank">Engadget: Is the Steam Deck still worth it in 2026?</a> (September 2026). Product details come from the Amazon listing. Prices and availability change, so check the current Amazon listing.</p>
+${disclosureBox}
+</article>`;
+  posts.push({ slug, title, desc, body, blurb: 'Why the Steam Deck OLED still wins in 2026: its Steam library, real-world battery life, comfort and HDR OLED screen, plus a 2TB bundle on Amazon.', kicker: 'STEAM DECK' });
+}
+
 // ---------- Static pages ----------
 const aboutBody = `<article><h1>About ${esc(cfg.siteName)}</h1>
 <p class="lead">Pixel Pocket Guides helps you pick the right retro gaming handheld without wading through hundreds of near-identical devices.</p>
