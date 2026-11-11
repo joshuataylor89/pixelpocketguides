@@ -102,7 +102,7 @@ const faqBlock = (items) => `<h2>Quick answers</h2><div class="faq">${items
 const microSD = `https://www.amazon.com/s?k=${encodeURIComponent('microSD card 256GB')}&tag=${cfg.amazonTag}`;
 
 // ---------- Page shell ----------
-function page({ title, desc, url, body, type = 'website', datePublished, canonical }) {
+function page({ title, desc, url, body, type = 'website', datePublished, canonical, wide = false, scripts = '' }) {
   const full = cfg.domain + url;
   const ld =
     type === 'article'
@@ -149,9 +149,9 @@ ${ld}
 <body>
 <header class="site"><div class="wrap">
   <a class="logo" href="/">PIXEL<span>POCKET</span><br>GUIDES</a>
-  <nav><a href="/">Home</a><a href="/best-retro-handhelds-holiday-2026/">Top 10</a><a href="/retro-handheld-buying-guide-by-price-2026/">By Price</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav>
+  <nav><a href="/">Home</a><a href="/best-retro-handhelds-holiday-2026/">Top 10</a><a href="/retro-handheld-buying-guide-by-price-2026/">By Price</a><a href="/handhelds/">Handhelds</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav>
 </div></header>
-<main class="wrap">
+<main class="wrap${wide ? ' wide' : ''}">
 ${body}
 </main>
 <footer class="site"><div class="wrap">
@@ -159,6 +159,7 @@ ${body}
   <p><a href="/affiliate-disclosure/">Affiliate Disclosure</a> · <a href="/privacy/">Privacy</a> · <a href="/about/">About</a> · © ${new Date().getFullYear()} ${esc(cfg.siteName)}</p>
   <p>Product names and trademarks belong to their owners. Prices and availability change; check Amazon for current details.</p>
 </div></footer>
+${scripts}
 </body>
 </html>
 `;
@@ -729,11 +730,29 @@ for (const g of guides) {
   const gbody = `<article><span class="pill">${esc(g.kicker)}</span><h1>${esc(g.title)}</h1><p class="meta">Updated ${esc(cfg.updated)}</p>${g.body.replace('__SOURCE__', esc(g.source)).replace('__SOURCENAME__', esc(g.sourceName))}</article>`;
   write(`guides/${g.slug}`, page({ title: `${g.title} | ${cfg.siteName}`, desc: g.desc, url: `/guides/${g.slug}/`, body: gbody, type: 'article', datePublished: published }));
 }
+const hhData = JSON.parse(fs.readFileSync(path.join(root, 'data', 'handhelds.json'), 'utf8'));
+const hhBody = `<div class="hh-head"><div><span class="pill">DATABASE</span><h1>Retro Handheld Database</h1></div></div>
+<p class="meta" style="margin:0 0 8px">Search ${hhData.length} handhelds, filter by specs and compare prices. Buttons search Amazon, and not every device is sold there, so check the listing.</p>
+<div class="hh-bar">
+<input type="search" id="hh-q" placeholder="Search handhelds, brands, chips…" aria-label="Search handhelds" autocomplete="off">
+<div class="hh-views" role="group" aria-label="Layout"><button type="button" class="hh-btn" data-view="full" aria-pressed="true">Full</button><button type="button" class="hh-btn" data-view="recap" aria-pressed="false">Recap</button><button type="button" class="hh-btn" data-view="preview" aria-pressed="false">Preview</button></div>
+<select id="hh-sort" aria-label="Sort"></select>
+<button type="button" class="hh-btn" id="hh-filter-btn">Filter</button>
+</div>
+<div class="hh-meta"><span id="hh-count"></span><span id="hh-active"></span><button type="button" class="hh-clear" id="hh-reset">Reset</button></div>
+<div id="hh-list" class="hh-list hh-full"></div>
+<button type="button" class="hh-more" id="hh-more">Show more</button>
+<p class="hh-note">* Upcoming or recently announced. Specs and prices are approximate and come from Retro Catalog's handheld database (<a href="https://retrocatalog.com" rel="noopener" target="_blank">retrocatalog.com</a>). Pictures are placeholders. Check the current Amazon listing before you buy.</p>
+${disclosureBox}
+<button type="button" id="hh-scrim" aria-label="Close filters"></button>
+<aside id="hh-panel" aria-label="Filters"><div class="hh-ph"><b>Filters</b><button type="button" id="hh-close" aria-label="Close">×</button></div><div id="hh-panel-body"></div></aside>`;
+const hhScripts = `<script id="hh-data" type="application/json">${JSON.stringify({ tag: cfg.amazonTag, devices: hhData }).replace(/</g, '\\u003c')}</script><script src="/handhelds.js" defer></script>`;
+write('handhelds', page({ title: `Retro Handheld Database: Specs, Prices and Filters | ${cfg.siteName}`, desc: 'Search and filter 120+ retro gaming handhelds by price, size, form factor, operating system, brand and specs. Compare screens, chips, batteries and more.', url: '/handhelds/', body: hhBody, wide: true, scripts: hhScripts }));
 write('about', page({ title: `About | ${cfg.siteName}`, desc: 'About Pixel Pocket Guides.', url: '/about/', body: aboutBody }));
 write('affiliate-disclosure', page({ title: `Affiliate Disclosure | ${cfg.siteName}`, desc: 'Amazon Associates affiliate disclosure.', url: '/affiliate-disclosure/', body: disclosureBody }));
 write('privacy', page({ title: `Privacy Policy | ${cfg.siteName}`, desc: 'Privacy policy for Pixel Pocket Guides.', url: '/privacy/', body: privacyBody }));
 
-const urls = ['/', ...posts.map((p) => `/${p.slug}/`), '/guides/', ...guides.map((g) => `/guides/${g.slug}/`), '/about/', '/affiliate-disclosure/', '/privacy/'];
+const urls = ['/', ...posts.map((p) => `/${p.slug}/`), '/handhelds/', '/guides/', ...guides.map((g) => `/guides/${g.slug}/`), '/about/', '/affiliate-disclosure/', '/privacy/'];
 fs.writeFileSync(path.join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${cfg.domain}${u}</loc><lastmod>${published}</lastmod></url>`).join('\n')}\n</urlset>\n`);
 fs.writeFileSync(path.join(out, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${cfg.domain}/sitemap.xml\n`);
 fs.writeFileSync(path.join(out, '_headers'), `/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  X-Frame-Options: DENY\n`);
