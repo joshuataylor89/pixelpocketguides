@@ -615,6 +615,117 @@ ${disclosureBox}
   });
 }
 
+// POSTS 11-12: Miyoo Flip vs RG35XXSP, best Game Boy-style handheld
+{
+  const q = (s) => `https://www.amazon.com/s?k=${encodeURIComponent(s)}&tag=${cfg.amazonTag}`;
+  const abtn = (s) => `<a class="btn" href="${esc(q(s))}" target="_blank" rel="sponsored nofollow noopener">Check price on Amazon <small>→</small></a>`;
+  const SP = P['rg35xxsp'];
+  const links = `<p>More guides: <a href="/best-flip-clamshell-retro-handhelds-2026/">Top 5 Flip Handhelds</a>, <a href="/best-vertical-retro-handhelds-2026/">Top 5 Vertical Handhelds</a>, <a href="/best-joystick-free-retro-handhelds-2026/">Top 5 Joystick-Free Handhelds</a>, the <a href="/handhelds/">handheld database</a> and our <a href="/best-microsd-cards-for-retro-handhelds-2026/">microSD card guide</a>.</p>`;
+  // Post: Miyoo Flip vs RG35XXSP
+  {
+    const slug = 'miyoo-flip-vs-anbernic-rg35xxsp';
+    const title = 'Miyoo Flip vs Anbernic RG35XXSP: Which Flip Handheld Should You Buy?';
+    const desc = 'Miyoo Flip vs Anbernic RG35XXSP compared: price, screen, chip, battery, which systems each plays best and who should buy which GBA SP-style flip handheld.';
+    const body = `<article>
+<span class="pill">COMPARISON</span>
+<h1>${esc(title)}</h1>
+<p class="meta">Updated ${esc(cfg.updated)}</p>
+<p class="lead">The Miyoo Flip and the Anbernic RG35XXSP are two of the most popular flip handhelds, both shaped like the Game Boy Advance SP and priced under $100. They look alike, but they are better at different things. Here is how they compare, and which one to buy.</p>
+<p><b>Short answer:</b> buy the <a href="#rg35xxsp">Anbernic RG35XXSP</a> if you want the safe, well-reviewed pick for GBA, SNES and PS1 games with HDMI out, and the <a href="#miyoo-flip">Miyoo Flip</a> if you want the extra power for N64 and Dreamcast games.</p>
+
+<h2>Miyoo Flip vs RG35XXSP at a glance</h2>
+<div class="tablewrap"><table>
+<tr><th></th><th>Miyoo Flip</th><th>Anbernic RG35XXSP</th></tr>
+<tr><td>Price</td><td>About $78</td><td>About $65</td></tr>
+<tr><td>Screen</td><td>3.5" 4:3 IPS, 640×480</td><td>3.5" IPS, 640×480</td></tr>
+<tr><td>Chip / RAM</td><td>Rockchip RK3566 / 1GB</td><td>Allwinner H700 / 1GB</td></tr>
+<tr><td>Battery</td><td>3,000mAh</td><td>3,300mAh</td></tr>
+<tr><td>Weight</td><td>165g</td><td>Check the listing</td></tr>
+<tr><td>Operating system</td><td>Linux</td><td>Linux</td></tr>
+<tr><td>Listed as best for</td><td>Dreamcast and N64</td><td>GBA, SNES, PS1, some Dreamcast</td></tr>
+<tr><td>Extras</td><td>Tagged a Staff Pick by Retro Catalog</td><td>HDMI out, Wi-Fi, Bluetooth, microSD up to 512GB</td></tr>
+</table></div>
+
+<section class="product" id="miyoo-flip"><div class="thumb">${icon('clamshell')}</div><div>
+<h3>Miyoo Flip <span class="badge">More Power</span></h3>
+<p class="price">About $78</p>
+<p>The Miyoo Flip uses a Rockchip RK3566 chip, which Retro Catalog lists as best for Dreamcast and N64 games. It weighs about 165g, so it fits easily in a pocket, and Retro Catalog tags it as a Staff Pick.</p>
+<ul class="specs"><li><b>Screen:</b> 3.5" 4:3 IPS, 640×480</li><li><b>Chip / RAM:</b> Rockchip RK3566 / 1GB</li><li><b>Battery:</b> 3,000mAh</li><li><b>Weight:</b> 165g</li></ul>
+<p><b>Choose it if:</b> you want a flip handheld that is a step up for N64 and Dreamcast.</p>
+${abtn('Miyoo Flip')}</div></section>
+
+<section class="product" id="rg35xxsp">${thumb(SP)}<div>
+<h3>Anbernic RG35XXSP <span class="badge">Safe Pick</span></h3>
+<p class="price">${esc(SP.price)}</p>
+<p>${esc(SP.verdict)}</p>
+<ul class="specs">${SP.specs.map(([k, v]) => `<li><b>${esc(k)}:</b> ${esc(v)}</li>`).join('')}</ul>
+<p><b>Choose it if:</b> you want a proven, well-reviewed SP-style handheld at the lower price, with HDMI out for the TV.</p>
+${buyBtn(SP)}</div></section>
+
+<h2>Which should you buy?</h2>
+<ul>
+<li><b>Buy the RG35XXSP</b> for GBA, SNES and PS1 games, HDMI out, a slightly bigger battery and the lower price.</li>
+<li><b>Buy the Miyoo Flip</b> if you want more headroom for N64 and Dreamcast.</li>
+<li><b>Either way,</b> add a microSD card. See our <a href="/best-microsd-cards-for-retro-handhelds-2026/">microSD card guide</a>.</li>
+</ul>
+
+${faqBlock([
+  ['Is the Miyoo Flip better than the RG35XXSP?', 'It depends on the games. The Miyoo Flip is listed as best for Dreamcast and N64, and the RG35XXSP is the safer pick for GBA, SNES and PS1.'],
+  ['Which is cheaper, the Miyoo Flip or the RG35XXSP?', 'The RG35XXSP, at about $65 compared with about $78 for the Miyoo Flip. Prices change, so check Amazon.'],
+  ['Do both fold shut like the Game Boy Advance SP?', 'Yes. Both are flip (clamshell) handhelds with a hinged lid that protects the screen.'],
+  ['Do I need a microSD card?', 'Yes. Both use microSD cards for games and saves.']
+])}
+${links}
+<h2>Where this comparison comes from</h2>
+<p>We have not hands-on tested these devices. This comparison uses published specs and reviews, including <a href="https://retrocatalog.com" rel="noopener" target="_blank">Retro Catalog</a> and <a href="https://www.gamesradar.com/hardware/retro/best-retro-handheld/" rel="noopener" target="_blank">GamesRadar</a>. Prices and availability change, so check the current Amazon listing.</p>
+${disclosureBox}
+</article>`;
+    posts.push({ slug, title, desc, body, blurb: 'Two popular GBA SP-style flip handhelds compared on price, power and the games each plays best.', kicker: 'COMPARISON' });
+  }
+  // Post: best Game Boy-style handheld
+  {
+    const slug = 'best-game-boy-style-handhelds-2026';
+    const title = 'Best Game Boy-Style Handhelds to Buy in 2026';
+    const desc = 'The best Game Boy-style retro handhelds in 2026: pocket-sized vertical and flip handhelds for Game Boy, GBA, SNES and PS1 games, plus one that plays real cartridges.';
+    const ids = ['trimui-brick', 'rg35xx-plus', 'rg35xxsp', 'analogue-pocket'];
+    const body = `<article>
+<span class="pill">GAME BOY-STYLE HANDHELDS</span>
+<h1>${esc(title)}</h1>
+<p class="meta">Updated ${esc(cfg.updated)}</p>
+<p class="lead">Want the Game Boy feel, with a backlit screen and a battery that lasts? Game Boy-style handhelds are small, light and affordable, and they play Game Boy, Game Boy Color, Game Boy Advance, SNES and PS1 games. Here are the best Game Boy-style handhelds you can buy on Amazon, from a tiny pocket pick to one that plays your real cartridges.</p>
+<p>Short on time? <a href="#trimui-brick">The TRIMUI Brick</a> is the best pocket pick, <a href="#rg35xx-plus">the Anbernic RG35XX Plus</a> is the budget classic, <a href="#rg35xxsp">the RG35XXSP</a> is the best GBA SP-style flip, and <a href="#analogue-pocket">the Analogue Pocket</a> is the one for real cartridges.</p>
+
+<h2>Game Boy-style handhelds at a glance</h2>
+${compareTable(ids)}
+
+<h2>What makes a handheld Game Boy-style?</h2>
+<p>These devices copy the classic shapes: a tall pocket-sized body with a D-pad and buttons below the screen (like the original Game Boy), or a fold-up flip design (like the Game Boy Advance SP). They are cheap, easy to carry, and built for 8-bit, 16-bit and handheld classics. They do not have analog sticks, so for N64, PSP or PS2 games look at our <a href="/best-dual-joystick-retro-handhelds-2026/">dual-joystick handhelds</a>.</p>
+
+<h2>Ranked: the best Game Boy-style handhelds</h2>
+${ids.map((id, i) => productCard(P[id], i + 1)).join('\n')}
+
+<h2>How to choose</h2>
+<ul>
+<li><b>Original Game Boy shape:</b> the TRIMUI Brick and the RG35XX Plus.</li>
+<li><b>Game Boy Advance SP shape:</b> the RG35XXSP. For a faster flip, see <a href="/miyoo-flip-vs-anbernic-rg35xxsp/">Miyoo Flip vs RG35XXSP</a>.</li>
+<li><b>Real cartridges:</b> the Analogue Pocket plays original Game Boy, Game Boy Color and Game Boy Advance cartridges.</li>
+<li><b>Games and storage:</b> most emulation handhelds ship without games, so you supply backups of games you own. Add a microSD card from our <a href="/best-microsd-cards-for-retro-handhelds-2026/">microSD card guide</a>.</li>
+</ul>
+
+${faqBlock([
+  ['What is the best Game Boy-style handheld?', 'For most people, the <a href="#trimui-brick">TRIMUI Brick</a>. It has a sharp screen, a simple operating system and a pocket-friendly size.'],
+  ['What is the best Game Boy-style handheld for real cartridges?', 'The <a href="#analogue-pocket">Analogue Pocket</a>. It plays original Game Boy, Game Boy Color and Game Boy Advance cartridges.'],
+  ['What is the cheapest Game Boy-style handheld?', 'The <a href="#rg35xx-plus">Anbernic RG35XX Plus</a> is one of the cheapest solid options, often around $50 to $70.'],
+  ['Is there a Game Boy Advance SP-style handheld?', 'Yes, the <a href="#rg35xxsp">Anbernic RG35XXSP</a> folds shut like the GBA SP.']
+])}
+${links}
+${sourcesBlock()}
+${disclosureBox}
+</article>`;
+    posts.push({ slug, title, desc, body, blurb: 'Pocket-sized Game Boy and GBA SP-style handhelds ranked, plus one that plays real cartridges.', kicker: 'GAME BOY-STYLE' });
+  }
+}
+
 // ---------- Static pages ----------
 const aboutBody = `<article><h1>About ${esc(cfg.siteName)}</h1>
 <p class="lead">Pixel Pocket Guides helps you pick the right retro gaming handheld without wading through hundreds of near-identical devices.</p>
@@ -697,14 +808,15 @@ const previews = {
   'best-vertical-retro-handhelds-2026': P['trimui-brick'].image,
   'best-horizontal-retro-handhelds-2026': P['pocket-air-mini'].image,
   'best-dual-joystick-retro-handhelds-2026': P['pocket-air-mini'].image,
-  'best-joystick-free-retro-handhelds-2026': P['trimui-brick'].image
+  'best-joystick-free-retro-handhelds-2026': P['trimui-brick'].image,
+  'best-game-boy-style-handhelds-2026': P['trimui-brick'].image
 };
 const entryCard = (p, i) => `<article class="entry${i === 0 ? ' lead-entry' : ''}"><a class="entry-img" href="/${p.slug}/" aria-label="${esc(p.title)}">${previews[p.slug] ? `<img referrerpolicy="no-referrer" src="${esc(previews[p.slug])}" alt="${esc(p.title)}" loading="${i < 2 ? 'eager' : 'lazy'}">` : '<span class="entry-ph">PIXEL POCKET</span>'}</a><div class="entry-body"><span class="pill">${esc(p.kicker)}</span><h2><a href="/${p.slug}/">${esc(p.title)}</a></h2><p class="meta">${fmtDate(p.date || '2026-11-10')}</p><p>${esc(p.blurb || p.desc)}</p><p><a class="more" href="/${p.slug}/">Read the full guide →</a></p></div></article>`;
-const blogHome = `<section class="hero">
-<span class="pill">THE BLOG</span>
+const blogHome = `<section class="hero hero-modern">
 <h1>Retro handheld buying guides</h1>
-<p>Honest picks for every budget. Every product is on Amazon.</p>
+<p class="tagline">Find the right handheld faster with ranked picks, clear specs and side-by-side comparisons.</p>
 </section>
+<div class="sec-head"><span class="pill">THE BLOG</span><span class="sec-line"></span></div>
 <div class="feed">
 ${ordered.map(entryCard).join('\n')}
 </div>
