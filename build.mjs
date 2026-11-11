@@ -395,7 +395,7 @@ ${disclosureBox}
     ['Lexar', 'Lexar Play / Professional', 'Best Value', 'Lexar microSD card 256GB', 'Often cheaper than Samsung and SanDisk for similar rated speeds. A solid pick when you are filling a handheld with a big library on a budget.', 'Good speed for the price', 'Less well known, so check recent reviews on the exact listing'],
     ['Kingston', 'Kingston Canvas Select Plus / Canvas Go! Plus', 'Reliable Budget Pick', 'Kingston Canvas Select Plus microSD 256GB', 'Kingston makes dependable cards at fair prices and is a common recommendation for handhelds and tablets.', 'Fair price, widely available', 'Entry models are slower for loading big games'],
     ['PNY', 'PNY Elite-X / PRO Elite', 'Budget Pick', 'PNY microSD card 256GB', 'A low-cost name that often undercuts the big two. Fine for 8-bit and 16-bit libraries, where speed matters less.', 'Low price per gigabyte', 'Not the fastest for large Android games'],
-    ['Amazon Basics', 'Amazon Basics microSDXC', 'Cheapest Option', 'Amazon Basics microSD card 256GB', 'Sold and fulfilled by Amazon, which lowers the risk of getting a fake. A good pick for a stocking-stuffer handheld where you just need storage.', 'Low price, sold by Amazon', 'Speeds trail the premium cards'],
+    ['Amazon Basics', 'Amazon Basics microSDXC', 'Cheapest Option', 'Amazon Basics microSD card 256GB', 'Sold and fulfilled by Amazon, which lowers the risk of getting a fake. A good pick for a stocking-stuffer handheld where you just need storage.', 'Low price, sold by Amazon', 'Speeds trail the premium cards', 'https://link.amazon/B0hYDcYB5'],
     ['Silicon Power', 'Silicon Power Superior / Elite', 'Budget Large Capacity', 'Silicon Power microSD card 512GB', 'A frequent choice when you want a lot of space for little money. Check the listing for the A1 or A2 and U3 labels.', 'Strong price on larger sizes', 'Quality can vary by model, so read reviews'],
     ['Transcend', 'Transcend 300S / 340S', 'Dependable Everyday', 'Transcend microSD card 128GB', 'A long-running memory brand that focuses on steady performance. Good for older retro systems and Linux handhelds.', 'Steady, well-built cards', 'Fewer high-capacity options'],
     ['Team Group', 'TEAMGROUP Elite / A1 Card', 'Good Spare Card', 'TEAMGROUP microSD card 256GB', 'A budget brand that makes useful spare cards for swapping libraries between handhelds.', 'Affordable, A1-rated models', 'Check capacity and speed on the exact listing'],
@@ -409,7 +409,7 @@ ${disclosureBox}
 <p class="price">Popular line: ${esc(c[1])}</p>
 <p>${esc(c[4])}</p>
 <div class="proscons"><div class="pro"><span class="h">Pros</span><ul><li>${esc(c[5])}</li></ul></div><div class="con"><span class="h">Cons</span><ul><li>${esc(c[6])}</li></ul></div></div>
-${btn(c[3])}
+${c[7] ? `<a class="btn" href="${esc(c[7])}" target="_blank" rel="sponsored nofollow noopener">Check price on Amazon <small>→</small></a>` : btn(c[3])}
 </div></section>`;
   const body = `<article>
 <span class="pill">ACCESSORIES · STORAGE</span>
