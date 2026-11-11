@@ -187,7 +187,7 @@ ${ids.map((id, i) => productCard(P[id], i + 1)).join('\n')}
 <h2>Before you buy: gift-giving tips</h2>
 <ul>
 <li><b>Bring your own games.</b> Most emulation handhelds ship without games. Players use backups of games they own. The Evercade Super Pocket and the Analogue Pocket are the exceptions, since they use licensed built-in games or real cartridges.</li>
-<li><b>Add a microSD card.</b> Most of these use one for storage, and it is the one accessory that makes the gift usable on day one. <a href="${esc(microSD)}" target="_blank" rel="sponsored nofollow noopener">Browse microSD cards on Amazon</a>.</li>
+<li><b>Add a microSD card.</b> Most of these use one for storage, and it is the one accessory that makes the gift usable on day one. <a href="${esc(microSD)}" target="_blank" rel="sponsored nofollow noopener">Browse microSD cards on Amazon</a> or read our <a href="/best-microsd-cards-for-retro-handhelds-2026/">microSD card guide</a>.</li>
 <li><b>Check who sells it.</b> Buy from the brand's own storefront or a seller with solid reviews. Rebranded clones with big markups are common in this category.</li>
 <li><b>Linux or Android?</b> Linux handhelds (TRIMUI Brick, RG35XXSP, RG28XX) are simple and fast to set up. Android handhelds (RG Cube, Odin 2, RG477M) need more setup but run PS2, GameCube and mobile games.</li>
 </ul>
@@ -267,7 +267,7 @@ ${tier(
 <h2>Before you check out</h2>
 <ul>
 <li><b>Games are not included.</b> Emulation handhelds need game files, which you should only make from games you own. The Super Pocket (built-in licensed games) and the Analogue Pocket (real cartridges) avoid this.</li>
-<li><b>Get a microSD card.</b> It is what the games live on. <a href="${esc(microSD)}" target="_blank" rel="sponsored nofollow noopener">Browse microSD cards on Amazon</a>.</li>
+<li><b>Get a microSD card.</b> It is what the games live on. <a href="${esc(microSD)}" target="_blank" rel="sponsored nofollow noopener">Browse microSD cards on Amazon</a> or read our <a href="/best-microsd-cards-for-retro-handhelds-2026/">microSD card guide</a>.</li>
 <li><b>Check the seller and return window.</b> Buy from the brand or a well-reviewed seller, and keep the return window in mind when giving a gift.</li>
 <li><b>Prices move.</b> The figures here are reviewer-reported, so check Amazon for the live price.</li>
 </ul>
@@ -312,7 +312,7 @@ ${ids.map((id, i) => productCard(P[id], i + 1)).join('\n')}
 <li><b>Screen size and shape.</b> Smaller screens (around 2.8 to 3.5 inches) suit Game Boy and SNES games and fit any pocket. Larger ones suit DS games and arcade shooters.</li>
 <li><b>Operating system.</b> Linux handhelds are simple to start with, and Android handhelds can run more apps.</li>
 <li><b>Games.</b> Most emulation handhelds ship without games. You supply backups of games you own. The Evercade Super Pocket comes with licensed games built in.</li>
-<li><b>Battery and storage.</b> Check the battery size, and buy a microSD card for your games. <a href="${esc(microSD)}" target="_blank" rel="sponsored nofollow noopener">Browse microSD cards on Amazon</a>.</li>
+<li><b>Battery and storage.</b> Check the battery size, and buy a microSD card for your games. <a href="${esc(microSD)}" target="_blank" rel="sponsored nofollow noopener">Browse microSD cards on Amazon</a> or read our <a href="/best-microsd-cards-for-retro-handhelds-2026/">microSD card guide</a>.</li>
 <li><b>Budget.</b> Prices here run from about $40 to under $90. Always check Amazon for the current price, since sales around Black Friday and Cyber Monday can change it.</li>
 </ul>
 
@@ -365,7 +365,7 @@ ${ids.map((id, i) => productCard(P[id], i + 1)).join('\n')}
 <li><b>Screen shape and size.</b> A 4:3 screen suits classic games, a square screen suits Game Boy and DS games, and a large 16:9 screen suits PSP and modern games.</li>
 <li><b>Operating system.</b> These run Android, which needs more setup than a Linux handheld but runs more emulators and apps.</li>
 <li><b>Games.</b> Most emulation handhelds ship without games. You supply backups of games you own. The Analogue Pocket plays your real cartridges.</li>
-<li><b>Storage and budget.</b> Prices here run from about $110 to over $400, so check Amazon for the current price. Many models take a microSD card. <a href="${esc(microSD)}" target="_blank" rel="sponsored nofollow noopener">Browse microSD cards on Amazon</a>.</li>
+<li><b>Storage and budget.</b> Prices here run from about $110 to over $400, so check Amazon for the current price. Many models take a microSD card. <a href="${esc(microSD)}" target="_blank" rel="sponsored nofollow noopener">Browse microSD cards on Amazon</a> or read our <a href="/best-microsd-cards-for-retro-handhelds-2026/">microSD card guide</a>.</li>
 </ul>
 
 ${faqBlock([
@@ -380,6 +380,91 @@ ${sourcesBlock()}
 ${disclosureBox}
 </article>`;
   posts.push({ slug, title, desc, body, blurb: 'Five horizontal Android and cartridge handhelds ranked, from the best-value pick to the PS2 powerhouse.', kicker: 'TOP 5 HORIZONTAL' });
+}
+
+// POST 5: microSD cards
+{
+  const slug = 'best-microsd-cards-for-retro-handhelds-2026';
+  const title = 'Best microSD Cards for Retro Handhelds (Top 10 Brands, 2026)';
+  const desc = 'The best microSD cards for retro gaming handhelds in 2026: Samsung, SanDisk, Lexar, Kingston and six more brands compared, with size, speed and fake-card tips. All on Amazon.';
+  const link = (q) => `https://www.amazon.com/s?k=${encodeURIComponent(q)}&tag=${cfg.amazonTag}`;
+  const btn = (q) => `<a class="btn" href="${esc(link(q))}" target="_blank" rel="sponsored nofollow noopener">Check price on Amazon <small>→</small></a>`;
+  const cards = [
+    ['Samsung', 'Samsung EVO Select / PRO Plus', 'Best Overall', 'Samsung microSD card 256GB', 'A trusted name with a long record for reliable cards. The EVO Select is the easy value pick, and the PRO Plus is the step up if you want faster loading for bigger games. This is the safe default for almost any handheld.', 'Reliable, widely sold, easy to find in 128GB, 256GB and 512GB', 'Costs a little more than budget brands'],
+    ['SanDisk', 'SanDisk Extreme / Ultra', 'Best Alternative', 'SanDisk Extreme microSD card 256GB', 'The other default choice. SanDisk is the brand most retro handheld guides name first. The Ultra suits older and cheaper handhelds, and the Extreme is the pick for Android handhelds that load large PS2 and GameCube games.', 'Great reputation, many sizes, often discounted', 'Heavily copied, so only buy from Amazon or an authorized seller'],
+    ['Lexar', 'Lexar Play / Professional', 'Best Value', 'Lexar microSD card 256GB', 'Often cheaper than Samsung and SanDisk for similar rated speeds. A solid pick when you are filling a handheld with a big library on a budget.', 'Good speed for the price', 'Less well known, so check recent reviews on the exact listing'],
+    ['Kingston', 'Kingston Canvas Select Plus / Canvas Go! Plus', 'Reliable Budget Pick', 'Kingston Canvas Select Plus microSD 256GB', 'Kingston makes dependable cards at fair prices and is a common recommendation for handhelds and tablets.', 'Fair price, widely available', 'Entry models are slower for loading big games'],
+    ['PNY', 'PNY Elite-X / PRO Elite', 'Budget Pick', 'PNY microSD card 256GB', 'A low-cost name that often undercuts the big two. Fine for 8-bit and 16-bit libraries, where speed matters less.', 'Low price per gigabyte', 'Not the fastest for large Android games'],
+    ['Amazon Basics', 'Amazon Basics microSDXC', 'Cheapest Option', 'Amazon Basics microSD card 256GB', 'Sold and fulfilled by Amazon, which lowers the risk of getting a fake. A good pick for a stocking-stuffer handheld where you just need storage.', 'Low price, sold by Amazon', 'Speeds trail the premium cards'],
+    ['Silicon Power', 'Silicon Power Superior / Elite', 'Budget Large Capacity', 'Silicon Power microSD card 512GB', 'A frequent choice when you want a lot of space for little money. Check the listing for the A1 or A2 and U3 labels.', 'Strong price on larger sizes', 'Quality can vary by model, so read reviews'],
+    ['Transcend', 'Transcend 300S / 340S', 'Dependable Everyday', 'Transcend microSD card 128GB', 'A long-running memory brand that focuses on steady performance. Good for older retro systems and Linux handhelds.', 'Steady, well-built cards', 'Fewer high-capacity options'],
+    ['Team Group', 'TEAMGROUP Elite / A1 Card', 'Good Spare Card', 'TEAMGROUP microSD card 256GB', 'A budget brand that makes useful spare cards for swapping libraries between handhelds.', 'Affordable, A1-rated models', 'Check capacity and speed on the exact listing'],
+    ['Patriot', 'Patriot LX / EP Series', 'Budget Backup', 'Patriot microSD card 128GB', 'Another low-cost option for the second slot or a backup copy of your library.', 'Cheap, good for backups', 'Not a first choice for demanding Android games']
+  ];
+  const brandCard = (c, i) => `<section class="product" id="${esc(c[0].toLowerCase().replace(/[^a-z0-9]+/g, '-'))}">
+<div class="thumb"><svg viewBox="0 0 120 150" role="img" aria-label="microSD card"><path d="M22 6h62l22 22v116H22z" fill="currentColor" opacity=".9"/><rect x="34" y="14" width="8" height="18" fill="#0d0f1f"/><rect x="48" y="14" width="8" height="18" fill="#0d0f1f"/><rect x="62" y="14" width="8" height="18" fill="#0d0f1f"/><text x="64" y="104" text-anchor="middle" font-size="18" font-family="monospace" fill="#0d0f1f">microSD</text></svg></div>
+<div>
+<div class="rank">#${i + 1}</div>
+<h3 id="${esc(c[0].toLowerCase().replace(/[^a-z0-9]+/g, '-'))}-card">${esc(c[0])} <span class="badge">${esc(c[2])}</span></h3>
+<p class="price">Popular line: ${esc(c[1])}</p>
+<p>${esc(c[4])}</p>
+<div class="proscons"><div class="pro"><span class="h">Pros</span><ul><li>${esc(c[5])}</li></ul></div><div class="con"><span class="h">Cons</span><ul><li>${esc(c[6])}</li></ul></div></div>
+${btn(c[3])}
+</div></section>`;
+  const body = `<article>
+<span class="pill">ACCESSORIES · STORAGE</span>
+<h1>${esc(title)}</h1>
+<p class="meta">Updated ${esc(cfg.updated)}</p>
+<p class="lead">Almost every retro handheld needs a microSD card for games, saves and emulator files, and the card you pick affects how fast games load and how safe your saves are. Here are 10 microSD card brands that work well in retro handhelds, from the trusted favorites to budget picks, all sold on Amazon. <a href="#samsung">Samsung</a> and <a href="#sandisk">SanDisk</a> are our top two.</p>
+<p>Short on time? For most handhelds, buy a <b>256GB Samsung or SanDisk card</b>. They are the safest, easiest choices.</p>
+
+<h2>How much storage do you need?</h2>
+<ul>
+<li><b>128GB:</b> plenty for 8-bit, 16-bit, Game Boy Advance and most PS1 libraries.</li>
+<li><b>256GB:</b> the sweet spot for most people. Covers big PS1 collections, PSP and DS plus extras.</li>
+<li><b>512GB:</b> for PS2, GameCube and Dreamcast libraries, which take much more space. Some handhelds list a maximum card size, so check yours before buying.</li>
+</ul>
+
+<h2>Speed labels in plain English</h2>
+<ul>
+<li><b>U1 / U3:</b> minimum write speed. U3 is a safe choice for anything.</li>
+<li><b>A1 / A2:</b> better at running apps. Useful for Android handhelds that load games from the card.</li>
+<li><b>Class 10:</b> fine for Linux handhelds that mostly run small retro games.</li>
+</ul>
+<p>Cards advertise their top speed, but a handheld may not use all of it. A mid-priced card is usually enough.</p>
+
+<h2>The 10 best microSD card brands for retro handhelds</h2>
+${cards.map(brandCard).join('\n')}
+
+<h2>How to avoid fake microSD cards</h2>
+<ul>
+<li>Buy cards that are sold and shipped by Amazon, or by the brand's official store.</li>
+<li>Be suspicious of an unusually low price on a large card, especially 512GB and above.</li>
+<li>Check the card as soon as it arrives with a free tool such as H2testw (Windows) or F3 (Mac and Linux), and return it quickly if it fails.</li>
+<li>Keep a backup of your saves. Any card can fail.</li>
+</ul>
+
+<h2>Setting up your card</h2>
+<ul>
+<li>Most handhelds work with FAT32 or exFAT. If your handheld asks for one, follow its manual.</li>
+<li>Large cards sometimes arrive in exFAT. Check what your handheld supports before copying games over.</li>
+<li>Handhelds with two slots let you use one card for the system and one for games.</li>
+</ul>
+
+<p>Looking for a handheld to put it in? See our <a href="/best-retro-handhelds-holiday-2026/">Top 10 Retro Handhelds</a>, the <a href="/retro-handheld-buying-guide-by-price-2026/">buying guide by price</a>, or the Top 5 <a href="/best-vertical-retro-handhelds-2026/">vertical</a> and <a href="/best-horizontal-retro-handhelds-2026/">horizontal</a> picks.</p>
+
+${faqBlock([
+  ['What is the best microSD card for retro handhelds?', 'For most people, a <a href="#samsung">Samsung</a> or <a href="#sandisk">SanDisk</a> 256GB card. Both are reliable and easy to find.'],
+  ['What size microSD card should I buy?', '256GB is the best all-around choice. Go to 512GB if you want PS2, GameCube or Dreamcast games, and check your handheld limit first.'],
+  ['Do I need an A2 card?', 'No. A1 or A2 cards help Android handhelds load apps and games faster, but a good U3 card is fine for most retro libraries.'],
+  ['Why do I need a microSD card at all?', 'Most emulation handhelds ship with little or no game storage. The card holds your games, saves and emulator files.'],
+  ['How do I know if a microSD card is fake?', 'Buy from Amazon or an authorized seller and test the card with a free tool such as H2testw or F3 when it arrives.']
+])}
+<h2>Where this guide comes from</h2>
+<p>This guide is based on general buying experience with microSD cards and common recommendations in retro handheld communities. We have not lab-tested these cards. Models, speeds and prices change often, so check the current Amazon listing before you buy.</p>
+${disclosureBox}
+</article>`;
+  posts.push({ slug, title, desc, body, blurb: 'Samsung, SanDisk and eight more brands ranked, with size and speed advice and how to avoid fake cards.', kicker: 'MICROSD' });
 }
 
 // ---------- Static pages ----------
