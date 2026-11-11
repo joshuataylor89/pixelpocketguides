@@ -593,13 +593,23 @@ ${guides.map((g) => `<a class="postcard" href="/guides/${g.slug}/"><span class="
 // Newest first: sort by each post's optional "date" (YYYY-MM-DD); posts with the same date go newest-added first.
 const ordered = posts.map((p, i) => ({ ...p, _i: i })).sort((a, b) => (b.date || '2026-11-10').localeCompare(a.date || '2026-11-10') || b._i - a._i);
 const fmtDate = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+const IMG = 'https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/';
+const previews = {
+  'steam-deck-still-a-beast-2026': IMG + '61XBCgb6nnL._SL1500_.jpg',
+  'best-microsd-cards-for-retro-handhelds-2026': IMG + '618XGviQ6+L._AC_SL1500_.jpg',
+  'best-retro-handhelds-holiday-2026': P['rg-cube'].image,
+  'retro-handheld-buying-guide-by-price-2026': P['trimui-brick'].image,
+  'best-vertical-retro-handhelds-2026': P['trimui-brick'].image,
+  'best-horizontal-retro-handhelds-2026': P['pocket-air-mini'].image
+};
+const entryCard = (p, i) => `<article class="entry${i === 0 ? ' lead-entry' : ''}"><a class="entry-img" href="/${p.slug}/" aria-label="${esc(p.title)}">${previews[p.slug] ? `<img src="${esc(previews[p.slug])}" alt="${esc(p.title)}" loading="${i < 2 ? 'eager' : 'lazy'}">` : '<span class="entry-ph">PIXEL POCKET</span>'}</a><div class="entry-body"><span class="pill">${esc(p.kicker)}</span><h2><a href="/${p.slug}/">${esc(p.title)}</a></h2><p class="meta">${fmtDate(p.date || '2026-11-10')}</p><p>${esc(p.blurb || p.desc)}</p><p><a class="more" href="/${p.slug}/">Read the full guide →</a></p></div></article>`;
 const blogHome = `<section class="hero">
 <span class="pill">THE BLOG</span>
 <h1>Retro handheld buying guides</h1>
 <p>Honest picks for every budget. Every product is on Amazon.</p>
 </section>
 <div class="feed">
-${ordered.map((p) => `<article class="entry"><span class="pill">${esc(p.kicker)}</span><h2><a href="/${p.slug}/">${esc(p.title)}</a></h2><p class="meta">${fmtDate(p.date || '2026-11-10')}</p><p>${esc(p.desc)}</p><p><a class="more" href="/${p.slug}/">Read the full guide →</a></p></article>`).join('\n')}
+${ordered.map(entryCard).join('\n')}
 </div>
 <div class="disclosure">${DISCLOSURE} <a href="/affiliate-disclosure/">Learn more</a>.</div>`;
 

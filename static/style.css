@@ -67,3 +67,19 @@ footer.site a{color:var(--muted)}
 .entry p{margin:6px 0}
 .more{font-weight:700}
 .sizes{margin:10px 0 0;font-size:15px;color:var(--muted)} .sizes a{font-weight:700}
+
+/* modern card feed */
+.feed{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin:8px 0 28px}
+.entry{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:0;overflow:hidden;display:flex;flex-direction:column;transition:transform .12s,border-color .12s}
+.entry:hover{transform:translateY(-3px);border-color:var(--accent)}
+.entry-img{display:flex;align-items:center;justify-content:center;background:#fff;aspect-ratio:16/10;overflow:hidden}
+.entry-img img{width:100%;height:100%;object-fit:contain;padding:10px}
+.entry-ph{color:var(--accent);font-family:"Press Start 2P",monospace;font-size:12px}
+.entry-body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.entry h2{font-size:21px;line-height:1.25;margin:10px 0 4px}
+.entry p{font-size:15.5px;color:var(--muted)}
+.entry .more{color:var(--accent2)}
+.lead-entry{grid-column:1/-1;flex-direction:row}
+.lead-entry .entry-img{flex:0 0 46%;aspect-ratio:auto;min-height:280px}
+.lead-entry h2{font-size:28px}
+@media(max-width:700px){.feed{grid-template-columns:1fr}.lead-entry{flex-direction:column}.lead-entry .entry-img{flex:none;aspect-ratio:16/10;min-height:0}.lead-entry h2{font-size:23px}}
